@@ -1,0 +1,19 @@
+{
+  "name": "<%= _.slugify(appname) %>",
+  "description": "<%= appDescription %>",
+  "version": "0.0.0",
+  "author": {
+    "name": "<%= realname %>",
+    "email": "<%= email %>",
+    "url": "<%= githubUrl %>"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {},
+  "homepage": "",
+  "keywords": [],
+  "license": "MIT",
+  "main": "",
+  "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
+  "scripts": {}
+}
