@@ -1,4 +1,4 @@
-g# <%= appname %>
+# <%= appname %>
 
 > <%= appDescription %>
 

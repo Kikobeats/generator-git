@@ -165,14 +165,14 @@ var GitGenerator = yeoman.generators.Base.extend({
   },
 
   projectfiles: function () {
-    this.template('.editorconfig', '.editorconfig');
-    this.template('.gitignore', '.gitignore');
-    this.template('.gitattributes', '.gitattributes');
-    this.template('.jshintrc', '.jshintrc');
-    this.template('.travis.yml', '.travis.yml');
-    this.template('README.md', 'README.md');
-    this.template('LICENSE.md', 'LICENSE.md');
-    this.template('package.json', 'package.json');
+    this.template('_editorconfig', '.editorconfig');
+    this.template('_gitignore', '.gitignore');
+    this.template('_gitattributes', '.gitattributes');
+    this.template('_jshintrc', '.jshintrc');
+    this.template('_travis.yml', '.travis.yml');
+    this.template('_README.md', 'README.md');
+    this.template('_LICENSE.md', 'LICENSE.md');
+    this.template('_package.json', 'package.json');
   },
 
   // gitfiles: function () {
