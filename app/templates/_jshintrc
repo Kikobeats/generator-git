@@ -10,7 +10,6 @@
   "sub": true,
 
   // Suppress warnings about mixed tabs and spaces
-  "smarttabs": true,
 
   // Suppress warnings about trailing whitespace
   "trailing": false,
@@ -30,26 +29,23 @@
   "supernew": true,
 
   // Allow backwards, node-dependency-style commas
-  "laxcomma": true
+  "laxcomma": true,
 
-  // "bitwise": true,
-  // "camelcase": true,
-  // "node": true,
-  // "undef": true,
-  // "unused": true,
-  // "curly": true,
-  // "immed": true,
-  // "latedef": true,
-  // "noarg": true,
-  // "noempty": true,
-  // "plusplus": true,
-  // "quotmark": "single",
-  // "trailing": true,
-  // "asi": false,
-  // "eqnull": true,
-  // "eval": true,
-  // "sub": true,
-  // "supernew": true,
-  // "eqeqeq": true,
-  // "eqnull": true
+  "node": true,
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "indent": 2,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "single",
+  "regexp": true,
+  "undef": true,
+  "unused": true,
+  "strict": true,
+  "white": true
 }
