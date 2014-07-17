@@ -15,5 +15,8 @@
   "license": "MIT",
   "main": "",
   "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
-  "scripts": {}
+  "scripts": {
+    "test": "mocha -b",
+    "prepublish": "npm prune"
+  }
 }
