@@ -1,11 +1,11 @@
 'use strict';
-var path = require('path');
-var url = require('url');
-var yeoman = require('yeoman-generator');
-var yosay = require('yosay');
-var chalk = require('chalk');
+var path    = require('path');
+var url     = require('url');
+var yeoman  = require('yeoman-generator');
+var yosay   = require('yosay');
+var chalk   = require('chalk');
 var npmName = require('npm-name');
-var superb = require('superb');
+var superb  = require('superb');
 
 /* jshint -W106 */
 var proxy = process.env.http_proxy || process.env.HTTP_PROXY || process.env.https_proxy ||
@@ -74,7 +74,7 @@ var GitGenerator = yeoman.generators.Base.extend({
   askForYou: function () {
     var done = this.async();
 
-    this.log(yosay('Initialize a Git Repository'));
+    this.log(yosay('Initializing ' + superb() + ' Git Repository'));
 
     var prompts = [{
       name: 'githubUser',
@@ -165,27 +165,21 @@ var GitGenerator = yeoman.generators.Base.extend({
   },
 
   projectfiles: function () {
-    this.template('_editorconfig', '.editorconfig');
-    this.template('_gitignore', '.gitignore');
-    this.template('_gitattributes', '.gitattributes');
-    this.template('_jshintrc', '.jshintrc');
-    this.template('_travis.yml', '.travis.yml');
+    this.copy('_editorconfig', '.editorconfig');
+    this.copy('_gitignore', '.gitignore');
+    this.copy('_gitattributes', '.gitattributes');
+    this.copy('_jshintrc', '.jshintrc');
+    this.copy('_travis.yml', '.travis.yml');
     this.template('_README.md', 'README.md');
     this.template('_LICENSE.md', 'LICENSE.md');
     this.template('_package.json', 'package.json');
   },
 
-  // gitfiles: function () {
-  //   this.copy('gitattributes', '.gitattributes');
-  //   this.copy('gitignore', '.gitignore');
-  // },
 
-  // app: function () {
-  //   this.mkdir('app');
-  //   this.mkdir('app/templates');
-  //   this.superb = superb();
-  //   this.template('app/index.js');
-  // },
+  projectFolders: function () {
+    this.mkdir('test');
+    this.copy('test/_mocha.opts', 'test/mocha.opts');
+  }
 
   // templates: function () {
   //   this.copy('editorconfig', 'app/templates/editorconfig');
