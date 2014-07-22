@@ -16,7 +16,7 @@
   "main": "",
   "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
   "scripts": {
-    "test": "mocha -b",
+    "test": "sh test/test.sh",
     "prepublish": "npm prune"
   }
 }

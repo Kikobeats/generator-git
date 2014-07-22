@@ -178,7 +178,8 @@ var GitGenerator = yeoman.generators.Base.extend({
 
   projectFolders: function () {
     this.mkdir('test');
-    this.copy('test/_mocha.opts', 'test/mocha.opts');
+    this.copy('test/_test.sh', 'test/test.sh');
+    this.copy('test/_test.coffee', 'test/test.coffee');
   }
 
   // templates: function () {
