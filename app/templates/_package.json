@@ -8,7 +8,10 @@
     "url": "<%= githubUrl %>"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
   "engines": {},
   "homepage": "",
   "keywords": [],
