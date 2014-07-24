@@ -8,7 +8,7 @@
 
 [![devDependency Status](https://david-dm.org/<%= githubUser %>/<%= _.slugify(appname) %>/dev-status.svg)](https://david-dm.org/<%= githubUser %>/<%= _.slugify(appname) %>#info=devDependencies)
 
-[![NPM](https://nodei.co/npm/<%= _.slugify(appname) %>.png)](https://nodei.co/npm/<%= _.slugify(appname) %>/)
+[![NPM](https://nodei.co/npm/<%= _.slugify(appname) %>.png?downloads=true&stars=true)](https://nodei.co/npm/<%= _.slugify(appname) %>/)
 
 ## Install
 

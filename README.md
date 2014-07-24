@@ -10,6 +10,8 @@
 
 [![NPM](https://nodei.co/npm/generator-git.png)](https://nodei.co/npm/generator-git/)
 
+![](https://nodei.co/npm/generator-git.png?downloads=true&stars=true)
+
 ![](http://i.imgur.com/T2DgNL0.gif)
 
 Inspired in [sindresorhus](https://github.com/sindresorhus) and [mikermcneil](https://github.com/mikermcneil) style.
