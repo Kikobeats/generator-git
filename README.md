@@ -1,14 +1,13 @@
 # generator-git
 
-> Create the basic scaffolding to start with a git proyect
-
 [![Build Status](https://secure.travis-ci.org/Kikobeats/generator-git.png?branch=master)](https://travis-ci.org/Kikobeats/generator-git)
 [![Dependency status](https://david-dm.org/Kikobeats/generator-git.svg)](https://david-dm.org/Kikobeats/generator-git)
+>>>>>>> 47e024edb39cc92a3adfdbbcf299fcb8dc3d7fbc
 [![devDependency Status](https://david-dm.org/Kikobeats/generator-git/dev-status.svg)](https://david-dm.org/Kikobeats/generator-git#info=devDependencies)
 
-[![NPM](https://nodei.co/npm/generator-git.png)](https://nodei.co/npm/generator-git/)
+[![NPM](https://nodei.co/npm/generator-git.png?downloads=true&stars=true)](https://npmjs.org/package/generator-git)
 
-![](https://nodei.co/npm/generator-git.png?downloads=true&stars=true)
+> Create the basic scaffolding to start with a git proyect
 
 ![](http://i.imgur.com/T2DgNL0.gif)
 
