@@ -23,12 +23,12 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "chalk": "^0.4.0",
+    "chalk": "^0.5.1",
     "github": "^0.2.1",
     "npm-name": "^0.2.0",
-    "superb": "^1.0.1",
-    "yeoman-generator": "^0.16.0",
-    "yosay": "^0.1.0"
+    "superb": "^1.0.2",
+    "yeoman-generator": "^0.17.1",
+    "yosay": "^0.3.0"
   },
   "devDependencies": {
     "mocha": "*"
