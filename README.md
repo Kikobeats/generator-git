@@ -48,3 +48,4 @@ Remember install [editorconfig](http://editorconfig.org/) in your favorite edito
 
 ## LICENSE
 
+MIT © [Kiko Beats](http://kikobeats.com)
