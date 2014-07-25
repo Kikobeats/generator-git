@@ -1,11 +1,9 @@
 # generator-git
 
-[![Build Status](https://secure.travis-ci.org/Kikobeats/generator-git.png?branch=master)](https://travis-ci.org/Kikobeats/generator-git)
-[![Dependency status](https://david-dm.org/Kikobeats/generator-git.svg)](https://david-dm.org/Kikobeats/generator-git)
-[![devDependency Status](https://david-dm.org/Kikobeats/generator-git/dev-status.svg)](https://david-dm.org/Kikobeats/generator-git#info=devDependencies)
-
-[![NPM](https://nodei.co/npm/generator-git.png?downloads=true&stars=true)](https://npmjs.org/package/generator-git)
-
+[![Dependency status](http://img.shields.io/david/Kikobeats/generator-git.svg?style=flat)](https://david-dm.org/Kikobeats/generator-git)
+[![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/generator-git.svg?style=flat)](https://david-dm.org/Kikobeats/generator-git#info=devDependencies)
+[![NPM Status](http://img.shields.io/npm/dm/generator-git.svg?style=flat)](https://www.npmjs.org/package/generator-git)
+[![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat)](https://www.gittip.com/Kikobeats/)
 > Create the basic scaffolding to start with a git proyect
 
 ![](http://i.imgur.com/T2DgNL0.gif)
