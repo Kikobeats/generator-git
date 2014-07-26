@@ -1,6 +1,6 @@
 {
   "name": "generator-git",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create the basic scaffolding to start with a git proyect ",
   "license": "MIT",
   "main": "app/index.js",
@@ -20,6 +20,12 @@
     "app"
   ],
   "keywords": [
+    "git",
+    "generator",
+    "yeoman",
+    "github",
+    "scaffold",
+    "scaffolding",
     "yeoman-generator"
   ],
   "dependencies": {
