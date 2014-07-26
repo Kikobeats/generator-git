@@ -44,6 +44,11 @@ $ yo git
 
 Remember install [editorconfig](http://editorconfig.org/) in your favorite editor.
 
+## TODO
+
+* Select the type of license (MIT/GNU/APACHE/...)
+* Select framework for Testing
+
 ## LICENSE
 
 MIT © [Kiko Beats](http://kikobeats.com)
