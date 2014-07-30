@@ -12,11 +12,13 @@
     "mocha": "*",
     "should": "*"
   },
-  "engines": {},
+  "engines": {
+    "node": "*"
+  },
   "homepage": "",
   "keywords": [],
   "license": "MIT",
-  "main": "",
+  "main": "./index.js",
   "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
   "scripts": {
     "test": "sh test/test.sh",
