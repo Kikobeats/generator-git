@@ -98,7 +98,7 @@ var GitGenerator = yeoman.generators.Base.extend({
 
     var prompts = [{
       name: 'generatorName',
-      message: 'What\'s the base name of your generator?',
+      message: 'What\'s the base name of your proyect?',
       default: generatorName
     }, {
       type: 'confirm',
