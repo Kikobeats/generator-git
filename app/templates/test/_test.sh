@@ -15,9 +15,9 @@ function run {
   --compilers coffee:coffee-script/register \
   --require should \
   --reporter spec \
-  --timeout 10000 \
+  --timeout 120000 \
   --slow 300 \
-  --watch
+  --watch \
   "$@"
 }
 
