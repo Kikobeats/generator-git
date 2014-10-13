@@ -1,5 +1,6 @@
 ## -- Dependencies -------------------------------------------------------------
-scripts   = require '../'
-should    = require 'should'
+
+yourLibraryName = require '..'
+should          = require 'should'
 
 ## -- Tests -------------------------------------------------------------
