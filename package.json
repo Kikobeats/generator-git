@@ -1,6 +1,6 @@
 {
   "name": "generator-git",
-  "version": "0.10.13",
+  "version": "0.12.2",
   "description": "Create the basic scaffolding to start with a git proyect.",
   "license": "MIT",
   "main": "app/index.js",
