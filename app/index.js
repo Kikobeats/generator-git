@@ -164,17 +164,17 @@ var GitGenerator = yeoman.generators.Base.extend({
     }.bind(this));
   },
 
-  projectfiles: function () {
+  projectFiles: function () {
     this.copy('_editorconfig', '.editorconfig');
     this.copy('_gitignore', '.gitignore');
     this.copy('_gitattributes', '.gitattributes');
     this.copy('_jshintrc', '.jshintrc');
+    this.copy('_npmignore', '.npmignore');
     this.copy('_travis.yml', '.travis.yml');
     this.template('_README.md', 'README.md');
     this.template('_LICENSE.md', 'LICENSE.md');
     this.template('_package.json', 'package.json');
   },
-
 
   projectFolders: function () {
     this.mkdir('test');
