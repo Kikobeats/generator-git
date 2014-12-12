@@ -16,7 +16,7 @@
   "engines": {
     "node": "*"
   },
-  "homepage": "",
+  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
   "keywords": [],
   "license": "MIT",
   "main": "./index.js",
