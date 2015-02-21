@@ -9,9 +9,15 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "browserify": "*",
     "coffee-script": "*",
+    "gulp": "*",
+    "gulp-header": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "vinyl-source-stream": "*"
   },
   "engines": {
     "node": "*"
