@@ -7,6 +7,9 @@
     "email": "<%= email %>",
     "url": "<%= githubUrl %>"
   },
+  "bugs": {
+    "url": "<%= githubUser %>/<%= _.slugify(appname) %>/issues"
+  },
   "dependencies": {},
   "devDependencies": {
     "browserify": "*",
@@ -22,7 +25,7 @@
   "engines": {
     "node": "*"
   },
-  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
+  "homepage": "<%= githubUser %>/<%= _.slugify(appname) %>",
   "keywords": [],
   "license": "MIT",
   "main": "./index.js",
