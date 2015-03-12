@@ -24,7 +24,8 @@
     "vinyl-source-stream": "*"
   },
   "engines": {
-    "node": "*"
+    "node": ">= 0.10.0",
+    "npm": ">= 1.4.0"
   },
   "homepage": "<%= githubUser %>/<%= _.slugify(appname) %>",
   "keywords": [],
