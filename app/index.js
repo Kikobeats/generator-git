@@ -121,7 +121,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
 
       this.prompt(prompts, function(props) {
         if (props.pkgName) {
-          return this.askForProyectName();
+          return this.prompting.askForProyectName.call(this);
         }
         this.generatorName = props.generatorName;
         this.appname = this.generatorName;
