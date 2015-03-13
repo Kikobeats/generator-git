@@ -172,6 +172,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
       this.copy('_jshintrc', '.jshintrc');
       this.copy('_npmignore', '.npmignore');
       this.copy('_npmrc', '.npmrc');
+      this.copy('_index.js', 'index.js');
       this.copy('_travis.yml', '.travis.yml');
       this.template('_README.md', 'README.md');
       this.template('_LICENSE.md', 'LICENSE.md');
