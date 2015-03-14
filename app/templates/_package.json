@@ -8,7 +8,7 @@
     "url": "<%= githubUrl %>"
   },
   "bugs": {
-    "url": "<%= githubUser %>/<%= _.slugify(appname) %>/issues"
+    "url": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -27,7 +27,7 @@
     "node": ">= 0.10.0",
     "npm": ">= 1.4.0"
   },
-  "homepage": "<%= githubUser %>/<%= _.slugify(appname) %>",
+  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
   "keywords": [],
   "license": "MIT",
   "main": "./index.js",
