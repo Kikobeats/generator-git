@@ -1,5 +1,12 @@
 # <%= appname %>
 
+<h1 align="center">
+  <br>
+  <img src="" alt="<%= appname %>">
+  <br>
+  <br>
+</h1>
+
 [![Build Status](http://img.shields.io/travis/<%= githubUser %>/<%= _.slugify(appname) %>/master.svg?style=flat)](https://travis-ci.org/<%= githubUser %>/<%= _.slugify(appname) %>)
 [![Coverage Status](http://img.shields.io/coveralls/<%= githubUser %>/<%= _.slugify(appname) %>/master.svg?style=flat)](https://coveralls.io/r/<%= githubUser %>/<%= _.slugify(appname) %>?branch=master)
 [![Dependency status](http://img.shields.io/david/<%= githubUser %>/<%= _.slugify(appname) %>.svg?style=flat)](https://david-dm.org/<%= githubUser %>/<%= _.slugify(appname) %>)
