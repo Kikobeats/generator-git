@@ -7,10 +7,14 @@
     "email": "<%= email %>",
     "url": "<%= githubUrl %>"
   },
+  "bugs": {
+    "url": "<%= githubUser %>/<%= _.slugify(appname) %>/issues"
+  },
   "dependencies": {},
   "devDependencies": {
     "browserify": "*",
     "coffee-script": "*",
+    "coffeeify": "*",
     "gulp": "*",
     "gulp-header": "*",
     "gulp-uglify": "*",
@@ -20,9 +24,10 @@
     "vinyl-source-stream": "*"
   },
   "engines": {
-    "node": "*"
+    "node": ">= 0.10.0",
+    "npm": ">= 1.4.0"
   },
-  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
+  "homepage": "<%= githubUser %>/<%= _.slugify(appname) %>",
   "keywords": [],
   "license": "MIT",
   "main": "./index.js",

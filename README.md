@@ -10,6 +10,14 @@
 
 Inspired in [sindresorhus](https://github.com/sindresorhus) and [mikermcneil](https://github.com/mikermcneil) style.
 
+## What's new:
+
+- Setup `package.json` and `bower.json` fetching information from your Github account.
+- Setup testing scaffold and travis configuration.
+- Added common meta information for editor and linters.
+- Prepare the environment for start a NPM project using JavaScript/CoffeeScript.
+- Prepare a gulp task for compile the code for use in the browser using broserify.
+
 ## Install
 
 ```bash
@@ -44,11 +52,6 @@ $ yo git
 
 Remember install [editorconfig](http://editorconfig.org/) in your favorite editor.
 
-## TODO
-
-* Select the type of license (MIT/GNU/APACHE/...)
-* Select framework for Testing
-
-## LICENSE
+## License
 
 MIT © [Kiko Beats](http://kikobeats.com)
