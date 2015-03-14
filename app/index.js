@@ -140,7 +140,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
         this.appDescription = props.appDescription;
         done();
       }.bind(this));
-    },
+    }
   },
 
   configuring: {
@@ -170,6 +170,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
       this.copy('_gitignore', '.gitignore');
       this.copy('_gitattributes', '.gitattributes');
       this.copy('_jshintrc', '.jshintrc');
+      this.copy('_jscsrc', '.jscsrc');
       this.copy('_npmignore', '.npmignore');
       this.copy('_npmrc', '.npmrc');
       this.copy('_index.js', 'index.js');
