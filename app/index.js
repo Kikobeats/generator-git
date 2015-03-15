@@ -179,7 +179,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
       this.template('_LICENSE.md', 'LICENSE.md');
       this.template('_package.json', 'package.json');
       this.template('_bower.json', 'bower.json');
-      this.template('_gulpfile.coffee', 'gulpfile.coffee');
+      this.copy('_gulpfile.coffee', 'gulpfile.coffee');
     },
 
     projecttests: function() {

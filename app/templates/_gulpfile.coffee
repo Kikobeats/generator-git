@@ -22,6 +22,7 @@ banner = [
            " * <%= pkg.name %> - <%= pkg.description %>"
            " * @version v<%= pkg.version %>"
            " * @link    <%= pkg.homepage %>"
+           " * @author  <%= pkg.author.name %> (<%= pkg.author.url %>)"
            " * @license <%= pkg.license %>"
            " */"].join("\n")
 
