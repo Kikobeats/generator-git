@@ -1,12 +1,12 @@
 'use strict';
-var url = require('url');
-var _ = require('lodash');
-var path = require('path');
-var yosay = require('yosay');
-var superb = require('superb');
+var url     = require('url');
+var path    = require('path');
+var yosay   = require('yosay');
+var superb  = require('superb');
+var _       = require('lodash');
 var npmName = require('npm-name');
-var _s = require('underscore.string');
-var yeoman = require('yeoman-generator');
+var yeoman  = require('yeoman-generator');
+var _s      = require('underscore.string');
 
 /* jshint -W106 */
 var proxy = process.env.http_proxy || process.env.HTTP_PROXY || process.env.https_proxy ||
@@ -180,13 +180,13 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
       this.template('_package.json', 'package.json');
       this.template('_bower.json', 'bower.json');
       this.copy('_gulpfile.coffee', 'gulpfile.coffee');
-    },
-
-    projecttests: function() {
       this.mkdir('test');
       this.copy('test/_test.sh', 'test/test.sh');
       this.copy('test/_test.coffee', 'test/test.coffee');
-    }
+      this.mkdir('dist');
+      this.template('dist/example.html', 'dist/_example.html');
+
+    },
   },
 
   install: function() {
