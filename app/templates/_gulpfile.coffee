@@ -19,7 +19,7 @@ src =
 
 module =
   filename : "#{pkg.name}.js"
-  shortcut  : "#{pkg.name}"
+  shortcut : "#{pkg.name}"
   dist     : 'dist'
 
 banner = [

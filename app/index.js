@@ -166,6 +166,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
 
   writing: {
     projectfiles: function() {
+      /* meta */
       this.copy('_editorconfig', '.editorconfig');
       this.copy('_gitignore', '.gitignore');
       this.copy('_gitattributes', '.gitattributes');
@@ -173,20 +174,25 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
       this.copy('_jscsrc', '.jscsrc');
       this.copy('_npmignore', '.npmignore');
       this.copy('_npmrc', '.npmrc');
-      this.copy('_index.js', 'index.js');
       this.copy('_travis.yml', '.travis.yml');
+
+      /* basic */
+      this.copy('_index.js', 'index.js');
       this.template('_README.md', 'README.md');
       this.template('_LICENSE.md', 'LICENSE.md');
       this.template('_package.json', 'package.json');
       this.template('_bower.json', 'bower.json');
       this.copy('_gulpfile.coffee', 'gulpfile.coffee');
+
+      /* testing */
       this.mkdir('test');
       this.copy('test/_test.sh', 'test/test.sh');
       this.copy('test/_test.coffee', 'test/test.coffee');
-      this.mkdir('dist');
-      this.template('dist/example.html', 'dist/_example.html');
 
-    },
+      this.mkdir('dist');
+      this.template('dist/_example.html', 'dist/example.html');
+
+    }
   },
 
   install: function() {
