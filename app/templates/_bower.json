@@ -12,7 +12,6 @@
     "test",
     "tests"
   ],
-
   "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
   "keywords": [],
   "license": "MIT",
