@@ -3,11 +3,18 @@
   "description": "<%= appDescription %>",
   "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
   "version": "0.0.0",
-  "main": "dist/<%= _.slugify(appname) %>.js",
+  "main": "./dist/<%= _.slugify(appname) %>.js",
   "authors": [
-    "<%= realname %> <%= email %>"
+    {
+      "name": "<%= realname %>",
+      "email": "<%= email %>",
+      "homepage": "<%= githubUrl %>"
+    }
   ],
   "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
+  "bugs": {
+    "url": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>/issues"
+  },
   "keywords": [],
   "ignore": [
     "**/.*",
