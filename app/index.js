@@ -148,7 +148,6 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
       if (this.appname !== _.last(this.destinationRoot().split(path.sep))) {
         this.destinationRoot(this.appname);
       }
-      this.config.save();
     },
     userInfo: function() {
       var done = this.async();
