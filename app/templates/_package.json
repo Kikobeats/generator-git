@@ -1,15 +1,19 @@
 {
   "name": "<%= _.slugify(appname) %>",
   "description": "<%= appDescription %>",
+  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
   "version": "0.0.0",
+  "main": "./index.js",
   "author": {
     "name": "<%= realname %>",
     "email": "<%= email %>",
     "url": "<%= githubUrl %>"
   },
+  "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
   "bugs": {
     "url": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>/issues"
   },
+  "keywords": [],
   "dependencies": {},
   "devDependencies": {
     "browserify": "*",
@@ -28,12 +32,8 @@
     "node": ">= 0.10.0",
     "npm": ">= 1.4.0"
   },
-  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
-  "keywords": [],
-  "license": "MIT",
-  "main": "./index.js",
-  "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
   "scripts": {
     "test": "sh test/test.sh"
-  }
+  },
+  "license": "MIT"
 }

@@ -1,20 +1,20 @@
 {
   "name": "<%= _.slugify(appname) %>",
   "description": "<%= appDescription %>",
+  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
   "version": "0.0.0",
+  "main": "dist/<%= _.slugify(appname) %>.js",
   "authors": [
-   "<%= realname %> <%= email %>"
+    "<%= realname %> <%= email %>"
   ],
+  "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
+  "keywords": [],
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
+    "node_modules",
     "test",
     "tests"
   ],
-  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
-  "keywords": [],
-  "license": "MIT",
-  "main": "dist/<%= _.slugify(appname) %>.js",
-  "repository": "<%= githubUser %>/<%= _.slugify(appname) %>"
+  "license": "MIT"
 }
