@@ -114,6 +114,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
             if (!available) {
               done(true);
             }
+
             done(false);
           });
         }
@@ -123,8 +124,12 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
         if (props.pkgName) {
           return this.prompting.askForProyectName.call(this);
         }
+
         this.generatorName = props.generatorName;
         this.appname = this.generatorName;
+        this.slugifyAppname = _s.slugify(this.appname);
+        this.camelAppame = _s.camelize(this.appname);
+        this.moduleName = props.moduleName;
         done();
       }.bind(this));
     },
@@ -149,6 +154,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
         this.destinationRoot(this.appname);
       }
     },
+
     userInfo: function() {
       var done = this.async();
 

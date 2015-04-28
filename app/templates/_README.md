@@ -7,11 +7,11 @@
   <br>
 </h1>
 
-[![Build Status](http://img.shields.io/travis/<%= githubUser %>/<%= _.slugify(appname) %>/master.svg?style=flat-square)](https://travis-ci.org/<%= githubUser %>/<%= _.slugify(appname) %>)
-[![Coverage Status](http://img.shields.io/coveralls/<%= githubUser %>/<%= _.slugify(appname) %>/master.svg?style=flat-square)](https://coveralls.io/r/<%= githubUser %>/<%= _.slugify(appname) %>?branch=master)
-[![Dependency status](http://img.shields.io/david/<%= githubUser %>/<%= _.slugify(appname) %>.svg?style=flat-square)](https://david-dm.org/<%= githubUser %>/<%= _.slugify(appname) %>)
-[![Dev Dependencies Status](http://img.shields.io/david/dev/<%= githubUser %>/<%= _.slugify(appname) %>.svg?style=flat-square)](https://david-dm.org/<%= githubUser %>/<%= _.slugify(appname) %>#info=devDependencies)
-[![NPM Status](http://img.shields.io/npm/dm/<%= _.slugify(appname) %>.svg?style=flat-square)](https://www.npmjs.org/package/<%= _.slugify(appname) %>)
+[![Build Status](http://img.shields.io/travis/<%= githubUser %>/<%= slugifyAppname %>/master.svg?style=flat-square)](https://travis-ci.org/<%= githubUser %>/<%= slugifyAppname %>)
+[![Coverage Status](http://img.shields.io/coveralls/<%= githubUser %>/<%= slugifyAppname %>/master.svg?style=flat-square)](https://coveralls.io/r/<%= githubUser %>/<%= slugifyAppname %>?branch=master)
+[![Dependency status](http://img.shields.io/david/<%= githubUser %>/<%= slugifyAppname %>.svg?style=flat-square)](https://david-dm.org/<%= githubUser %>/<%= slugifyAppname %>)
+[![Dev Dependencies Status](http://img.shields.io/david/dev/<%= githubUser %>/<%= slugifyAppname %>.svg?style=flat-square)](https://david-dm.org/<%= githubUser %>/<%= slugifyAppname %>#info=devDependencies)
+[![NPM Status](http://img.shields.io/npm/dm/<%= slugifyAppname %>.svg?style=flat-square)](https://www.npmjs.org/package/<%= slugifyAppname %>)
 [![Gittip](http://img.shields.io/gittip/<%= githubUser %>.svg?style=flat-square)](https://www.gittip.com/<%= githubUser %>/)
 
 **NOTE:** more badges availables in [shields.io](http://shields.io/)
@@ -21,24 +21,46 @@
 ## Install
 
 ```bash
-npm install <%=_.slugify(appname)%>
+npm install <%=slugifyAppname%> --save
 ```
 
 If you want to use in the browser (powered by [Browserify](http://browserify.org/)):
 
 ```bash
-bower install <%=_.slugify(appname)%> --save
+bower install <%=slugifyAppname%> --save
 ```
 
 and later link in your HTML:
 
 ```html
-<script src="bower_components/<%=_.slugify(appname)%>/dist/<%=_.slugify(appname)%>.js"></script>
+<script src="bower_components/<%=slugifyAppname%>/dist/<%=slugifyAppname%>.js"></script>
 ```
 
 ## Usage
 
+```js
+var <%= camelAppame %> = require('<%= slugifyAppname %>');
+```
+
 ## API
+
+### <%= camelAppame %>(input, [options])
+
+#### input
+
+*Required*
+Type: `string`
+
+Lorem ipsum.
+
+#### options
+
+##### foo
+
+Type: `boolean`
+Default: `false`
+
+Lorem ipsum.
 
 ## License
 

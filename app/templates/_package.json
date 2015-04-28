@@ -1,7 +1,7 @@
 {
-  "name": "<%= _.slugify(appname) %>",
+  "name": "<%= slugifyAppname %>",
   "description": "<%= appDescription %>",
-  "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>",
+  "homepage": "https://github.com/<%= githubUser %>/<%= slugifyAppname %>",
   "version": "0.0.0",
   "main": "./index.js",
   "author": {
@@ -9,9 +9,9 @@
     "email": "<%= email %>",
     "url": "<%= githubUrl %>"
   },
-  "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
+  "repository": "<%= githubUser %>/<%= slugifyAppname %>",
   "bugs": {
-    "url": "https://github.com/<%= githubUser %>/<%= _.slugify(appname) %>/issues"
+    "url": "https://github.com/<%= githubUser %>/<%= slugifyAppname %>/issues"
   },
   "keywords": [],
   "dependencies": {},
