@@ -7,6 +7,7 @@
   <br>
 </h1>
 
+![Last version](https://img.shields.io/github/tag/<%= githubUser %>/<%= slugifyAppname %>.svg?style=flat-square)
 [![Build Status](http://img.shields.io/travis/<%= githubUser %>/<%= slugifyAppname %>/master.svg?style=flat-square)](https://travis-ci.org/<%= githubUser %>/<%= slugifyAppname %>)
 [![Coverage Status](http://img.shields.io/coveralls/<%= githubUser %>/<%= slugifyAppname %>/master.svg?style=flat-square)](https://coveralls.io/r/<%= githubUser %>/<%= slugifyAppname %>?branch=master)
 [![Dependency status](http://img.shields.io/david/<%= githubUser %>/<%= slugifyAppname %>.svg?style=flat-square)](https://david-dm.org/<%= githubUser %>/<%= slugifyAppname %>)
