@@ -13,7 +13,7 @@
 [![Dependency status](http://img.shields.io/david/<%= githubUser %>/<%= slugifyAppname %>.svg?style=flat-square)](https://david-dm.org/<%= githubUser %>/<%= slugifyAppname %>)
 [![Dev Dependencies Status](http://img.shields.io/david/dev/<%= githubUser %>/<%= slugifyAppname %>.svg?style=flat-square)](https://david-dm.org/<%= githubUser %>/<%= slugifyAppname %>#info=devDependencies)
 [![NPM Status](http://img.shields.io/npm/dm/<%= slugifyAppname %>.svg?style=flat-square)](https://www.npmjs.org/package/<%= slugifyAppname %>)
-[![Gittip](http://img.shields.io/gittip/<%= githubUser %>.svg?style=flat-square)](https://www.gittip.com/<%= githubUser %>/)
+[![Gratipay](https://img.shields.io/gratipay/<%= githubUser %>.svg?style=flat-square)](https://gratipay.com/~<%= githubUser %>/)
 
 **NOTE:** more badges availables in [shields.io](http://shields.io/)
 
