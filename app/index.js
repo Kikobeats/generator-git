@@ -1,12 +1,12 @@
 'use strict';
-var url     = require('url');
-var path    = require('path');
-var yosay   = require('yosay');
-var superb  = require('superb');
-var _       = require('lodash');
-var npmName = require('npm-name');
-var yeoman  = require('yeoman-generator');
-var _s      = require('underscore.string');
+var url        = require('url');
+var path       = require('path');
+var yosay      = require('yosay');
+var superb     = require('superb');
+var _          = require('lodash');
+var npmName    = require('npm-name');
+var generators = require('yeoman-generator');
+var _s         = require('underscore.string');
 
 /* jshint -W106 */
 var proxy = process.env.http_proxy || process.env.HTTP_PROXY || process.env.https_proxy ||
@@ -59,11 +59,13 @@ var githubUserInfo = function(name, cb, log) {
       log.error('Cannot fetch your github profile. Make sure you\'ve typed it correctly.');
       res = emptyGithubRes;
     }
+
     cb(JSON.parse(JSON.stringify(res)));
   });
 };
 
-var GitGenerator = module.exports = yeoman.generators.Base.extend({
+module.exports = generators.Base.extend({
+
   initializing: function() {
     this.pkg = require('../package.json');
     this.currentYear = (new Date()).getFullYear();
@@ -71,10 +73,7 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
 
   prompting: {
 
-    /**
-     * Ask for your Github account
-     */
-    askFor: function() {
+    askForGithubName: function() {
       var done = this.async();
 
       this.log(yosay('Initializing ' + superb() + ' Git Repository'));
@@ -92,17 +91,14 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
       }.bind(this));
     },
 
-    /**
-     * Ask about the proyect
-     */
-    askForProyectName: function() {
+    askForModuleName: function() {
       var done = this.async();
-      var generatorName = extractGeneratorName(this.appname);
+      var moduleName = extractGeneratorName(this.appname);
 
       var prompts = [{
-        name: 'generatorName',
-        message: 'What\'s the base name of your proyect?',
-        default: generatorName
+        name: 'moduleName',
+        message: 'What do you want to name your module?',
+        default: moduleName
       }, {
         type: 'confirm',
         name: 'pkgName',
@@ -110,23 +106,17 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
         default: true,
         when: function(answers) {
           var done = this.async();
-          npmName(answers.generatorName, function(err, available) {
-            if (!available) {
-              done(true);
-            }
-
-            done(false);
+          npmName(answers.moduleName, function(err, available) {
+            if (!available) return done(true);
+            return done(false);
           });
         }
       }];
 
       this.prompt(prompts, function(props) {
-        if (props.pkgName) {
-          return this.prompting.askForProyectName.call(this);
-        }
-
-        this.generatorName = props.generatorName;
-        this.appname = this.generatorName;
+        if (props.pkgName) return this.prompting.askForProyectName.call(this);
+        this.moduleName = props.moduleName;
+        this.appname = this.moduleName;
         this.slugifyAppname = _s.slugify(this.appname);
         this.camelAppame = _s.camelize(this.appname);
         this.moduleName = props.moduleName;
@@ -134,15 +124,45 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
       }.bind(this));
     },
 
-    askForProyectDescription: function() {
+    askForModuleDescription: function() {
       var done = this.async();
       var prompts = [{
-        name: 'appDescription',
+        name: 'moduleDescription',
         message: 'A short description of your project',
         default: 'I\'m a lazy'
       }];
       this.prompt(prompts, function(props) {
-        this.appDescription = props.appDescription;
+        this.moduleDescription = props.moduleDescription;
+        done();
+      }.bind(this));
+    },
+
+    askForBrowserBundle: function() {
+      var done = this.async();
+      var prompts = [{
+        name: 'browserBundle',
+        message: 'Do you need a Browser bundle (powered by browserify) ?',
+        type: 'confirm',
+        default: false
+      }];
+
+      this.prompt(prompts, function(props) {
+        this.browserBundle = props.browserBundle;
+        done();
+      }.bind(this));
+    },
+
+    askForCLI: function() {
+      var done = this.async();
+      var prompts = [{
+        name: 'cli',
+        message: 'Do you need a CLI?',
+        type: 'confirm',
+        default: false
+      }];
+
+      this.prompt(prompts, function(props) {
+        this.cli = props.cli;
         done();
       }.bind(this));
     }
@@ -150,9 +170,8 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
 
   configuring: {
     enforceFolderName: function() {
-      if (this.appname !== _.last(this.destinationRoot().split(path.sep))) {
+      if (this.appname !== _.last(this.destinationRoot().split(path.sep)))
         this.destinationRoot(this.appname);
-      }
     },
 
     userInfo: function() {
@@ -196,6 +215,9 @@ var GitGenerator = module.exports = yeoman.generators.Base.extend({
 
       this.mkdir('dist');
       this.template('dist/_example.html', 'dist/example.html');
+
+      /* optional */
+      if (this.cli) this.template('cli.js');
 
     }
   },
