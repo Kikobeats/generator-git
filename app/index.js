@@ -91,14 +91,14 @@ module.exports = generators.Base.extend({
       }.bind(this));
     },
 
-    askForModuleName: function() {
+    askForProyectName: function() {
       var done = this.async();
-      var moduleName = extractGeneratorName(this.appname);
+      var generatorName = extractGeneratorName(this.appname);
 
       var prompts = [{
-        name: 'moduleName',
+        name: 'generatorName',
         message: 'What do you want to name your module?',
-        default: moduleName
+        default: generatorName
       }, {
         type: 'confirm',
         name: 'pkgName',
@@ -106,7 +106,7 @@ module.exports = generators.Base.extend({
         default: true,
         when: function(answers) {
           var done = this.async();
-          npmName(answers.moduleName, function(err, available) {
+          npmName(answers.generatorName, function(err, available) {
             if (!available) return done(true);
             return done(false);
           });
@@ -115,24 +115,24 @@ module.exports = generators.Base.extend({
 
       this.prompt(prompts, function(props) {
         if (props.pkgName) return this.prompting.askForProyectName.call(this);
-        this.moduleName = props.moduleName;
-        this.appname = this.moduleName;
+
+        this.generatorName = props.generatorName;
+        this.appname = this.generatorName;
         this.slugifyAppname = _s.slugify(this.appname);
         this.camelAppame = _s.camelize(this.appname);
-        this.moduleName = props.moduleName;
         done();
       }.bind(this));
     },
 
-    askForModuleDescription: function() {
+    askForAppDescription: function() {
       var done = this.async();
       var prompts = [{
-        name: 'moduleDescription',
+        name: 'appDescription',
         message: 'A short description of your project',
         default: 'I\'m a lazy'
       }];
       this.prompt(prompts, function(props) {
-        this.moduleDescription = props.moduleDescription;
+        this.appDescription = props.appDescription;
         done();
       }.bind(this));
     },
@@ -190,6 +190,7 @@ module.exports = generators.Base.extend({
 
   writing: {
     projectfiles: function() {
+
       /* meta */
       this.copy('_editorconfig', '.editorconfig');
       this.copy('_gitignore', '.gitignore');
@@ -202,23 +203,42 @@ module.exports = generators.Base.extend({
 
       /* basic */
       this.copy('_index.js', 'index.js');
-      this.template('_README.md', 'README.md');
       this.template('_LICENSE.md', 'LICENSE.md');
-      this.template('_package.json', 'package.json');
-      this.template('_bower.json', 'bower.json');
-      this.bulkCopy('_gulpfile.coffee', 'gulpfile.coffee');
 
       /* testing */
+
       this.mkdir('test');
       this.copy('test/_test.sh', 'test/test.sh');
       this.copy('test/_test.coffee', 'test/test.coffee');
 
-      this.mkdir('dist');
-      this.template('dist/_example.html', 'dist/example.html');
+      /* complementary */
 
-      /* optional */
-      if (this.cli) this.template('cli.js');
+      if (this.browserBundle) {
 
+        if (this.cli) {
+          this.template('_cli.js', 'cli.js');
+          this.template('browser/_package_with_cli.json', 'package.json');
+          this.template('browser/_README_with_cli.md', 'README.md');
+        } else {
+          this.template('browser/_package.json', 'package.json');
+          this.template('browser/_README.md', 'README.md');
+        }
+
+        this.bulkCopy('browser/_gulpfile.coffee', 'browser/gulpfile.coffee');
+        this.template('browser/_bower.json', 'browser/bower.json');
+        this.mkdir('dist');
+        this.template('dist/_example.html', 'dist/example.html');
+
+      } else {
+        if (this.cli) {
+          this.template('_cli.js', 'cli.js');
+          this.template('_package_with_cli.json', 'package.json');
+          this.template('_README_with_cli.md', 'README.md');
+        } else {
+          this.template('_package.json', 'package.json');
+          this.template('_README.md', 'README.md');
+        }
+      }
     }
   },
 

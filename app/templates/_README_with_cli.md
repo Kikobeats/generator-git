@@ -25,6 +25,12 @@
 npm install <%=slugifyAppname%> --save
 ```
 
+You can use this module globally as well:
+
+```bash
+npm install <%=slugifyAppname%> -g
+```
+
 ## Usage
 
 ```js

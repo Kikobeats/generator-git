@@ -25,6 +25,18 @@
 npm install <%=slugifyAppname%> --save
 ```
 
+If you want to use in the browser (powered by [Browserify](http://browserify.org/)):
+
+```bash
+bower install <%=slugifyAppname%> --save
+```
+
+and later link in your HTML:
+
+```html
+<script src="bower_components/<%=slugifyAppname%>/dist/<%=slugifyAppname%>.js"></script>
+```
+
 ## Usage
 
 ```js

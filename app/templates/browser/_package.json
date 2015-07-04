@@ -16,8 +16,17 @@
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
+    "browserify": "*",
+    "coffee-script": "*",
+    "coffeeify": "*",
+    "gulp": "*",
+    "gulp-header": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*"
   },
   "engines": {
     "node": ">= 0.10.0",

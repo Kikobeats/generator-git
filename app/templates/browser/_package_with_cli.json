@@ -14,10 +14,22 @@
     "url": "https://github.com/<%= githubUser %>/<%= slugifyAppname %>/issues"
   },
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "meow": "*",
+    "update-notifier": "*"
+  },
   "devDependencies": {
+    "browserify": "*",
+    "coffee-script": "*",
+    "coffeeify": "*",
+    "gulp": "*",
+    "gulp-header": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*"
   },
   "engines": {
     "node": ">= 0.10.0",

@@ -14,7 +14,10 @@
     "url": "https://github.com/<%= githubUser %>/<%= slugifyAppname %>/issues"
   },
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "meow": "*",
+    "update-notifier": "*"
+  },
   "devDependencies": {
     "mocha": "*",
     "should": "*"
