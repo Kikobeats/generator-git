@@ -224,8 +224,8 @@ module.exports = generators.Base.extend({
           this.template('browser/_README.md', 'README.md');
         }
 
-        this.bulkCopy('browser/_gulpfile.coffee', 'browser/gulpfile.coffee');
-        this.template('browser/_bower.json', 'browser/bower.json');
+        this.bulkCopy('browser/_gulpfile.coffee', 'gulpfile.coffee');
+        this.template('browser/_bower.json', 'bower.json');
         this.mkdir('dist');
         this.template('dist/_example.html', 'dist/example.html');
 
