@@ -224,6 +224,7 @@ module.exports = generators.Base.extend({
           this.template('browser/_README.md', 'README.md');
         }
 
+        this.bulkCopy('browser/_bumpedrc', '.bumpedrc');
         this.bulkCopy('browser/_gulpfile.coffee', 'gulpfile.coffee');
         this.template('browser/_bower.json', 'bower.json');
         this.mkdir('dist');
@@ -238,6 +239,8 @@ module.exports = generators.Base.extend({
           this.template('_package.json', 'package.json');
           this.template('_README.md', 'README.md');
         }
+
+        this.bulkCopy('_bumpedrc', '.bumpedrc');
       }
     }
   },
