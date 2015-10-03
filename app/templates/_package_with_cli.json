@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "main": "./index.js",
   "author": {
-    "name": "<%= realname %>",
     "email": "<%= email %>",
+    "name": "<%= realname %>",
     "url": "<%= githubUrl %>"
   },
   "repository": "<%= githubUser %>/<%= slugifyAppname %>",
@@ -15,12 +15,13 @@
   },
   "keywords": [],
   "dependencies": {
-    "meow": "*",
-    "update-notifier": "*"
+    "coffee-script": "latest",
+    "meow": "latest",
+    "update-notifier": "latest"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*"
+    "mocha": "latest",
+    "should": "latest"
   },
   "engines": {
     "node": ">= 0.10.0",
