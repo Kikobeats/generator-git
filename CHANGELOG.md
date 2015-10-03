@@ -1,7 +1,16 @@
+<a name="2.6.2"></a>
+## 2.6.2 (2015-10-03)
+
+
+* updated moar dependencies ([588cf9d](https://github.com/Kikobeats/generator-git/commit/588cf9d))
+
+
+
 <a name="2.6.1"></a>
 ## 2.6.1 (2015-10-03)
 
 
+* 2.6.1 releases ([f326c93](https://github.com/Kikobeats/generator-git/commit/f326c93))
 * Update _travis.yml ([afe8e0b](https://github.com/Kikobeats/generator-git/commit/afe8e0b))
 * updated dependencies version ([bf959fb](https://github.com/Kikobeats/generator-git/commit/bf959fb))
 
@@ -69,9 +78,9 @@
 
 
 * 2.3.1 releases ([345f152](https://github.com/Kikobeats/generator-git/commit/345f152))
+* added last tagged version badge ([984e49b](https://github.com/Kikobeats/generator-git/commit/984e49b))
 * Merge branch 'master' of github.com:Kikobeats/generator-git ([2b54d02](https://github.com/Kikobeats/generator-git/commit/2b54d02))
 * Update README.md ([dd663a0](https://github.com/Kikobeats/generator-git/commit/dd663a0))
-* added last tagged version badge ([984e49b](https://github.com/Kikobeats/generator-git/commit/984e49b))
 * updated ([abab0bc](https://github.com/Kikobeats/generator-git/commit/abab0bc))
 * using flat square style ([4f10fd9](https://github.com/Kikobeats/generator-git/commit/4f10fd9))
 
@@ -169,8 +178,8 @@
 
 
 * 2.1.2 releases ([f3e9d42](https://github.com/Kikobeats/generator-git/commit/f3e9d42))
-* Merge branch 'master' of github.com:Kikobeats/generator-git ([b3a40bd](https://github.com/Kikobeats/generator-git/commit/b3a40bd))
 * added image template ([f1d7a7d](https://github.com/Kikobeats/generator-git/commit/f1d7a7d))
+* Merge branch 'master' of github.com:Kikobeats/generator-git ([b3a40bd](https://github.com/Kikobeats/generator-git/commit/b3a40bd))
 
 
 
@@ -206,8 +215,8 @@
 
 
 * 2.0.1 releases ([29af0e2](https://github.com/Kikobeats/generator-git/commit/29af0e2))
-* Update _travis.yml ([0b1982a](https://github.com/Kikobeats/generator-git/commit/0b1982a))
 * fixed when the name already exist in npm ([840beed](https://github.com/Kikobeats/generator-git/commit/840beed))
+* Update _travis.yml ([0b1982a](https://github.com/Kikobeats/generator-git/commit/0b1982a))
 
 
 
@@ -241,8 +250,8 @@
 ## 1.2.6 (2015-02-06)
 
 
-* Update _test.coffee ([813e61a](https://github.com/Kikobeats/generator-git/commit/813e61a))
 * new build ([62d5699](https://github.com/Kikobeats/generator-git/commit/62d5699))
+* Update _test.coffee ([813e61a](https://github.com/Kikobeats/generator-git/commit/813e61a))
 
 
 
@@ -251,24 +260,24 @@
 
 
 * 0.12.11 ([5a8f642](https://github.com/Kikobeats/generator-git/commit/5a8f642))
-* Merge branch 'master' of https://github.com/Kikobeats/generator-git ([f5d851e](https://github.com/Kikobeats/generator-git/commit/f5d851e))
-* Update README.md ([8a15f0d](https://github.com/Kikobeats/generator-git/commit/8a15f0d))
-* Update _editorconfig ([8832a29](https://github.com/Kikobeats/generator-git/commit/8832a29))
-* Update _editorconfig ([dbea0e2](https://github.com/Kikobeats/generator-git/commit/dbea0e2))
-* Update _jshintrc ([b4cdb3f](https://github.com/Kikobeats/generator-git/commit/b4cdb3f))
-* Update _package.json ([1094548](https://github.com/Kikobeats/generator-git/commit/1094548))
 * added bower and browserify support ([abcf4a5](https://github.com/Kikobeats/generator-git/commit/abcf4a5))
 * added watch parameter in mocha ([380ddeb](https://github.com/Kikobeats/generator-git/commit/380ddeb))
 * adjusted ([e39ee27](https://github.com/Kikobeats/generator-git/commit/e39ee27))
 * fixed bash functions and updated travis settings ([d4d8ee2](https://github.com/Kikobeats/generator-git/commit/d4d8ee2))
 * improved ([5886dce](https://github.com/Kikobeats/generator-git/commit/5886dce))
 * loaded should ([a8dcc69](https://github.com/Kikobeats/generator-git/commit/a8dcc69))
+* Merge branch 'master' of https://github.com/Kikobeats/generator-git ([f5d851e](https://github.com/Kikobeats/generator-git/commit/f5d851e))
 * more timeout, added cofee dependency, refactor comments ([40e76e7](https://github.com/Kikobeats/generator-git/commit/40e76e7))
-* new build ([ed492f7](https://github.com/Kikobeats/generator-git/commit/ed492f7))
-* new build ([53f2a36](https://github.com/Kikobeats/generator-git/commit/53f2a36))
 * new build ([9ab9969](https://github.com/Kikobeats/generator-git/commit/9ab9969))
-* updated ([ea49b81](https://github.com/Kikobeats/generator-git/commit/ea49b81))
+* new build ([53f2a36](https://github.com/Kikobeats/generator-git/commit/53f2a36))
+* new build ([ed492f7](https://github.com/Kikobeats/generator-git/commit/ed492f7))
+* Update _editorconfig ([8832a29](https://github.com/Kikobeats/generator-git/commit/8832a29))
+* Update _editorconfig ([dbea0e2](https://github.com/Kikobeats/generator-git/commit/dbea0e2))
+* Update _jshintrc ([b4cdb3f](https://github.com/Kikobeats/generator-git/commit/b4cdb3f))
+* Update _package.json ([1094548](https://github.com/Kikobeats/generator-git/commit/1094548))
+* Update README.md ([8a15f0d](https://github.com/Kikobeats/generator-git/commit/8a15f0d))
 * updated ([2b68b79](https://github.com/Kikobeats/generator-git/commit/2b68b79))
+* updated ([ea49b81](https://github.com/Kikobeats/generator-git/commit/ea49b81))
 * updated default homepage ([160ce66](https://github.com/Kikobeats/generator-git/commit/160ce66))
 * updated version ([36ea257](https://github.com/Kikobeats/generator-git/commit/36ea257))
 
@@ -298,18 +307,18 @@
 
 
 * Added more info about the status of the proyect ([6982f32](https://github.com/Kikobeats/generator-git/commit/6982f32))
-* Merge branch 'master' of https://github.com/Kikobeats/generator-git ([b8cd8ff](https://github.com/Kikobeats/generator-git/commit/b8cd8ff))
-* Update README.md ([8b61d21](https://github.com/Kikobeats/generator-git/commit/8b61d21))
-* Update README.md ([676768b](https://github.com/Kikobeats/generator-git/commit/676768b))
-* Update README.md ([92dca30](https://github.com/Kikobeats/generator-git/commit/92dca30))
-* Update README.md ([8b3f52a](https://github.com/Kikobeats/generator-git/commit/8b3f52a))
-* Update README.md ([a0d051c](https://github.com/Kikobeats/generator-git/commit/a0d051c))
-* Update README.md ([47e024e](https://github.com/Kikobeats/generator-git/commit/47e024e))
-* Update README.md ([da2afe0](https://github.com/Kikobeats/generator-git/commit/da2afe0))
-* Update README.md ([5f506a7](https://github.com/Kikobeats/generator-git/commit/5f506a7))
-* Update _package.json ([c352f7a](https://github.com/Kikobeats/generator-git/commit/c352f7a))
 * extend nodei status ([2790973](https://github.com/Kikobeats/generator-git/commit/2790973))
+* Merge branch 'master' of https://github.com/Kikobeats/generator-git ([b8cd8ff](https://github.com/Kikobeats/generator-git/commit/b8cd8ff))
 * resolved conflict ([5b27994](https://github.com/Kikobeats/generator-git/commit/5b27994))
+* Update _package.json ([c352f7a](https://github.com/Kikobeats/generator-git/commit/c352f7a))
+* Update README.md ([a0d051c](https://github.com/Kikobeats/generator-git/commit/a0d051c))
+* Update README.md ([92dca30](https://github.com/Kikobeats/generator-git/commit/92dca30))
+* Update README.md ([47e024e](https://github.com/Kikobeats/generator-git/commit/47e024e))
+* Update README.md ([8b61d21](https://github.com/Kikobeats/generator-git/commit/8b61d21))
+* Update README.md ([5f506a7](https://github.com/Kikobeats/generator-git/commit/5f506a7))
+* Update README.md ([da2afe0](https://github.com/Kikobeats/generator-git/commit/da2afe0))
+* Update README.md ([676768b](https://github.com/Kikobeats/generator-git/commit/676768b))
+* Update README.md ([8b3f52a](https://github.com/Kikobeats/generator-git/commit/8b3f52a))
 * updated ([4ce2dfa](https://github.com/Kikobeats/generator-git/commit/4ce2dfa))
 * updated dependencies ([dcaf299](https://github.com/Kikobeats/generator-git/commit/dcaf299))
 * updated template ([6ade6b5](https://github.com/Kikobeats/generator-git/commit/6ade6b5))
@@ -322,14 +331,14 @@
 
 
 * Added template for tests ([e9eabb1](https://github.com/Kikobeats/generator-git/commit/e9eabb1))
+* added test file ([7dfc65b](https://github.com/Kikobeats/generator-git/commit/7dfc65b))
+* changed travis status position ([d4c6e39](https://github.com/Kikobeats/generator-git/commit/d4c6e39))
+* first commit ([d8b9941](https://github.com/Kikobeats/generator-git/commit/d8b9941))
 * Renamed scaffolding for conflicts ([e3dec1c](https://github.com/Kikobeats/generator-git/commit/e3dec1c))
 * Update _jshintrc ([cc9022a](https://github.com/Kikobeats/generator-git/commit/cc9022a))
 * Update _jshintrc ([8dc8f76](https://github.com/Kikobeats/generator-git/commit/8dc8f76))
 * Update _package.json ([c268dbb](https://github.com/Kikobeats/generator-git/commit/c268dbb))
 * Update package.json ([f4dbcc1](https://github.com/Kikobeats/generator-git/commit/f4dbcc1))
-* added test file ([7dfc65b](https://github.com/Kikobeats/generator-git/commit/7dfc65b))
-* changed travis status position ([d4c6e39](https://github.com/Kikobeats/generator-git/commit/d4c6e39))
-* first commit ([d8b9941](https://github.com/Kikobeats/generator-git/commit/d8b9941))
 * updated description ([5707ed5](https://github.com/Kikobeats/generator-git/commit/5707ed5))
 * updated version ([88805d1](https://github.com/Kikobeats/generator-git/commit/88805d1))
 * updated version ([26a2ec2](https://github.com/Kikobeats/generator-git/commit/26a2ec2))
