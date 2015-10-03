@@ -1,7 +1,17 @@
+<a name="2.6.1"></a>
+## 2.6.1 (2015-10-03)
+
+
+* Update _travis.yml ([afe8e0b](https://github.com/Kikobeats/generator-git/commit/afe8e0b))
+* updated dependencies version ([bf959fb](https://github.com/Kikobeats/generator-git/commit/bf959fb))
+
+
+
 <a name="2.6.0"></a>
 # 2.6.0 (2015-09-01)
 
 
+* 2.6.0 releases ([396a197](https://github.com/Kikobeats/generator-git/commit/396a197))
 * paypal instead of gratipay ([342068a](https://github.com/Kikobeats/generator-git/commit/342068a))
 * updated bumped settings ([687aace](https://github.com/Kikobeats/generator-git/commit/687aace))
 
