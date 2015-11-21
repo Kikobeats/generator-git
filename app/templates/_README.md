@@ -1,11 +1,10 @@
 # <%= appname %>
 
-<h1 align="center">
+<p align="center">
   <br>
-  <img src="" alt="<%= appname %>">
+  <img src="https://i.imgur.com/Mh13XWB.gif" alt="<%= appname %>">
   <br>
-  <br>
-</h1>
+</p>
 
 ![Last version](https://img.shields.io/github/tag/<%= githubUser %>/<%= slugifyAppname %>.svg?style=flat-square)
 [![Build Status](http://img.shields.io/travis/<%= githubUser %>/<%= slugifyAppname %>/master.svg?style=flat-square)](https://travis-ci.org/<%= githubUser %>/<%= slugifyAppname %>)
