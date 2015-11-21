@@ -232,7 +232,9 @@ module.exports = generators.Base.extend({
 
       } else {
         if (this.cli) {
-          this.template('_cli.js', 'cli.js');
+          this.mkdir('bin');
+          this.template('bin/_help.txt', 'bin/help.txt');
+          this.template('bin/_index.js', 'bin/index.js');
           this.template('_package_with_cli.json', 'package.json');
           this.template('_README_with_cli.md', 'README.md');
         } else {

@@ -1,0 +1,36 @@
+Usage: $ <%= appname %> <command> [options]
+
+commands:
+
+init     Initializes a new .<%= appname %>rc file in the current directory.
+         Bumped detects configuration files as package.json or
+         bower.json by default, but you can add files with 'add' as well.
+
+add      Add a new file in your current configuration.
+         When you add a file, the shared version between the configuration
+         files is recalculated to get the more high version possible.
+
+version  Prints the current synchronized version.
+
+release  Bumped a new version of your software, updating the
+         version in your configuration files.
+
+         You can do it specifying the version that you want to release:
+
+         $ <%= appname %> release 1.0.1
+
+         Or pecifying semver keyword:
+
+         $ <%= appname %> release <major|premajor|minor|preminor|patch|prepatch|prerelease>
+
+remove   Removes a file declared in the configuration file.
+         The synchronized version is recalculated.
+
+set      Set or update a determinate property across the files
+         declared in your configuration files.
+
+         You can set Strings, Arrays or Objects:
+
+         $ <%= appname %> set name newName
+         $ <%= appname %> set keywords [ semver, management, cli ]
+         $ <%= appname %> set authors.name newAuthor
