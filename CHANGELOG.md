@@ -1,7 +1,16 @@
+<a name="2.6.5"></a>
+## 2.6.5 (2015-11-21)
+
+
+* added bin key in the CLI version ([1b8e886](https://github.com/Kikobeats/generator-git/commit/1b8e886))
+
+
+
 <a name="2.6.4"></a>
 ## 2.6.4 (2015-11-20)
 
 
+* 2.6.4 releases ([f61ce4f](https://github.com/Kikobeats/generator-git/commit/f61ce4f))
 * updated bumped configs ([5d5397d](https://github.com/Kikobeats/generator-git/commit/5d5397d))
 * updated bumped version ([72a39ab](https://github.com/Kikobeats/generator-git/commit/72a39ab))
 
