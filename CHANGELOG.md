@@ -1,6 +1,16 @@
+<a name="2.7.2"></a>
+## 2.7.2 (2015-11-21)
+
+
+* fix center header ([63a2704](https://github.com/Kikobeats/generator-git/commit/63a2704))
+
+
+
 <a name="2.7.1"></a>
 ## 2.7.1 (2015-11-21)
 
+
+* 2.7.1 releases ([481e3cc](https://github.com/Kikobeats/generator-git/commit/481e3cc))
 
 
 
