@@ -1,7 +1,14 @@
+<a name="2.7.1"></a>
+## 2.7.1 (2015-11-21)
+
+
+
+
 <a name="2.7.0"></a>
 # 2.7.0 (2015-11-21)
 
 
+* 2.7.0 releases ([6b44a8e](https://github.com/Kikobeats/generator-git/commit/6b44a8e))
 * improve CLI scaffold ([286e152](https://github.com/Kikobeats/generator-git/commit/286e152))
 
 
