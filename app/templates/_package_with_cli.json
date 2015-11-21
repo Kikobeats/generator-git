@@ -4,6 +4,9 @@
   "homepage": "https://github.com/<%= githubUser %>/<%= slugifyAppname %>",
   "version": "0.0.0",
   "main": "./index.js",
+  "bin": {
+    "<%= slugifyAppname %>": "cli.js"
+  },
   "author": {
     "email": "<%= email %>",
     "name": "<%= realname %>",
