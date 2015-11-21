@@ -1,7 +1,16 @@
+<a name="2.7.0"></a>
+# 2.7.0 (2015-11-21)
+
+
+* improve CLI scaffold ([286e152](https://github.com/Kikobeats/generator-git/commit/286e152))
+
+
+
 <a name="2.6.5"></a>
 ## 2.6.5 (2015-11-21)
 
 
+* 2.6.5 releases ([38b163f](https://github.com/Kikobeats/generator-git/commit/38b163f))
 * added bin key in the CLI version ([1b8e886](https://github.com/Kikobeats/generator-git/commit/1b8e886))
 
 
