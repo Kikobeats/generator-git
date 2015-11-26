@@ -1,7 +1,16 @@
+<a name="2.7.4"></a>
+## 2.7.4 (2015-11-26)
+
+
+* improved gulp build ([428dfa7](https://github.com/Kikobeats/generator-git/commit/428dfa7))
+
+
+
 <a name="2.7.3"></a>
 ## 2.7.3 (2015-11-25)
 
 
+* 2.7.3 releases ([460901f](https://github.com/Kikobeats/generator-git/commit/460901f))
 * updated ([a544e11](https://github.com/Kikobeats/generator-git/commit/a544e11))
 
 
