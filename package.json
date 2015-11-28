@@ -1,15 +1,28 @@
 {
   "name": "generator-git",
   "description": "Create the scaffolding for a new project.",
+  "homepage": "https://github.com/Kikobeats/generator-git",
   "version": "2.7.4",
+  "main": "app/index.js",
   "author": {
-    "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
     "url": "https://github.com/Kikobeats"
   },
+  "repository": "https://github.com/Kikobeats/generator-git",
   "bugs": {
     "url": "https://github.com/Kikobeats/generator-git/issues"
   },
+  "keywords": [
+    "generator",
+    "git",
+    "github",
+    "initialize",
+    "project",
+    "scaffold",
+    "yeoman",
+    "yeoman-generator"
+  ],
   "dependencies": {
     "chalk": "^1.0.0",
     "github": "^0.2.1",
@@ -29,23 +42,11 @@
   "files": [
     "app"
   ],
-  "homepage": "https://github.com/Kikobeats/generator-git",
-  "keywords": [
-    "generator",
-    "git",
-    "github",
-    "initialize",
-    "project",
-    "scaffold",
-    "yeoman"
-  ],
-  "license": "MIT",
-  "main": "app/index.js",
-  "peerDependencies": {
-    "yo": ">=1.0.0"
-  },
-  "repository": "https://github.com/Kikobeats/generator-git",
   "scripts": {
     "test": "mocha"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "yo": ">=1.0.0"
   }
 }
