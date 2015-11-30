@@ -6,9 +6,9 @@
   "main": "./dist/<%= kebabAppName %>.js",
   "authors": [
     {
-      "name": "<%= realname %>",
-      "email": "<%= email %>",
-      "homepage": "<%= githubUrl %>"
+      "email": "<%= userEmail %>",
+      "name": "<%= userName %>",
+      "url": "<%= userUrl %>"
     }
   ],
   "repository": "<%= userLogin %>/<%= kebabAppName %>",
