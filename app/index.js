@@ -234,7 +234,7 @@ module.exports = generators.Base.extend({
       _.assign(this.package, this.fs.readJSON(this.destinationPath('package/browser.json'), {}))
       this.readme += this.fs.read(this.templatePath('README/install/browser.md'))
       this.template('_bower.json', 'bower.json')
-      this.copy('_gulpfile.coffee', 'gulpfile.coffee')
+      this.bulkCopy('_gulpfile.coffee', 'gulpfile.coffee')
       this.mkdir('dist')
       this.template('dist/_index.html', 'dist/index.html')
       this.copy('bumped/browser', '.bumpedrc')
