@@ -142,6 +142,7 @@ module.exports = generators.Base.extend({
     }, {
       name: 'userLogin',
       message: 'Would you mind telling me your username on GitHub?',
+      default: 'someone'
     }, {
       name: 'cli',
       message: 'Do you need a CLI ?',
