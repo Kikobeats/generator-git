@@ -5,7 +5,7 @@
 [![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/generator-git.svg?style=flat-square)](https://david-dm.org/Kikobeats/generator-git#info=devDependencies)
 [![NPM Status](http://img.shields.io/npm/dm/generator-git.svg?style=flat-square)](https://www.npmjs.org/package/generator-git)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/kikobeats)
-> Create the basic scaffolding to start with a git proyect
+> Create the configurable scaffolding to start with a git-like project.
 
 The version **3.x** is a totally refactor focused in offer more options to choice each time that you need to setup a new project.
 

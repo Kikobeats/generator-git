@@ -1,6 +1,6 @@
 {
   "name": "generator-git",
-  "description": "Create the scaffolding for a new project.",
+  "description": "Create the configurable scaffolding to start with a git-like project.",
   "homepage": "https://github.com/Kikobeats/generator-git",
   "version": "2.7.4",
   "main": "app/index.js",
