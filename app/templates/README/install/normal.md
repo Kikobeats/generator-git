@@ -1,5 +1,5 @@
 ## Install
 
 ```bash
-npm install <%= kebabAppName %> --save
+npm install <%= appName %> --save
 ```

@@ -73,7 +73,6 @@ function capitalizeName (name) {
  * about project name
  *
  * - appName
- * - kebabAppName
  * - camelAppName
  * - appDescription
  *
@@ -104,16 +103,15 @@ module.exports = generators.Base.extend({
     askName({
       name: 'name',
       message: 'Your project name',
-      default: makeGeneratorName(path.basename(process.cwd())),
-      filter: makeGeneratorName,
+      default: _.kebabCase(path.basename(process.cwd())),
+      filter: _.kebabCase,
       validate: function (str) {
         return str.length > 0
       }
     }, this, function (name) {
       this.appName = name
-      this.kebabAppName = _.kebabCase(name)
       this.camelAppName = _.camelCase(name)
-      this.capitalizeName = capitalizeName(this.kebabAppName)
+      this.capitalizeName = capitalizeName(this.appName)
       cb()
     }.bind(this))
   },

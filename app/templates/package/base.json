@@ -1,7 +1,7 @@
 {
-  "name": "<%= kebabAppName %>",
+  "name": "<%= appName %>",
   "description": "<%= appDescription %>",
-  "homepage": "https://github.com/<%= userLogin %>/<%= kebabAppName %>",
+  "homepage": "https://github.com/<%= userLogin %>/<%= appName %>",
   "version": "0.0.0",
   "main": "./index.js",
   "author": {
@@ -9,9 +9,9 @@
     "name": "<%= userName %>",
     "url": "<%= userUrl %>"
   },
-  "repository": "<%= userLogin %>/<%= kebabAppName %>",
+  "repository": "<%= userLogin %>/<%= appName %>",
   "bugs": {
-    "url": "https://github.com/<%= userLogin %>/<%= kebabAppName %>/issues"
+    "url": "https://github.com/<%= userLogin %>/<%= appName %>/issues"
   },
   "keywords": [],
   "dependencies": {},
