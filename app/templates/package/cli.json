@@ -1,0 +1,10 @@
+{
+  "main": "./index.js",
+  "bin": {
+    "<%= kebabAppName %>": "./bin/index.js"
+  },
+  "dependencies": {
+    "meow": "latest",
+    "update-notifier": "latest"
+  }
+}

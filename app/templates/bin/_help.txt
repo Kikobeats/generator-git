@@ -1,8 +1,8 @@
-Usage: $ <%= appname %> <command> [options]
+Usage: $ <%= appName %> <command> [options]
 
 commands:
 
-init     Initializes a new .<%= appname %>rc file in the current directory.
+init     Initializes a new .<%= appName %>rc file in the current directory.
          Bumped detects configuration files as package.json or
          bower.json by default, but you can add files with 'add' as well.
 
@@ -17,11 +17,11 @@ release  Bumped a new version of your software, updating the
 
          You can do it specifying the version that you want to release:
 
-         $ <%= appname %> release 1.0.1
+         $ <%= appName %> release 1.0.1
 
          Or pecifying semver keyword:
 
-         $ <%= appname %> release <major|premajor|minor|preminor|patch|prepatch|prerelease>
+         $ <%= appName %> release <major|premajor|minor|preminor|patch|prepatch|prerelease>
 
 remove   Removes a file declared in the configuration file.
          The synchronized version is recalculated.
@@ -31,6 +31,6 @@ set      Set or update a determinate property across the files
 
          You can set Strings, Arrays or Objects:
 
-         $ <%= appname %> set name newName
-         $ <%= appname %> set keywords [ semver, management, cli ]
-         $ <%= appname %> set authors.name newAuthor
+         $ <%= appName %> set name newName
+         $ <%= appName %> set keywords [ semver, management, cli ]
+         $ <%= appName %> set authors.name newAuthor

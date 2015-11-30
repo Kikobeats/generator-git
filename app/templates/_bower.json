@@ -1,9 +1,9 @@
 {
-  "name": "<%= slugifyAppname %>",
+  "name": "<%= kebabAppName %>",
   "description": "<%= appDescription %>",
-  "homepage": "https://github.com/<%= githubUser %>/<%= slugifyAppname %>",
+  "homepage": "https://github.com/<%= userLogin %>/<%= kebabAppName %>",
   "version": "0.0.0",
-  "main": "./dist/<%= slugifyAppname %>.js",
+  "main": "./dist/<%= kebabAppName %>.js",
   "authors": [
     {
       "name": "<%= realname %>",
@@ -11,9 +11,9 @@
       "homepage": "<%= githubUrl %>"
     }
   ],
-  "repository": "<%= githubUser %>/<%= slugifyAppname %>",
+  "repository": "<%= userLogin %>/<%= kebabAppName %>",
   "bugs": {
-    "url": "https://github.com/<%= githubUser %>/<%= slugifyAppname %>/issues"
+    "url": "https://github.com/<%= userLogin %>/<%= kebabAppName %>/issues"
   },
   "keywords": [],
   "ignore": [

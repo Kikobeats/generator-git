@@ -7,17 +7,14 @@
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/kikobeats)
 > Create the basic scaffolding to start with a git proyect
 
-![](http://i.imgur.com/T2DgNL0.gif)
+The version **3.x** is a totally refactor focused in offer more options to choice each time that you need to setup a new project.
 
-Inspired in [sindresorhus](https://github.com/sindresorhus) and [mikermcneil](https://github.com/mikermcneil) style.
+## Choice between different:
 
-## What's new:
-
-- Setup `package.json` and `bower.json` fetching information from your Github account.
-- Setup testing scaffold and travis configuration.
-- Added common meta information for editor and linters.
-- Prepare the environment for start a NPM project using JavaScript/CoffeeScript.
-- Prepare a gulp task for compile the code for use in the browser using broserify.
+- Code styles (JSHint, JSCS, ESLint,...)
+- Software licenses (MIT, Apache,...)
+- Testing libraries (Mocha, should, tap,...)
+- Transpilers (CoffeeScript, TypeScript, Babel,...)
 
 ## Install
 
@@ -30,28 +27,6 @@ $ npm install -g generator-git
 ```bash
 $ yo git
 ```
-
-## Scaffolding
-
-### Basic
-
-* `.gitattributes`
-* `.gitignore`
-* `.travis.yml`
-* `.jshintrc`
-* `.editorconfig`
-* `package.json`
-* `LICENSE.md`
-* `README.md`
-
-### For Testing
-
-* `test/test.sh`
-* `test/test.coffee`
-
-## Additional
-
-Remember install [editorconfig](http://editorconfig.org/) in your favorite editor.
 
 ## License
 

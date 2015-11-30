@@ -1,3 +1,2 @@
-'use strict';
-require('coffee-script/register');
-module.exports = {};
+'use strict'
+module.exports = {}

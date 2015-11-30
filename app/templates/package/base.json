@@ -1,0 +1,30 @@
+{
+  "name": "<%= kebabAppName %>",
+  "description": "<%= appDescription %>",
+  "homepage": "https://github.com/<%= userLogin %>/<%= kebabAppName %>",
+  "version": "0.0.0",
+  "main": "./index.js",
+  "author": {
+    "email": "<%= userEmail %>",
+    "name": "<%= userName %>",
+    "url": "<%= userUrl %>"
+  },
+  "repository": "<%= userLogin %>/<%= kebabAppName %>",
+  "bugs": {
+    "url": "https://github.com/<%= userLogin %>/<%= kebabAppName %>/issues"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "latest",
+    "should": "latest"
+  },
+  "engines": {
+    "node": ">= 0.10.0",
+    "npm": ">= 1.4.0"
+  },
+  "scripts": {
+    "test": "sh test/test.sh"
+  },
+  "license": "MIT"
+}
