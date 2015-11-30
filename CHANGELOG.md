@@ -1,7 +1,19 @@
+<a name="3.0.1"></a>
+## 3.0.1 (2015-11-30)
+
+
+* fixed and deleted unnecessary code ([5cb8dc2](https://github.com/Kikobeats/generator-git/commit/5cb8dc2))
+* fixed gulp copy ([7ce54d0](https://github.com/Kikobeats/generator-git/commit/7ce54d0))
+* fixed references ([72cabc9](https://github.com/Kikobeats/generator-git/commit/72cabc9))
+* updated dep ([11bdf84](https://github.com/Kikobeats/generator-git/commit/11bdf84))
+
+
+
 <a name="3.0.0"></a>
 # 3.0.0 (2015-11-30)
 
 
+* 3.0.0 releases ([0170388](https://github.com/Kikobeats/generator-git/commit/0170388))
 * added default Github ([21ebb43](https://github.com/Kikobeats/generator-git/commit/21ebb43))
 * totally rewritten ([f1bc6ec](https://github.com/Kikobeats/generator-git/commit/f1bc6ec))
 * updated ([7f1907e](https://github.com/Kikobeats/generator-git/commit/7f1907e))
