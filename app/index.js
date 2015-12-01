@@ -53,12 +53,6 @@ function githubUserInfo (name, cb, log) {
   })
 }
 
-function makeGeneratorName (name) {
-  name = _.kebabCase(name)
-  name = name.indexOf('generator-') === 0 ? name : 'generator-' + name
-  return name
-}
-
 function capitalizeName (name) {
   return _.reduce(name.split('-'), function (acc, str, index) {
     var separator = index === 0 ? '' : ' '
