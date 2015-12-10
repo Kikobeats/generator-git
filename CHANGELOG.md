@@ -1,7 +1,16 @@
+<a name="3.0.6"></a>
+## 3.0.6 (2015-12-10)
+
+
+* Fix marge package.json in CLI/Browser mode ([d14a8ca](https://github.com/Kikobeats/generator-git/commit/d14a8ca))
+
+
+
 <a name="3.0.5"></a>
 ## 3.0.5 (2015-12-10)
 
 
+* 3.0.5 releases ([d179639](https://github.com/Kikobeats/generator-git/commit/d179639))
 * Remove coverage header by default ([d0df613](https://github.com/Kikobeats/generator-git/commit/d0df613))
 
 
