@@ -213,7 +213,7 @@ module.exports = generators.Base.extend({
     this.package = JSON.parse(this.package)
 
     if (this.cli) {
-      _.assign(this.package, this.fs.readJSON(this.destinationPath('package/cli.json'), {}))
+      _.merge(this.package, this.fs.readJSON(this.templatePath('package/cli.json'), {}))
       this.readme += this.fs.read(this.templatePath('README/install/cli.md'))
 
       this.template('bin/help.txt', 'bin/_help.txt')
@@ -223,7 +223,8 @@ module.exports = generators.Base.extend({
     }
 
     if (this.browser) {
-      _.assign(this.package, this.fs.readJSON(this.destinationPath('package/browser.json'), {}))
+      _.merge(this.package, this.fs.readJSON(this.templatePath('package/browser.json'), {}))
+
       this.readme += this.fs.read(this.templatePath('README/install/browser.md'))
       this.template('_bower.json', 'bower.json')
       this.bulkCopy('_gulpfile.coffee', 'gulpfile.coffee')
