@@ -1,3 +1,12 @@
+## Usage
+
+```js
+var <%= camelAppName %> = require('<%= appName %>');
+
+<%= camelAppName %>('do something');
+//=> return something
+```
+
 ## API
 
 ### <%= camelAppName %>(input, [options])
