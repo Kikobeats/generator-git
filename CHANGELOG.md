@@ -1,7 +1,17 @@
+<a name="3.0.4"></a>
+## 3.0.4 (2015-12-10)
+
+
+* Add usage into readme template ([9d46396](https://github.com/Kikobeats/generator-git/commit/9d46396))
+* Refactor cli code ([096cf10](https://github.com/Kikobeats/generator-git/commit/096cf10))
+
+
+
 <a name="3.0.3"></a>
 ## 3.0.3 (2015-12-02)
 
 
+* 3.0.3 releases ([dfb4e49](https://github.com/Kikobeats/generator-git/commit/dfb4e49))
 * fixed identation ([72b39a3](https://github.com/Kikobeats/generator-git/commit/72b39a3))
 
 
