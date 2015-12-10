@@ -1,7 +1,16 @@
+<a name="3.0.5"></a>
+## 3.0.5 (2015-12-10)
+
+
+* Remove coverage header by default ([d0df613](https://github.com/Kikobeats/generator-git/commit/d0df613))
+
+
+
 <a name="3.0.4"></a>
 ## 3.0.4 (2015-12-10)
 
 
+* 3.0.4 releases ([25688c6](https://github.com/Kikobeats/generator-git/commit/25688c6))
 * Add usage into readme template ([9d46396](https://github.com/Kikobeats/generator-git/commit/9d46396))
 * Refactor cli code ([096cf10](https://github.com/Kikobeats/generator-git/commit/096cf10))
 
