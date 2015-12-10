@@ -8,7 +8,6 @@
 
 ![Last version](https://img.shields.io/github/tag/<%= userLogin %>/<%= appName %>.svg?style=flat-square)
 [![Build Status](http://img.shields.io/travis/<%= userLogin %>/<%= appName %>/master.svg?style=flat-square)](https://travis-ci.org/<%= userLogin %>/<%= appName %>)
-[![Coverage Status](http://img.shields.io/coveralls/<%= userLogin %>/<%= appName %>/master.svg?style=flat-square)](https://coveralls.io/r/<%= userLogin %>/<%= appName %>?branch=master)
 [![Dependency status](http://img.shields.io/david/<%= userLogin %>/<%= appName %>.svg?style=flat-square)](https://david-dm.org/<%= userLogin %>/<%= appName %>)
 [![Dev Dependencies Status](http://img.shields.io/david/dev/<%= userLogin %>/<%= appName %>.svg?style=flat-square)](https://david-dm.org/<%= userLogin %>/<%= appName %>#info=devDependencies)
 [![NPM Status](http://img.shields.io/npm/dm/<%= appName %>.svg?style=flat-square)](https://www.npmjs.org/package/<%= appName %>)
@@ -17,4 +16,3 @@
 **NOTE:** more badges availables in [shields.io](http://shields.io/)
 
 > <%= appDescription %>
-
