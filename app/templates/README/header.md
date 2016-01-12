@@ -16,3 +16,4 @@
 **NOTE:** more badges availables in [shields.io](http://shields.io/)
 
 > <%= appDescription %>
+
