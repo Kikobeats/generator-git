@@ -1,0 +1,6 @@
+{
+  "clean": "rm -rf node_modules",
+  "commit": "git add CHANGELOG.md package.json && git commit -m \"$newVersion releases\"",
+  "pretest": "npm run lint",
+  "push": "git tag $newVersion && git push origin $newVersion --follow-tags"
+}

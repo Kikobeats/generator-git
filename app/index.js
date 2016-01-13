@@ -9,6 +9,12 @@ var finepack = require('finepack')
 var askName = require('inquirer-npm-name')
 var generators = require('yeoman-generator')
 
+var CONST = {
+  TRANSPILERS: ['coffee-script'],
+  STYLES: ['standard', 'jshint', 'jscs'],
+  TESTING: ['mocha', 'should', 'tap', 'tape']
+}
+
 var proxy = process.env.http_proxy || process.env.HTTP_PROXY ||
   process.env.https_proxy || process.env.HTTPS_PROXY || null
 
@@ -170,13 +176,14 @@ module.exports = generators.Base.extend({
     var cb = this.async()
 
     this.prompt([{
-      name: 'transpiler',
-      message: 'Transpiler',
-      choices: ['none', 'coffee-script'],
-      default: 'none',
-      type: 'list'
+      type: 'checkbox',
+      name: 'transpilers',
+      message: 'Select transpilers:',
+      choices: CONST.TRANSPILERS,
     }], function (props) {
-      this.transpiler = props.transpiler === 'none' ? null : props.transpiler
+      _.forEach(CONST.TRANSPILERS, function (choice) {
+        this[choice] = _.includes(props.transpilers, choice)
+      }.bind(this))
       cb()
     }.bind(this))
   },
@@ -186,13 +193,29 @@ module.exports = generators.Base.extend({
 
     this.prompt([{
       type: 'checkbox',
-      name: 'modules',
+      name: 'styles',
       message: 'Select the style:',
-      choices: [ 'JSHint', 'JSCS' ],
-      default: [ 'JSHint', 'JSCS' ]
-    }], function (styles) {
-      this.jshint = _.includes(styles, 'JSHint')
-      this.jscs = _.includes(styles, 'JSCS')
+      choices: CONST.STYLES
+    }], function (props) {
+      _.forEach(CONST.STYLES, function (choice) {
+        this[choice] = _.includes(props.styles, choice)
+      }.bind(this))
+      cb()
+    }.bind(this))
+  },
+
+  testing: function () {
+    var cb = this.async()
+
+    this.prompt([{
+      type: 'checkbox',
+      name: 'testing',
+      message: 'Select testing tools:',
+      choices: CONST.TESTING,
+    }], function (props) {
+      _.forEach(CONST.TESTING, function (choice) {
+        this[choice] = _.includes(props.testing, choice)
+      }.bind(this))
       cb()
     }.bind(this))
   },
@@ -205,9 +228,6 @@ module.exports = generators.Base.extend({
     this.copy('_npmrc', '.npmrc')
     this.copy('_travis.yml', '.travis.yml')
     this.template('_LICENSE.md', 'LICENSE.md')
-
-    this.copy('test/_test.sh', 'test/test.sh')
-    this.copy('test/_test.coffee', 'test/test.coffee')
 
     this.package = _.template(this.package)(this)
     this.package = JSON.parse(this.package)
@@ -235,21 +255,72 @@ module.exports = generators.Base.extend({
       this.copy('bumped/base', '.bumpedrc')
     }
 
+    /* STYLES */
+
+    var lintScript = ''
+
+    _.forEach(CONST.STYLES, function (style) {
+      if (this[style]) {
+        var script = style + ' lib'
+        this.package.devDependencies[style] = 'latest'
+        lintScript += lintScript === '' ? script : ' && ' + script
+      }
+    }.bind(this))
+
     if (this.jshint) this.copy('_jshintrc', '.jshintrc')
     if (this.jscs) this.copy('_jscsrc', '.jscsrc')
 
-    if (!this.transpiler || this.transpiler !== 'coffee-script')
+    /* SCRIPTS */
+
+    this.package.scripts = this.fs.readJSON(this.templatePath('package/scripts/base.json'))
+    if (this.browser)
+      _.merge(this.package.scripts, this.fs.readJSON(this.templatePath('package/scripts/browser.json'), {}))
+
+    this.package.scripts.lint = lintScript
+
+    /* TRANSPILERS */
+
+    _.forEach(CONST.TRANSPILERS, function (transpiler) {
+      if (this[transpiler])
+        this.package.dependencies[transpiler] = 'latest'
+    }.bind(this))
+
+    /* TESTING */
+
+    _.forEach(CONST.TESTING, function (testing) {
+      if (this[testing])
+        this.package.devDependencies[testing] = 'latest'
+    }.bind(this))
+
+    var testFile = 'test.sh'
+    var testScript = 'sh test/test.sh'
+
+    if (this.tape && !this.mocha) {
+      testFile = 'index.js'
+      testScript = 'tape test'
+    }
+
+    this.copy('test/_' + testFile, 'test/test.sh')
+    this.package.scripts.test = testScript
+
+    /* INDEX.JS */
+
+    var indexExtension = 'js'
+
+    if (!this['coffee-script'])
       this.package.devDependencies['coffee-script'] = 'latest'
     else
-      this.package.dependencies[this.transpiler] = 'latest'
+      indexExtension = 'coffee'
 
-    var indexExt = this.transpiler === 'coffee-script' ? 'coffee' : 'js'
+    this.copy('_index.' + indexExtension, 'index.js')
 
-    this.copy('_index.' + indexExt, 'index.js')
+    /* README */
 
     this.readme += this.fs.read(this.templatePath('README/body.md'))
     this.readme = _.template(this.readme)(this)
     this.fs.write(this.destinationPath('README.md'), this.readme)
+
+    /* LINTING */
 
     finepack(this.package, {
       validate: false,

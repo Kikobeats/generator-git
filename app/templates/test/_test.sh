@@ -24,6 +24,4 @@ run() {
 
 ## Main
 welcome && run \
-test/test.coffee
-
-
+test/index.js

@@ -16,9 +16,7 @@
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
-    "mocha": "latest",
-    "should": "latest",
-    "standard": "latest"
+    "git-dirty": "latest"
   },
   "engines": {
     "node": ">= 0.10.0",

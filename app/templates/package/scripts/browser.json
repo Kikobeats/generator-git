@@ -1,0 +1,3 @@
+{
+  "commit": "git add CHANGELOG.md bower.json package.json dist && git commit -m \"$newVersion releases\""
+}
