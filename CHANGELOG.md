@@ -1,7 +1,22 @@
+<a name="3.1.0"></a>
+# 3.1.0 (2016-01-13)
+
+
+* Add more options ([9cfac3b](https://github.com/Kikobeats/generator-git/commit/9cfac3b))
+* Add newline ([dcd0a76](https://github.com/Kikobeats/generator-git/commit/dcd0a76))
+* Fix dirty alias ([87c83e8](https://github.com/Kikobeats/generator-git/commit/87c83e8))
+* Little refactor ([8043f87](https://github.com/Kikobeats/generator-git/commit/8043f87))
+* Update prepublish script as bumped command ([a5e0edb](https://github.com/Kikobeats/generator-git/commit/a5e0edb))
+* Update scripts ([892291f](https://github.com/Kikobeats/generator-git/commit/892291f))
+* Update scripts ([3a3e91d](https://github.com/Kikobeats/generator-git/commit/3a3e91d))
+
+
+
 <a name="3.0.6"></a>
 ## 3.0.6 (2015-12-10)
 
 
+* 3.0.6 releases ([1c23da7](https://github.com/Kikobeats/generator-git/commit/1c23da7))
 * Fix marge package.json in CLI/Browser mode ([d14a8ca](https://github.com/Kikobeats/generator-git/commit/d14a8ca))
 
 
