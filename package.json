@@ -34,6 +34,10 @@
     "yeoman-generator": "latest",
     "yosay": "latest"
   },
+  "devDependencies": {
+    "git-dirty": "latest",
+    "standard": "latest"
+  },
   "engines": {
     "node": ">=0.10.0"
   },
@@ -41,7 +45,11 @@
     "app"
   ],
   "scripts": {
-    "test": "mocha"
+    "clean": "rm -rf node_modules",
+    "commit": "git add CHANGELOG.md package.json && git commit -m \"$newVersion releases\"",
+    "lint": "standard app",
+    "pretest": "npm run lint",
+    "push": "git tag $newVersion && git push origin $newVersion --follow-tags"
   },
   "license": "MIT",
   "peerDependencies": {
