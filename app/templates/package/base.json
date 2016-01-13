@@ -24,14 +24,5 @@
     "node": ">= 0.10.0",
     "npm": ">= 1.4.0"
   },
-  "scripts": {
-    "clean": "rm -rf node_modules",
-    "commit": "git add CHANGELOG.md bower.json package.json dist && git commit -m \"$newVersion releases\"",
-    "lint": "standard lib",
-    "prepublish": "git-dirty && npm run clean && npm install && npm test",
-    "pretest": "npm run lint",
-    "push": "git tag $newVersion && git push origin $newVersion --follow-tags",
-    "test": " && sh test/test.sh"
-  },
   "license": "MIT"
 }
