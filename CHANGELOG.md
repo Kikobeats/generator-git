@@ -1,7 +1,17 @@
+<a name="3.1.1"></a>
+## 3.1.1 (2016-01-14)
+
+
+* Fix bumped config ([5a48b1a](https://github.com/Kikobeats/generator-git/commit/5a48b1a))
+* Update bumped config ([5a60cca](https://github.com/Kikobeats/generator-git/commit/5a60cca))
+
+
+
 <a name="3.1.0"></a>
 # 3.1.0 (2016-01-13)
 
 
+* 3.1.0 releases ([e52fd50](https://github.com/Kikobeats/generator-git/commit/e52fd50))
 * Add more options ([9cfac3b](https://github.com/Kikobeats/generator-git/commit/9cfac3b))
 * Add newline ([dcd0a76](https://github.com/Kikobeats/generator-git/commit/dcd0a76))
 * Fix dirty alias ([87c83e8](https://github.com/Kikobeats/generator-git/commit/87c83e8))
