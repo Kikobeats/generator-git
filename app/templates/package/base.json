@@ -22,5 +22,9 @@
     "node": ">= 0.10.0",
     "npm": ">= 1.4.0"
   },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "pretest": "npm run lint"
+  },
   "license": "MIT"
 }

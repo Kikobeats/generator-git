@@ -272,10 +272,6 @@ module.exports = generators.Base.extend({
 
     /* SCRIPTS */
 
-    this.package.scripts = this.fs.readJSON(this.templatePath('package/scripts/base.json'))
-    if (this.browser)
-      _.merge(this.package.scripts, this.fs.readJSON(this.templatePath('package/scripts/browser.json'), {}))
-
     this.package.scripts.lint = lintScript
 
     /* TRANSPILERS */
