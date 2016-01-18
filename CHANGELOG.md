@@ -1,7 +1,17 @@
+<a name="3.2.1"></a>
+## 3.2.1 (2016-01-18)
+
+
+* Update ([d0c739b](https://github.com/Kikobeats/generator-git/commit/d0c739b))
+* Update ([b0f3681](https://github.com/Kikobeats/generator-git/commit/b0f3681))
+
+
+
 <a name="3.2.0"></a>
 # 3.2.0 (2016-01-18)
 
 
+* 3.2.0 releases ([3bcaed4](https://github.com/Kikobeats/generator-git/commit/3bcaed4))
 * Fetch last version of the packages ([e36b035](https://github.com/Kikobeats/generator-git/commit/e36b035))
 * lock dependencies ([246f6e3](https://github.com/Kikobeats/generator-git/commit/246f6e3))
 * Remove unnecessary ([f06b539](https://github.com/Kikobeats/generator-git/commit/f06b539))
