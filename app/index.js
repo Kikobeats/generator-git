@@ -8,6 +8,32 @@ var mkdirp = require('mkdirp')
 var finepack = require('finepack')
 var askName = require('inquirer-npm-name')
 var generators = require('yeoman-generator')
+var latestVersion = require('latest-version')
+
+function setupDependenciesVersions (pkg) {
+  function fetchVersions (dependencies) {
+    return Promise.all(dependencies.map(function (dependency) {
+      return latestVersion(dependency)
+    }, []))
+  }
+
+  function updatePkg (namespace, versions) {
+    Object.keys(pkg[namespace]).forEach(function (dep, index) {
+      pkg[namespace][dep] = '~' + versions[index]
+    })
+  }
+
+  var promise = Promise.all(['dependencies', 'devDependencies'].map(function (dep) {
+    var pkgs = Object.keys(pkg[dep])
+    return fetchVersions(pkgs).then(function (versions) {
+      updatePkg(dep, versions)
+    })
+  }))
+
+  return promise.then(function () {
+    return Promise.resolve(pkg)
+  })
+}
 
 var CONST = {
   TRANSPILERS: ['coffee-script'],
@@ -179,7 +205,7 @@ module.exports = generators.Base.extend({
       type: 'checkbox',
       name: 'transpilers',
       message: 'Select transpilers:',
-      choices: CONST.TRANSPILERS,
+      choices: CONST.TRANSPILERS
     }], function (props) {
       _.forEach(CONST.TRANSPILERS, function (choice) {
         this[choice] = _.includes(props.transpilers, choice)
@@ -315,14 +341,28 @@ module.exports = generators.Base.extend({
     this.readme += this.fs.read(this.templatePath('README/body.md'))
     this.readme = _.template(this.readme)(this)
     this.fs.write(this.destinationPath('README.md'), this.readme)
+  },
 
-    /* LINTING */
+  dependenciesVersion: function () {
+    var cb = this.async()
+    var _this = this
+
+    setupDependenciesVersions(this.package).then(function (newPkg) {
+      console.log(newPkg)
+      _this.package = newPkg
+      cb()
+    })
+  },
+
+  write: function () {
+    var cb = this.async()
 
     finepack(this.package, {
       validate: false,
       color: false
     }, function (err, packageFormated) {
       this.fs.writeJSON(this.destinationPath('package.json'), packageFormated)
+      cb()
     }.bind(this))
   },
 
