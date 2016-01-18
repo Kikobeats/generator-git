@@ -1,7 +1,16 @@
+<a name="3.2.2"></a>
+## 3.2.2 (2016-01-18)
+
+
+* Fix missing breakline ([79ef30c](https://github.com/Kikobeats/generator-git/commit/79ef30c))
+
+
+
 <a name="3.2.1"></a>
 ## 3.2.1 (2016-01-18)
 
 
+* 3.2.1 releases ([7de75fe](https://github.com/Kikobeats/generator-git/commit/7de75fe))
 * Update ([d0c739b](https://github.com/Kikobeats/generator-git/commit/d0c739b))
 * Update ([b0f3681](https://github.com/Kikobeats/generator-git/commit/b0f3681))
 
