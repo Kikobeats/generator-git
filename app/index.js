@@ -314,15 +314,8 @@ module.exports = generators.Base.extend({
         this.package.devDependencies[testing] = 'latest'
     }.bind(this))
 
-    var testFile = 'test.sh'
-    var testScript = 'sh test/test.sh'
-
-    if (this.tape && !this.mocha) {
-      testFile = 'index.js'
-      testScript = 'tape test'
-    }
-
-    this.copy('test/_' + testFile, 'test/test.sh')
+    var testScript = 'mocha'
+    if (this.tape && !this.mocha) testScript = 'tape'
     this.package.scripts.test = testScript
 
     /* INDEX.JS */

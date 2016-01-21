@@ -23,7 +23,9 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules",
-    "pretest": "npm run lint"
+    "lint": "",
+    "pretest": "npm run lint",
+    "test": "mocha"
   },
   "license": "MIT"
 }
