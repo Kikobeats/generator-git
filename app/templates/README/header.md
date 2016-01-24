@@ -1,4 +1,4 @@
-# <%= capitalizeName %>
+# <%= appName %>
 
 <p align="center">
   <br>
