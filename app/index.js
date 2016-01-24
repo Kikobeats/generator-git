@@ -341,7 +341,6 @@ module.exports = generators.Base.extend({
     var _this = this
 
     setupDependenciesVersions(this.package).then(function (newPkg) {
-      console.log(newPkg)
       _this.package = newPkg
       cb()
     })
