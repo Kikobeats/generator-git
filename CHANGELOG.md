@@ -1,7 +1,17 @@
+<a name="3.2.3"></a>
+## 3.2.3 (2016-01-24)
+
+
+* Fix git push on .bumpedrc ([3e17350](https://github.com/Kikobeats/generator-git/commit/3e17350))
+* Make testing workflow more simple ([e3d565f](https://github.com/Kikobeats/generator-git/commit/e3d565f))
+
+
+
 <a name="3.2.2"></a>
 ## 3.2.2 (2016-01-18)
 
 
+* 3.2.2 releases ([58dfba8](https://github.com/Kikobeats/generator-git/commit/58dfba8))
 * Fix missing breakline ([79ef30c](https://github.com/Kikobeats/generator-git/commit/79ef30c))
 
 
