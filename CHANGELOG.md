@@ -1,8 +1,19 @@
+<a name="3.2.6"></a>
+## 3.2.6 (2016-01-24)
+
+
+* Adjust ([227a4f3](https://github.com/Kikobeats/generator-git/commit/227a4f3))
+* Fix prebuild step ([f3188ba](https://github.com/Kikobeats/generator-git/commit/f3188ba))
+* Remove console.log debug :P ([16ea3ff](https://github.com/Kikobeats/generator-git/commit/16ea3ff))
+
+
+
 <a name="3.2.5"></a>
 ## 3.2.5 (2016-01-24)
 
 
 * Fix bumped git push ([a25b22d](https://github.com/Kikobeats/generator-git/commit/a25b22d))
+* Release 3.2.5 ([b786de4](https://github.com/Kikobeats/generator-git/commit/b786de4))
 
 
 
