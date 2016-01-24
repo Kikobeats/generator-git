@@ -1,6 +1,16 @@
+<a name="3.2.5"></a>
+## 3.2.5 (2016-01-24)
+
+
+* Fix bumped git push ([a25b22d](https://github.com/Kikobeats/generator-git/commit/a25b22d))
+
+
+
 <a name="3.2.4"></a>
 ## 3.2.4 (2016-01-24)
 
+
+* Release 3.2.4 ([6c3a0af](https://github.com/Kikobeats/generator-git/commit/6c3a0af))
 
 
 
