@@ -20,7 +20,7 @@ plugins:
 
     'Detecting problems before publish':
       plugin: 'bumped-terminal'
-      command: 'git-dirty'
+      command: 'git-dirty && npm test'
 
     'Publishing tag at Github':
       plugin: 'bumped-terminal'
