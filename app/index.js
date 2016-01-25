@@ -262,8 +262,8 @@ module.exports = generators.Base.extend({
       _.merge(this.package, this.fs.readJSON(this.templatePath('package/cli.json'), {}))
       this.readme += this.fs.read(this.templatePath('README/install/cli.md'))
 
-      this.template('bin/help.txt', 'bin/_help.txt')
-      this.copy('bin/index.js', 'bin/_index.js')
+      this.template('bin/_help.txt', 'bin/help.txt')
+      this.copy('bin/_index.js', 'bin/index.js')
     } else {
       this.readme += this.fs.read(this.templatePath('README/install/normal.md'))
     }
