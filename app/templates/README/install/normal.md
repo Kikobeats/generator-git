@@ -1,5 +1,5 @@
 ## Install
 
 ```bash
-npm install <%= appName %> --save
+$ npm install <%= appName %> --save
 ```

@@ -1,5 +1,5 @@
 ## Install
 
 ```bash
-npm install <%= appName %> -g
+$ npm install <%= appName %> --global
 ```
