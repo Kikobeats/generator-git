@@ -1,8 +1,17 @@
+<a name="3.2.9"></a>
+## 3.2.9 (2016-01-25)
+
+
+* better cli help ([eba28ca](https://github.com/Kikobeats/generator-git/commit/eba28ca))
+
+
+
 <a name="3.2.8"></a>
 ## 3.2.8 (2016-01-25)
 
 
 * Node version 4 as minimum version ([bf470d4](https://github.com/Kikobeats/generator-git/commit/bf470d4))
+* Release 3.2.8 ([dac0312](https://github.com/Kikobeats/generator-git/commit/dac0312))
 
 
 
