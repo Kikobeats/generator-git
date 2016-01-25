@@ -1,14 +1,14 @@
 'use strict'
 
-var _ = require('lodash')
-var path = require('path')
-var yosay = require('yosay')
-var superb = require('superb')
-var mkdirp = require('mkdirp')
-var finepack = require('finepack')
-var askName = require('inquirer-npm-name')
-var generators = require('yeoman-generator')
-var latestVersion = require('latest-version')
+const _ = require('lodash')
+const path = require('path')
+const yosay = require('yosay')
+const superb = require('superb')
+const mkdirp = require('mkdirp')
+const finepack = require('finepack')
+const askName = require('inquirer-npm-name')
+const generators = require('yeoman-generator')
+const latestVersion = require('latest-version')
 
 function setupDependenciesVersions (pkg) {
   function fetchVersions (dependencies) {
@@ -23,8 +23,8 @@ function setupDependenciesVersions (pkg) {
     })
   }
 
-  var promise = Promise.all(['dependencies', 'devDependencies'].map(function (dep) {
-    var pkgs = Object.keys(pkg[dep])
+  let promise = Promise.all(['dependencies', 'devDependencies'].map(function (dep) {
+    let pkgs = Object.keys(pkg[dep])
     return fetchVersions(pkgs).then(function (versions) {
       updatePkg(dep, versions)
     })
@@ -35,29 +35,29 @@ function setupDependenciesVersions (pkg) {
   })
 }
 
-var CONST = {
+let CONST = {
   TRANSPILERS: ['coffee-script'],
   STYLES: ['standard', 'jshint', 'jscs'],
   TESTING: ['mocha', 'should', 'tap', 'tape']
 }
 
-var proxy = process.env.http_proxy || process.env.HTTP_PROXY ||
+let proxy = process.env.http_proxy || process.env.HTTP_PROXY ||
   process.env.https_proxy || process.env.HTTPS_PROXY || null
 
-var githubOptions = {
+let githubOptions = {
   version: '3.0.0'
 }
 
 if (proxy) {
-  var proxyUrl = url.parse(proxy)
+  let proxyUrl = url.parse(proxy)
   githubOptions.proxy = {
     host: proxyUrl.hostname,
     port: proxyUrl.port
   }
 }
 
-var GitHubApi = require('github')
-var github = new GitHubApi(githubOptions)
+let GitHubApi = require('github')
+let github = new GitHubApi(githubOptions)
 
 if (process.env.GITHUB_TOKEN) {
   github.authenticate({
@@ -67,7 +67,7 @@ if (process.env.GITHUB_TOKEN) {
 }
 
 function githubUserInfo (name, cb, log) {
-  var emptyGithubRes = {
+  let emptyGithubRes = {
     name: '',
     email: '',
     html_url: ''
@@ -87,7 +87,7 @@ function githubUserInfo (name, cb, log) {
 
 function capitalizeName (name) {
   return _.reduce(name.split('-'), function (acc, str, index) {
-    var separator = index === 0 ? '' : ' '
+    let separator = index === 0 ? '' : ' '
     return acc + separator + _.capitalize(str)
   }, '')
 }
@@ -125,7 +125,7 @@ module.exports = generators.Base.extend({
 
   projectName: function () {
     this.log(yosay('Initializing ' + superb() + ' Project'))
-    var cb = this.async()
+    let cb = this.async()
     askName({
       name: 'name',
       message: 'Your project name',
@@ -157,7 +157,7 @@ module.exports = generators.Base.extend({
   },
 
   questions: function () {
-    var cb = this.async()
+    let cb = this.async()
 
     this.prompt([{
       name: 'appDescription',
@@ -187,7 +187,7 @@ module.exports = generators.Base.extend({
   },
 
   userInfo: function () {
-    var done = this.async()
+    let done = this.async()
 
     githubUserInfo(this.userLogin, function (res) {
       this.userName = res.name
@@ -199,7 +199,7 @@ module.exports = generators.Base.extend({
   },
 
   transpilers: function () {
-    var cb = this.async()
+    let cb = this.async()
 
     this.prompt([{
       type: 'checkbox',
@@ -215,7 +215,7 @@ module.exports = generators.Base.extend({
   },
 
   style: function () {
-    var cb = this.async()
+    let cb = this.async()
 
     this.prompt([{
       type: 'checkbox',
@@ -231,7 +231,7 @@ module.exports = generators.Base.extend({
   },
 
   testing: function () {
-    var cb = this.async()
+    let cb = this.async()
 
     this.prompt([{
       type: 'checkbox',
@@ -259,7 +259,11 @@ module.exports = generators.Base.extend({
     this.package = JSON.parse(this.package)
 
     if (this.cli) {
-      _.merge(this.package, this.fs.readJSON(this.templatePath('package/cli.json'), {}))
+      let cliPackage = this.fs.read(this.templatePath('package/cli.json'))
+      cliPackage = _.template(cliPackage)(this)
+      cliPackage = JSON.parse(cliPackage)
+
+      _.merge(this.package, cliPackage, {})
       this.readme += this.fs.read(this.templatePath('README/install/cli.md'))
 
       this.template('bin/_help.txt', 'bin/help.txt')
@@ -283,11 +287,11 @@ module.exports = generators.Base.extend({
 
     /* STYLES */
 
-    var lintScript = ''
+    let lintScript = ''
 
     _.forEach(CONST.STYLES, function (style) {
       if (this[style]) {
-        var script = style + ' lib'
+        let script = style + ' lib'
         this.package.devDependencies[style] = 'latest'
         lintScript += lintScript === '' ? script : ' && ' + script
       }
@@ -314,13 +318,13 @@ module.exports = generators.Base.extend({
         this.package.devDependencies[testing] = 'latest'
     }.bind(this))
 
-    var testScript = 'mocha'
+    let testScript = 'mocha'
     if (this.tape && !this.mocha) testScript = 'tape'
     this.package.scripts.test = testScript
 
     /* INDEX.JS */
 
-    var indexExtension = 'js'
+    let indexExtension = 'js'
 
     if (!this['coffee-script'])
       this.package.devDependencies['coffee-script'] = 'latest'
@@ -337,8 +341,8 @@ module.exports = generators.Base.extend({
   },
 
   dependenciesVersion: function () {
-    var cb = this.async()
-    var _this = this
+    let cb = this.async()
+    let _this = this
 
     setupDependenciesVersions(this.package).then(function (newPkg) {
       _this.package = newPkg
@@ -347,7 +351,7 @@ module.exports = generators.Base.extend({
   },
 
   write: function () {
-    var cb = this.async()
+    let cb = this.async()
 
     finepack(this.package, {
       validate: false,
