@@ -1,8 +1,17 @@
+<a name="3.2.8"></a>
+## 3.2.8 (2016-01-25)
+
+
+* Node version 4 as minimum version ([bf470d4](https://github.com/Kikobeats/generator-git/commit/bf470d4))
+
+
+
 <a name="3.2.7"></a>
 ## 3.2.7 (2016-01-25)
 
 
 * Fix CLI options ([8c652e9](https://github.com/Kikobeats/generator-git/commit/8c652e9))
+* Release 3.2.7 ([7d52f50](https://github.com/Kikobeats/generator-git/commit/7d52f50))
 
 
 
