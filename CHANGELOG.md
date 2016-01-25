@@ -1,9 +1,18 @@
+<a name="3.2.7"></a>
+## 3.2.7 (2016-01-25)
+
+
+* Fix CLI options ([8c652e9](https://github.com/Kikobeats/generator-git/commit/8c652e9))
+
+
+
 <a name="3.2.6"></a>
 ## 3.2.6 (2016-01-24)
 
 
 * Adjust ([227a4f3](https://github.com/Kikobeats/generator-git/commit/227a4f3))
 * Fix prebuild step ([f3188ba](https://github.com/Kikobeats/generator-git/commit/f3188ba))
+* Release 3.2.6 ([f3c0507](https://github.com/Kikobeats/generator-git/commit/f3c0507))
 * Remove console.log debug :P ([16ea3ff](https://github.com/Kikobeats/generator-git/commit/16ea3ff))
 
 
