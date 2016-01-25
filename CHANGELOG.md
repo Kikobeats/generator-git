@@ -1,8 +1,17 @@
+<a name="3.2.10"></a>
+## 3.2.10 (2016-01-25)
+
+
+* be explicit about permissions and flags ([d5bc437](https://github.com/Kikobeats/generator-git/commit/d5bc437))
+
+
+
 <a name="3.2.9"></a>
 ## 3.2.9 (2016-01-25)
 
 
 * better cli help ([eba28ca](https://github.com/Kikobeats/generator-git/commit/eba28ca))
+* Release 3.2.9 ([d4e62fd](https://github.com/Kikobeats/generator-git/commit/d4e62fd))
 
 
 
