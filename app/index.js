@@ -23,7 +23,7 @@ function setupDependenciesVersions (pkg) {
     })
   }
 
-  let promise = Promise.all(['dependencies', 'devDependencies'].map(function (dep) {
+  let promise = Promise.all(['dependencies'].map(function (dep) {
     let pkgs = Object.keys(pkg[dep])
     return fetchVersions(pkgs).then(function (versions) {
       updatePkg(dep, versions)
@@ -307,15 +307,13 @@ module.exports = generators.Base.extend({
     /* TRANSPILERS */
 
     _.forEach(CONST.TRANSPILERS, function (transpiler) {
-      if (this[transpiler])
-        this.package.dependencies[transpiler] = 'latest'
+      if (this[transpiler]) this.package.dependencies[transpiler] = 'latest'
     }.bind(this))
 
     /* TESTING */
 
     _.forEach(CONST.TESTING, function (testing) {
-      if (this[testing])
-        this.package.devDependencies[testing] = 'latest'
+      if (this[testing]) this.package.devDependencies[testing] = 'latest'
     }.bind(this))
 
     let testScript = 'mocha'
