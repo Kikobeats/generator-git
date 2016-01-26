@@ -1,8 +1,17 @@
+<a name="3.2.11"></a>
+## 3.2.11 (2016-01-26)
+
+
+* latest version for devDependencies ([200836c](https://github.com/Kikobeats/generator-git/commit/200836c))
+
+
+
 <a name="3.2.10"></a>
 ## 3.2.10 (2016-01-25)
 
 
 * be explicit about permissions and flags ([d5bc437](https://github.com/Kikobeats/generator-git/commit/d5bc437))
+* Release 3.2.10 ([00ee7f3](https://github.com/Kikobeats/generator-git/commit/00ee7f3))
 
 
 
