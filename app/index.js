@@ -237,7 +237,7 @@ module.exports = generators.Base.extend({
       type: 'checkbox',
       name: 'testing',
       message: 'Select testing tools:',
-      choices: CONST.TESTING,
+      choices: CONST.TESTING
     }], function (props) {
       _.forEach(CONST.TESTING, function (choice) {
         this[choice] = _.includes(props.testing, choice)
@@ -317,6 +317,7 @@ module.exports = generators.Base.extend({
     }.bind(this))
 
     let testScript = 'mocha'
+    if (this.mocha) this.copy('test/_mocha.opts', 'test/mocha.opts')
     if (this.tape && !this.mocha) testScript = 'tape'
     this.package.scripts.test = testScript
 
