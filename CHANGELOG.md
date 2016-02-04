@@ -1,8 +1,28 @@
+<a name="3.2.12"></a>
+## 3.2.12 (2016-02-04)
+
+
+### chore
+
+* chore(package): update finepack to version 2.2.2 ([1ebaaa6](https://github.com/Kikobeats/generator-git/commit/1ebaaa6))
+* chore(package): update lodash to version 4.1.0 ([177f249](https://github.com/Kikobeats/generator-git/commit/177f249))
+* chore(package): update lodash to version 4.2.0 ([7eced19](https://github.com/Kikobeats/generator-git/commit/7eced19))
+* chore(package): update yeoman-generator to version 0.22.5 ([117ea8d](https://github.com/Kikobeats/generator-git/commit/117ea8d))
+
+* fix test scaffold ([0663b8f](https://github.com/Kikobeats/generator-git/commit/0663b8f))
+* Merge pull request #2 from Kikobeats/greenkeeper-yeoman-generator-0.22.5 ([f7e3778](https://github.com/Kikobeats/generator-git/commit/f7e3778))
+* Merge pull request #3 from Kikobeats/greenkeeper-lodash-4.1.0 ([1336f13](https://github.com/Kikobeats/generator-git/commit/1336f13))
+* Merge pull request #4 from Kikobeats/greenkeeper-lodash-4.2.0 ([06caaca](https://github.com/Kikobeats/generator-git/commit/06caaca))
+* Merge pull request #5 from Kikobeats/greenkeeper-finepack-2.2.2 ([5dfa49b](https://github.com/Kikobeats/generator-git/commit/5dfa49b))
+
+
+
 <a name="3.2.11"></a>
 ## 3.2.11 (2016-01-26)
 
 
 * latest version for devDependencies ([200836c](https://github.com/Kikobeats/generator-git/commit/200836c))
+* Release 3.2.11 ([a7113a2](https://github.com/Kikobeats/generator-git/commit/a7113a2))
 
 
 

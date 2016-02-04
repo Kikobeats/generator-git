@@ -2,14 +2,17 @@
   "name": "generator-git",
   "description": "Create the configurable scaffolding to start with a git-like project.",
   "homepage": "https://github.com/Kikobeats/generator-git",
-  "version": "3.2.11",
+  "version": "3.2.12",
   "main": "app/index.js",
   "author": {
-    "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
     "url": "https://github.com/Kikobeats"
   },
-  "repository": "https://github.com/Kikobeats/generator-git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kikobeats/generator-git.git"
+  },
   "bugs": {
     "url": "https://github.com/Kikobeats/generator-git/issues"
   },
