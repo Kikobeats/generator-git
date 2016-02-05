@@ -3,3 +3,4 @@
 ```bash
 $ npm install <%= appName %> --save
 ```
+
