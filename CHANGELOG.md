@@ -1,3 +1,11 @@
+<a name="3.2.13"></a>
+## 3.2.13 (2016-02-05)
+
+
+* Add missing newline ([15e34a9](https://github.com/Kikobeats/generator-git/commit/15e34a9))
+
+
+
 <a name="3.2.12"></a>
 ## 3.2.12 (2016-02-04)
 
@@ -14,6 +22,7 @@
 * Merge pull request #3 from Kikobeats/greenkeeper-lodash-4.1.0 ([1336f13](https://github.com/Kikobeats/generator-git/commit/1336f13))
 * Merge pull request #4 from Kikobeats/greenkeeper-lodash-4.2.0 ([06caaca](https://github.com/Kikobeats/generator-git/commit/06caaca))
 * Merge pull request #5 from Kikobeats/greenkeeper-finepack-2.2.2 ([5dfa49b](https://github.com/Kikobeats/generator-git/commit/5dfa49b))
+* Release 3.2.12 ([ea938e9](https://github.com/Kikobeats/generator-git/commit/ea938e9))
 
 
 
