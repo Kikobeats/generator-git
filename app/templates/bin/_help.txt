@@ -1,7 +1,4 @@
 Usage
-  $ <%= appName %> <command> [options]
-
-Usage
   $ <%= appName %> <command>[options]
 
 Commands

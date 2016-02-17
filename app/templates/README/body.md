@@ -1,10 +1,9 @@
-
 ## Usage
 
 ```js
-var <%= camelAppName %> = require('<%= appName %>');
+const <%= camelAppName %> = require('<%= appName %>')
 
-<%= camelAppName %>('do something');
+<%= camelAppName %>('do something')
 //=> return something
 ```
 
