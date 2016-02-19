@@ -1,3 +1,11 @@
+<a name="3.2.16"></a>
+## 3.2.16 (2016-02-19)
+
+
+* improve cli ([b55ccab](https://github.com/Kikobeats/generator-git/commit/b55ccab))
+
+
+
 <a name="3.2.15"></a>
 ## 3.2.15 (2016-02-17)
 
@@ -10,6 +18,7 @@
 * Merge pull request #10 from Kikobeats/greenkeeper-lodash-4.5.0 ([55b7b70](https://github.com/Kikobeats/generator-git/commit/55b7b70))
 * Merge pull request #9 from Kikobeats/greenkeeper-lodash-4.4.0 ([6fd37b4](https://github.com/Kikobeats/generator-git/commit/6fd37b4))
 * node 4 style ([0eec348](https://github.com/Kikobeats/generator-git/commit/0eec348))
+* Release 3.2.15 ([73d0359](https://github.com/Kikobeats/generator-git/commit/73d0359))
 
 
 
