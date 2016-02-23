@@ -1,8 +1,22 @@
+<a name="3.2.17"></a>
+## 3.2.17 (2016-02-23)
+
+
+### chore
+
+* chore(package): update lodash to version 4.5.1 ([e013a3e](https://github.com/Kikobeats/generator-git/commit/e013a3e))
+
+* avoid clean and install ([9ebc6f3](https://github.com/Kikobeats/generator-git/commit/9ebc6f3))
+* Merge pull request #11 from Kikobeats/greenkeeper-lodash-4.5.1 ([bb4d560](https://github.com/Kikobeats/generator-git/commit/bb4d560))
+
+
+
 <a name="3.2.16"></a>
 ## 3.2.16 (2016-02-19)
 
 
 * improve cli ([b55ccab](https://github.com/Kikobeats/generator-git/commit/b55ccab))
+* Release 3.2.16 ([1adc807](https://github.com/Kikobeats/generator-git/commit/1adc807))
 
 
 
