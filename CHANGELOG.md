@@ -1,3 +1,15 @@
+<a name="3.2.18"></a>
+## 3.2.18 (2016-04-02)
+
+* Add sublime metadata into git ignore ([423f7df](https://github.com/Kikobeats/generator-git/commit/423f7df))
+* chore(package): update chalk to version 1.1.2 ([b3c15ee](https://github.com/Kikobeats/generator-git/commit/b3c15ee))
+* chore(package): update lodash to version 4.6.0 ([048d9c1](https://github.com/Kikobeats/generator-git/commit/048d9c1))
+* chore(package): update lodash to version 4.6.1 ([b8813ff](https://github.com/Kikobeats/generator-git/commit/b8813ff))
+* chore(package): update lodash to version 4.7.0 ([29f74ab](https://github.com/Kikobeats/generator-git/commit/29f74ab))
+* chore(package): update yo to version 1.7.0 ([e35d38d](https://github.com/Kikobeats/generator-git/commit/e35d38d))
+
+
+
 <a name="3.2.17"></a>
 ## 3.2.17 (2016-02-23)
 
