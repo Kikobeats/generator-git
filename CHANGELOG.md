@@ -1,3 +1,18 @@
+<a name="3.2.19"></a>
+## 3.2.19 (2016-04-16)
+
+* Use HTTPS ([348e1ea](https://github.com/Kikobeats/generator-git/commit/348e1ea))
+* chore(package): update lodash to version 4.10.0 ([6437224](https://github.com/Kikobeats/generator-git/commit/6437224))
+* chore(package): update lodash to version 4.11.0 ([d4ed363](https://github.com/Kikobeats/generator-git/commit/d4ed363))
+* chore(package): update lodash to version 4.11.1 ([fd21654](https://github.com/Kikobeats/generator-git/commit/fd21654))
+* chore(package): update lodash to version 4.8.0 ([14b5798](https://github.com/Kikobeats/generator-git/commit/14b5798))
+* chore(package): update lodash to version 4.8.1 ([755a269](https://github.com/Kikobeats/generator-git/commit/755a269))
+* chore(package): update lodash to version 4.8.2 ([226da6c](https://github.com/Kikobeats/generator-git/commit/226da6c))
+* chore(package): update lodash to version 4.9.0 ([f33095a](https://github.com/Kikobeats/generator-git/commit/f33095a))
+* chore(package): update yosay to version 1.1.1 ([1b3b0bb](https://github.com/Kikobeats/generator-git/commit/1b3b0bb))
+
+
+
 <a name="3.2.18"></a>
 ## 3.2.18 (2016-04-02)
 
