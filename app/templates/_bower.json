@@ -3,7 +3,7 @@
   "description": "<%= appDescription %>",
   "homepage": "https://github.com/<%= userLogin %>/<%= appName %>",
   "version": "0.0.0",
-  "main": "./dist/<%= appName %>.js",
+  "main": "dist/<%= appName %>.js",
   "authors": [
     {
       "email": "<%= userEmail %>",
