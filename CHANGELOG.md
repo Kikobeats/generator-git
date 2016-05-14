@@ -1,3 +1,21 @@
+<a name="3.3.0"></a>
+# 3.3.0 (2016-05-14)
+
+* Add vinyl source buffer dep ([32f19ee](https://github.com/Kikobeats/generator-git/commit/32f19ee))
+* remove unnecessary ([9eee484](https://github.com/Kikobeats/generator-git/commit/9eee484))
+* Update travis builds ([021f5f0](https://github.com/Kikobeats/generator-git/commit/021f5f0))
+* chore(package): update finepack to version 2.2.3 ([141869e](https://github.com/Kikobeats/generator-git/commit/141869e))
+* chore(package): update inquirer-npm-name to version 2.0.0 ([62eb939](https://github.com/Kikobeats/generator-git/commit/62eb939))
+* chore(package): update lodash to version 4.11.2 ([99486be](https://github.com/Kikobeats/generator-git/commit/99486be))
+* chore(package): update lodash to version 4.12.0 ([3a0a408](https://github.com/Kikobeats/generator-git/commit/3a0a408))
+* chore(package): update yeoman-generator to version 0.22.6 ([4b2fcdc](https://github.com/Kikobeats/generator-git/commit/4b2fcdc))
+* chore(package): update yeoman-generator to version 0.23.2 ([856e825](https://github.com/Kikobeats/generator-git/commit/856e825))
+* chore(package): update yeoman-generator to version 0.23.3 ([18cdd8e](https://github.com/Kikobeats/generator-git/commit/18cdd8e))
+* chore(package): update yo to version 1.7.1 ([34e7085](https://github.com/Kikobeats/generator-git/commit/34e7085))
+* chore(package): update yo to version 1.8.1 ([38336f0](https://github.com/Kikobeats/generator-git/commit/38336f0))
+
+
+
 <a name="3.2.19"></a>
 ## 3.2.19 (2016-04-16)
 
