@@ -9,7 +9,6 @@
     "gulp-util": "latest",
     "mocha": "latest",
     "should": "latest",
-    "vinyl-buffer": "latest",
-    "vinyl-source-stream": "latest"
+    "vinyl-source-buffer": "latest"
   }
 }

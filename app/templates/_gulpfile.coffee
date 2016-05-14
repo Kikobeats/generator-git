@@ -8,9 +8,8 @@ gutil      = require 'gulp-util'
 browserify = require 'browserify'
 header     = require 'gulp-header'
 uglify     = require 'gulp-uglify'
-buffer     = require 'vinyl-buffer'
 pkg        = require './package.json'
-source     = require 'vinyl-source-stream'
+source     = require 'vinyl-source-buffer'
 
 # -- Files ---------------------------------------------------------------------
 
@@ -39,7 +38,6 @@ gulp.task 'browserify', ->
     .ignore('coffee-script')
     .bundle().on('error', gutil.log)
   .pipe source module.filename
-  .pipe buffer()
   .pipe uglify()
   .pipe header banner, pkg: pkg
   .pipe gulp.dest module.dist
