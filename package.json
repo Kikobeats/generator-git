@@ -55,6 +55,6 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "yo": ">=1.8.1"
+    "yo": ">=1.8.2"
   }
 }
