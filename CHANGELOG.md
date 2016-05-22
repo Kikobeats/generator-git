@@ -1,3 +1,12 @@
+<a name="3.3.1"></a>
+## 3.3.1 (2016-05-22)
+
+* Fix promise style ([795b8f6](https://github.com/Kikobeats/generator-git/commit/795b8f6))
+* chore(package): update yo to version 1.8.2 ([f58da90](https://github.com/Kikobeats/generator-git/commit/f58da90))
+* chore(package): update yo to version 1.8.3 ([076b80c](https://github.com/Kikobeats/generator-git/commit/076b80c))
+
+
+
 <a name="3.3.0"></a>
 # 3.3.0 (2016-05-14)
 
