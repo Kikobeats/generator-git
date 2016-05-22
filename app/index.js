@@ -126,7 +126,8 @@ module.exports = generators.Base.extend({
   projectName: function () {
     this.log(yosay('Initializing ' + superb() + ' Project'))
     let cb = this.async()
-    askName({
+
+    let promise = askName({
       name: 'name',
       message: 'Your project name',
       default: _.kebabCase(path.basename(process.cwd())),
@@ -134,12 +135,16 @@ module.exports = generators.Base.extend({
       validate: function (str) {
         return str.length > 0
       }
-    }, this, function (name) {
-      this.appName = name
-      this.camelAppName = _.camelCase(name)
-      this.capitalizeName = capitalizeName(this.appName)
-      cb()
-    }.bind(this))
+    }, this)
+
+    promise
+      .then(function (answer) {
+        let name = answer.name
+        this.appName = name
+        this.camelAppName = _.camelCase(name)
+        this.capitalizeName = capitalizeName(this.appName)
+        cb()
+      }.bind(this))
   },
 
   setupPath: function () {
@@ -159,7 +164,7 @@ module.exports = generators.Base.extend({
   questions: function () {
     let cb = this.async()
 
-    this.prompt([{
+    let promise = this.prompt([{
       name: 'appDescription',
       message: 'A short description of your project',
       default: "I'm a lazy"
@@ -177,7 +182,9 @@ module.exports = generators.Base.extend({
       message: 'Do you need a Browser Support (powered by Browserify) ?',
       type: 'confirm',
       default: false
-    }], function (props) {
+    }])
+
+    promise.then(function (props) {
       this.appDescription = props.appDescription
       this.userLogin = props.userLogin
       this.cli = props.cli
@@ -201,12 +208,14 @@ module.exports = generators.Base.extend({
   transpilers: function () {
     let cb = this.async()
 
-    this.prompt([{
+    let promise = this.prompt([{
       type: 'checkbox',
       name: 'transpilers',
       message: 'Select transpilers:',
       choices: CONST.TRANSPILERS
-    }], function (props) {
+    }])
+
+    promise.then(function (props) {
       _.forEach(CONST.TRANSPILERS, function (choice) {
         this[choice] = _.includes(props.transpilers, choice)
       }.bind(this))
@@ -217,12 +226,14 @@ module.exports = generators.Base.extend({
   style: function () {
     let cb = this.async()
 
-    this.prompt([{
+    let promise = this.prompt([{
       type: 'checkbox',
       name: 'styles',
       message: 'Select the style:',
       choices: CONST.STYLES
-    }], function (props) {
+    }])
+
+    promise.then(function (props) {
       _.forEach(CONST.STYLES, function (choice) {
         this[choice] = _.includes(props.styles, choice)
       }.bind(this))
@@ -233,12 +244,14 @@ module.exports = generators.Base.extend({
   testing: function () {
     let cb = this.async()
 
-    this.prompt([{
+    let promise = this.prompt([{
       type: 'checkbox',
       name: 'testing',
       message: 'Select testing tools:',
       choices: CONST.TESTING
-    }], function (props) {
+    }])
+
+    promise.then(function (props) {
       _.forEach(CONST.TESTING, function (choice) {
         this[choice] = _.includes(props.testing, choice)
       }.bind(this))
