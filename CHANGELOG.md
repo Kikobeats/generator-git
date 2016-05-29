@@ -1,3 +1,11 @@
+<a name="3.3.2"></a>
+## 3.3.2 (2016-05-29)
+
+* Add index as default file to stylize ([11eaa53](https://github.com/Kikobeats/generator-git/commit/11eaa53))
+* chore(package): update lodash to version 4.13.0 ([3b05de3](https://github.com/Kikobeats/generator-git/commit/3b05de3))
+
+
+
 <a name="3.3.1"></a>
 ## 3.3.1 (2016-05-22)
 
