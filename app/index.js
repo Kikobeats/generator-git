@@ -304,7 +304,7 @@ module.exports = generators.Base.extend({
 
     _.forEach(CONST.STYLES, function (style) {
       if (this[style]) {
-        let script = style + ' lib'
+        let script = style + ' lib index.js'
         this.package.devDependencies[style] = 'latest'
         lintScript += lintScript === '' ? script : ' && ' + script
       }
