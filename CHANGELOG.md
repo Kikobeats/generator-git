@@ -1,3 +1,12 @@
+<a name="3.3.3"></a>
+## 3.3.3 (2016-06-02)
+
+* Little tweaks ([83546ce](https://github.com/Kikobeats/generator-git/commit/83546ce))
+* chore(package): update github to version 1.1.0 ([ddb4513](https://github.com/Kikobeats/generator-git/commit/ddb4513))
+* chore(package): update yo to version 1.8.4 ([bfcc83e](https://github.com/Kikobeats/generator-git/commit/bfcc83e))
+
+
+
 <a name="3.3.2"></a>
 ## 3.3.2 (2016-05-29)
 
