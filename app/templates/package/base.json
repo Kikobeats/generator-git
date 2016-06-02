@@ -19,7 +19,7 @@
     "git-dirty": "latest"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 0.10"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
