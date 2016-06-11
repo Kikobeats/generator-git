@@ -1,3 +1,12 @@
+<a name="3.3.4"></a>
+## 3.3.4 (2016-06-11)
+
+* Add global flag in CLI mode ([2215e24](https://github.com/Kikobeats/generator-git/commit/2215e24))
+* chore(package): update github to version 1.1.1 ([d253ea8](https://github.com/Kikobeats/generator-git/commit/d253ea8))
+* chore(package): update github to version 1.1.2 ([2b34bf2](https://github.com/Kikobeats/generator-git/commit/2b34bf2))
+
+
+
 <a name="3.3.3"></a>
 ## 3.3.3 (2016-06-02)
 
