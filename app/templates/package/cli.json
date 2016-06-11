@@ -1,10 +1,11 @@
 {
-  "main": "index.js",
   "bin": {
     "<%= appName %>": "bin/index.js"
   },
+  "main": "index.js",
   "dependencies": {
     "meow": "latest",
     "update-notifier": "latest"
-  }
+  },
+  "preferGlobal": true
 }
