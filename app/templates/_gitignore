@@ -24,6 +24,7 @@ nbproject
 ############################
 testApp
 coverage
+.nyc_output
 
 ############################
 # Other
