@@ -1,3 +1,10 @@
+<a name="3.4.0"></a>
+# 3.4.0 (2016-06-13)
+
+* Add coveralls ([bda9c78](https://github.com/Kikobeats/generator-git/commit/bda9c78))
+
+
+
 <a name="3.3.4"></a>
 ## 3.3.4 (2016-06-11)
 
