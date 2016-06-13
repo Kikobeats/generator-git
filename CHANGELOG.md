@@ -1,3 +1,10 @@
+<a name="3.4.3"></a>
+## 3.4.3 (2016-06-13)
+
+* Adjust coverage badge style ([7d2a3c2](https://github.com/Kikobeats/generator-git/commit/7d2a3c2))
+
+
+
 <a name="3.4.2"></a>
 ## 3.4.2 (2016-06-13)
 
