@@ -1,3 +1,10 @@
+<a name="3.4.2"></a>
+## 3.4.2 (2016-06-13)
+
+* Fix coverage ([2399d10](https://github.com/Kikobeats/generator-git/commit/2399d10))
+
+
+
 <a name="3.4.1"></a>
 ## 3.4.1 (2016-06-13)
 
