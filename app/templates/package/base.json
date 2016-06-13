@@ -28,7 +28,7 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "",
     "pretest": "npm run lint",
-    "test": "mocha"
+    "test": "nyc mocha"
   },
   "license": "MIT"
 }
