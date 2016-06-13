@@ -1,3 +1,10 @@
+<a name="3.4.1"></a>
+## 3.4.1 (2016-06-13)
+
+* Fix typo ([f4f9f00](https://github.com/Kikobeats/generator-git/commit/f4f9f00))
+
+
+
 <a name="3.4.0"></a>
 # 3.4.0 (2016-06-13)
 
