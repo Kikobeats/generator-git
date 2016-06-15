@@ -332,7 +332,7 @@ module.exports = generators.Base.extend({
     let testScript = 'mocha'
     if (this.mocha) this.copy('test/_mocha.opts', 'test/mocha.opts')
     if (this.tape && !this.mocha) testScript = 'tape'
-    this.package.scripts.test = testScript
+    this.package.scripts.test += testScript
 
     /* INDEX.JS */
 
