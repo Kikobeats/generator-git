@@ -1,3 +1,10 @@
+<a name="3.4.4"></a>
+## 3.4.4 (2016-06-15)
+
+* Fix prefix test script with coverage report ([341d320](https://github.com/Kikobeats/generator-git/commit/341d320))
+
+
+
 <a name="3.4.3"></a>
 ## 3.4.3 (2016-06-13)
 
