@@ -1,3 +1,4 @@
+
 If you want to use in the browser (powered by [Browserify](http://browserify.org/)):
 
 ```bash
