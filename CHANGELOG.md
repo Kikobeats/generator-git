@@ -1,3 +1,13 @@
+<a name="3.4.5"></a>
+## 3.4.5 (2016-06-20)
+
+* Add missings line breaks ([b39efb4](https://github.com/Kikobeats/generator-git/commit/b39efb4))
+* chore(package): update github to version 1.2.0 ([a2e75bb](https://github.com/Kikobeats/generator-git/commit/a2e75bb))
+* chore(package): update yeoman-generator to version 0.23.4 ([041a8e3](https://github.com/Kikobeats/generator-git/commit/041a8e3))
+* chore(package): update yosay to version 1.2.0 ([af546f2](https://github.com/Kikobeats/generator-git/commit/af546f2))
+
+
+
 <a name="3.4.4"></a>
 ## 3.4.4 (2016-06-15)
 
