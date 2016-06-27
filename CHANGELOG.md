@@ -1,3 +1,14 @@
+<a name="3.4.6"></a>
+## 3.4.6 (2016-06-27)
+
+* Complete License Authorship ([87c023c](https://github.com/Kikobeats/generator-git/commit/87c023c))
+* chore(package): update github to version 1.2.1 ([545827d](https://github.com/Kikobeats/generator-git/commit/545827d))
+* chore(package): update github to version 1.3.0 ([9a43edf](https://github.com/Kikobeats/generator-git/commit/9a43edf))
+* chore(package): update github to version 1.4.0 ([e846331](https://github.com/Kikobeats/generator-git/commit/e846331))
+* chore(package): update github to version 2.0.0 ([3a36a85](https://github.com/Kikobeats/generator-git/commit/3a36a85))
+
+
+
 <a name="3.4.5"></a>
 ## 3.4.5 (2016-06-20)
 
