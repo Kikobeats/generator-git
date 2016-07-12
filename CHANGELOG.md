@@ -1,3 +1,12 @@
+<a name="3.4.7"></a>
+## 3.4.7 (2016-07-12)
+
+* Add recursive mocha flag ([12cc5ee](https://github.com/Kikobeats/generator-git/commit/12cc5ee))
+* chore(package): update github to version 2.0.1 ([ecdcd7e](https://github.com/Kikobeats/generator-git/commit/ecdcd7e))
+* chore(package): update github to version 2.1.0 ([b7870cd](https://github.com/Kikobeats/generator-git/commit/b7870cd))
+
+
+
 <a name="3.4.6"></a>
 ## 3.4.6 (2016-06-27)
 
