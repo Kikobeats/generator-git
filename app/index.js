@@ -1,5 +1,6 @@
 'use strict'
 
+const url = require('url')
 const _ = require('lodash')
 const path = require('path')
 const yosay = require('yosay')
@@ -23,8 +24,8 @@ function setupDependenciesVersions (pkg) {
     })
   }
 
-  let promise = Promise.all(['dependencies'].map(function (dep) {
-    let pkgs = Object.keys(pkg[dep])
+  const promise = Promise.all(['dependencies'].map(function (dep) {
+    const pkgs = Object.keys(pkg[dep])
     return fetchVersions(pkgs).then(function (versions) {
       updatePkg(dep, versions)
     })
@@ -35,29 +36,38 @@ function setupDependenciesVersions (pkg) {
   })
 }
 
-let CONST = {
-  TRANSPILERS: ['coffee-script'],
-  STYLES: ['standard', 'jshint', 'jscs'],
-  TESTING: ['mocha', 'should', 'tap', 'tape']
+const CONST = {
+  LINTERS: {
+    choose: ['standard', 'jshint', 'jscs'],
+    files: ['lib', 'index.js']
+  },
+
+  TESTING: {
+    choose: ['mocha', 'should', 'tap', 'tape']
+  },
+
+  TRANSPILERS: {
+    choose: ['coffee-script']
+  }
 }
 
-let proxy = process.env.http_proxy || process.env.HTTP_PROXY ||
+const proxy = process.env.http_proxy || process.env.HTTP_PROXY ||
   process.env.https_proxy || process.env.HTTPS_PROXY || null
 
-let githubOptions = {
+const githubOptions = {
   version: '3.0.0'
 }
 
 if (proxy) {
-  let proxyUrl = url.parse(proxy)
+  const proxyUrl = url.parse(proxy)
   githubOptions.proxy = {
     host: proxyUrl.hostname,
     port: proxyUrl.port
   }
 }
 
-let GitHubApi = require('github')
-let github = new GitHubApi(githubOptions)
+const GitHubApi = require('github')
+const github = new GitHubApi(githubOptions)
 
 if (process.env.GITHUB_TOKEN) {
   github.authenticate({
@@ -67,7 +77,7 @@ if (process.env.GITHUB_TOKEN) {
 }
 
 function githubUserInfo (name, cb, log) {
-  let emptyGithubRes = {
+  const emptyGithubRes = {
     name: '',
     email: '',
     html_url: ''
@@ -87,7 +97,7 @@ function githubUserInfo (name, cb, log) {
 
 function capitalizeName (name) {
   return _.reduce(name.split('-'), function (acc, str, index) {
-    let separator = index === 0 ? '' : ' '
+    const separator = index === 0 ? '' : ' '
     return acc + separator + _.capitalize(str)
   }, '')
 }
@@ -125,9 +135,9 @@ module.exports = generators.Base.extend({
 
   projectName: function () {
     this.log(yosay('Initializing ' + superb() + ' Project'))
-    let cb = this.async()
+    const cb = this.async()
 
-    let promise = askName({
+    const promise = askName({
       name: 'name',
       message: 'Your project name',
       default: _.kebabCase(path.basename(process.cwd())),
@@ -139,7 +149,7 @@ module.exports = generators.Base.extend({
 
     promise
       .then(function (answer) {
-        let name = answer.name
+        const name = answer.name
         this.appName = name
         this.camelAppName = _.camelCase(name)
         this.capitalizeName = capitalizeName(this.appName)
@@ -162,9 +172,9 @@ module.exports = generators.Base.extend({
   },
 
   questions: function () {
-    let cb = this.async()
+    const cb = this.async()
 
-    let promise = this.prompt([{
+    const promise = this.prompt([{
       name: 'appDescription',
       message: 'A short description of your project',
       default: "I'm a lazy"
@@ -194,7 +204,7 @@ module.exports = generators.Base.extend({
   },
 
   userInfo: function () {
-    let done = this.async()
+    const done = this.async()
 
     githubUserInfo(this.userLogin, function (res) {
       this.userName = res.name
@@ -206,53 +216,53 @@ module.exports = generators.Base.extend({
   },
 
   transpilers: function () {
-    let cb = this.async()
+    const cb = this.async()
 
-    let promise = this.prompt([{
+    const promise = this.prompt([{
       type: 'checkbox',
       name: 'transpilers',
       message: 'Select transpilers:',
-      choices: CONST.TRANSPILERS
+      choices: CONST.TRANSPILERS.choose
     }])
 
     promise.then(function (props) {
-      _.forEach(CONST.TRANSPILERS, function (choice) {
+      _.forEach(CONST.TRANSPILERS.choose, function (choice) {
         this[choice] = _.includes(props.transpilers, choice)
       }.bind(this))
       cb()
     }.bind(this))
   },
 
-  style: function () {
-    let cb = this.async()
+  linters: function () {
+    const cb = this.async()
 
-    let promise = this.prompt([{
+    const promise = this.prompt([{
       type: 'checkbox',
-      name: 'styles',
-      message: 'Select the style:',
-      choices: CONST.STYLES
+      name: 'linter',
+      message: 'Select the linter:',
+      choices: CONST.LINTERS.choose
     }])
 
     promise.then(function (props) {
-      _.forEach(CONST.STYLES, function (choice) {
-        this[choice] = _.includes(props.styles, choice)
+      _.forEach(CONST.LINTERS.choose, function (choice) {
+        this[choice] = _.includes(props.linter, choice)
       }.bind(this))
       cb()
     }.bind(this))
   },
 
   testing: function () {
-    let cb = this.async()
+    const cb = this.async()
 
-    let promise = this.prompt([{
+    const promise = this.prompt([{
       type: 'checkbox',
       name: 'testing',
       message: 'Select testing tools:',
-      choices: CONST.TESTING
+      choices: CONST.TESTING.choose
     }])
 
     promise.then(function (props) {
-      _.forEach(CONST.TESTING, function (choice) {
+      _.forEach(CONST.TESTING.choose, function (choice) {
         this[choice] = _.includes(props.testing, choice)
       }.bind(this))
       cb()
@@ -298,34 +308,15 @@ module.exports = generators.Base.extend({
       this.copy('bumped/base', '.bumpedrc')
     }
 
-    /* STYLES */
-
-    let lintScript = ''
-
-    _.forEach(CONST.STYLES, function (style) {
-      if (this[style]) {
-        let script = style + ' lib index.js'
-        this.package.devDependencies[style] = 'latest'
-        lintScript += lintScript === '' ? script : ' && ' + script
-      }
-    }.bind(this))
-
-    if (this.jshint) this.copy('_jshintrc', '.jshintrc')
-    if (this.jscs) this.copy('_jscsrc', '.jscsrc')
-
-    /* SCRIPTS */
-
-    this.package.scripts.lint = lintScript
-
     /* TRANSPILERS */
 
-    _.forEach(CONST.TRANSPILERS, function (transpiler) {
+    _.forEach(CONST.TRANSPILERS.choose, function (transpiler) {
       if (this[transpiler]) this.package.dependencies[transpiler] = 'latest'
     }.bind(this))
 
     /* TESTING */
 
-    _.forEach(CONST.TESTING, function (testing) {
+    _.forEach(CONST.TESTING.choose, function (testing) {
       if (this[testing]) this.package.devDependencies[testing] = 'latest'
     }.bind(this))
 
@@ -334,14 +325,30 @@ module.exports = generators.Base.extend({
     if (this.tape && !this.mocha) testScript = 'tape'
     this.package.scripts.test += testScript
 
+    /* LINTERS */
+
+    let lintScript = ''
+
+    _.forEach(CONST.LINTERS.choose, function (style) {
+      if (this[style]) {
+        const script = style + ' ' + CONST.LINTERS.files.join(' ')
+        this.package.devDependencies[style] = 'latest'
+        lintScript += lintScript === '' ? script : ' && ' + script
+      }
+    }.bind(this))
+
+    if (this.jshint) this.copy('_jshintrc', '.jshintrc')
+    if (this.jscs) this.copy('_jscsrc', '.jscsrc')
+
+    this.package.scripts.lint = lintScript
+
+    if (this.mocha && this.standard) this.package.standard = this.fs.readJSON(this.templatePath('linter/standard.json'))
+
     /* INDEX.JS */
 
     let indexExtension = 'js'
-
-    if (!this['coffee-script'])
-      this.package.devDependencies['coffee-script'] = 'latest'
-    else
-      indexExtension = 'coffee'
+    if (!this['coffee-script']) this.package.devDependencies['coffee-script'] = 'latest'
+    else indexExtension = 'coffee'
 
     this.copy('_index.' + indexExtension, 'index.js')
 
@@ -353,8 +360,8 @@ module.exports = generators.Base.extend({
   },
 
   dependenciesVersion: function () {
-    let cb = this.async()
-    let _this = this
+    const cb = this.async()
+    const _this = this
 
     setupDependenciesVersions(this.package).then(function (newPkg) {
       _this.package = newPkg
@@ -363,7 +370,7 @@ module.exports = generators.Base.extend({
   },
 
   write: function () {
-    let cb = this.async()
+    const cb = this.async()
 
     finepack(this.package, {
       validate: false,
