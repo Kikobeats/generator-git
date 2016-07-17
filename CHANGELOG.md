@@ -1,3 +1,11 @@
+<a name="3.5.0"></a>
+# 3.5.0 (2016-07-17)
+
+* Add default global vars under standard with mocha ([32a5184](https://github.com/Kikobeats/generator-git/commit/32a5184))
+* chore(package): update github to version 2.2.0 ([79e1fc3](https://github.com/Kikobeats/generator-git/commit/79e1fc3))
+
+
+
 <a name="3.4.7"></a>
 ## 3.4.7 (2016-07-12)
 
