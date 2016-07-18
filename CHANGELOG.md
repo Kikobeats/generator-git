@@ -1,3 +1,11 @@
+<a name="3.5.1"></a>
+## 3.5.1 (2016-07-18)
+
+* License in 80 columns ([8b56a39](https://github.com/Kikobeats/generator-git/commit/8b56a39))
+* chore(package): update yeoman-generator to version 0.24.1 ([ebb2046](https://github.com/Kikobeats/generator-git/commit/ebb2046))
+
+
+
 <a name="3.5.0"></a>
 # 3.5.0 (2016-07-17)
 
