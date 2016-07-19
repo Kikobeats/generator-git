@@ -30,4 +30,4 @@ Lorem ipsum.
 
 ## License
 
-MIT © [<%= userName %>](<%= userUrl %>)
+MIT © [<%= userName %>](<%= userUrl %>).
