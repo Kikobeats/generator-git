@@ -1,3 +1,10 @@
+<a name="3.5.2"></a>
+## 3.5.2 (2016-07-19)
+
+* Add missing dot ([a98a0cc](https://github.com/Kikobeats/generator-git/commit/a98a0cc))
+
+
+
 <a name="3.5.1"></a>
 ## 3.5.1 (2016-07-18)
 
