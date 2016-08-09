@@ -39,7 +39,7 @@ function setupDependenciesVersions (pkg) {
 const CONST = {
   LINTERS: {
     choose: ['standard', 'jshint', 'jscs'],
-    files: ['lib', 'index.js']
+    files: ['lib/**/*.js', 'index.js']
   },
 
   TESTING: {
