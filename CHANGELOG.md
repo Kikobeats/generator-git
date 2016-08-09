@@ -1,3 +1,10 @@
+<a name="3.5.4"></a>
+## 3.5.4 (2016-08-09)
+
+* Lint all js files by default ([fb21642](https://github.com/Kikobeats/generator-git/commit/fb21642))
+
+
+
 <a name="3.5.3"></a>
 ## 3.5.3 (2016-08-09)
 
