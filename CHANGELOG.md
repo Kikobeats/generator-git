@@ -1,3 +1,15 @@
+<a name="3.5.3"></a>
+## 3.5.3 (2016-08-09)
+
+* Lint all files in lib folder ([fecdd64](https://github.com/Kikobeats/generator-git/commit/fecdd64))
+* chore(package): update github to version 2.3.0 ([2c23729](https://github.com/Kikobeats/generator-git/commit/2c23729))
+* chore(package): update github to version 2.4.0 ([65726ae](https://github.com/Kikobeats/generator-git/commit/65726ae))
+* chore(package): update lodash to version 4.14.0 ([f8818a9](https://github.com/Kikobeats/generator-git/commit/f8818a9))
+* chore(package): update lodash to version 4.14.1 ([d841bf8](https://github.com/Kikobeats/generator-git/commit/d841bf8))
+* chore(package): update lodash to version 4.14.2 ([aad9d72](https://github.com/Kikobeats/generator-git/commit/aad9d72))
+
+
+
 <a name="3.5.2"></a>
 ## 3.5.2 (2016-07-19)
 
