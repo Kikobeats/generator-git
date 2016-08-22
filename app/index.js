@@ -1,11 +1,11 @@
 'use strict'
 
-const url = require('url')
 const _ = require('lodash')
 const path = require('path')
 const yosay = require('yosay')
 const superb = require('superb')
 const mkdirp = require('mkdirp')
+const ghUser = require('gh-user')
 const finepack = require('finepack')
 const askName = require('inquirer-npm-name')
 const generators = require('yeoman-generator')
@@ -48,50 +48,6 @@ const CONST = {
   TRANSPILERS: {
     choose: ['coffee-script']
   }
-}
-
-const proxy = process.env.http_proxy || process.env.HTTP_PROXY ||
-  process.env.https_proxy || process.env.HTTPS_PROXY || null
-
-const githubOptions = {
-  version: '3.0.0'
-}
-
-if (proxy) {
-  const proxyUrl = url.parse(proxy)
-  githubOptions.proxy = {
-    host: proxyUrl.hostname,
-    port: proxyUrl.port
-  }
-}
-
-const GitHubApi = require('github')
-const github = new GitHubApi(githubOptions)
-
-if (process.env.GITHUB_TOKEN) {
-  github.authenticate({
-    type: 'oauth',
-    token: process.env.GITHUB_TOKEN
-  })
-}
-
-function githubUserInfo (name, cb, log) {
-  const emptyGithubRes = {
-    name: '',
-    email: '',
-    html_url: ''
-  }
-
-  github.user.getFrom({
-    user: name
-  }, function (err, res) {
-    if (err) {
-      log.error("Cannot fetch your github profile. Make sure you've typed it correctly.")
-      res = emptyGithubRes
-    }
-
-    return cb(JSON.parse(JSON.stringify(res)))
-  })
 }
 
 function capitalizeName (name) {
@@ -203,15 +159,16 @@ module.exports = generators.Base.extend({
   },
 
   userInfo: function () {
-    const done = this.async()
+    const cb = this.async()
+    const promise = ghUser(this.userLogin)
 
-    githubUserInfo(this.userLogin, function (res) {
-      this.userName = res.name
-      this.userEmail = res.email
-      this.userBlog = res.blog
-      this.userUrl = res.html_url
-      done()
-    }.bind(this), this.log)
+    promise.then(function (user) {
+      this.userName = user.name
+      this.userEmail = user.email
+      this.userBlog = user.blog
+      this.userUrl = user.html_url
+      cb()
+    }.bind(this))
   },
 
   transpilers: function () {
