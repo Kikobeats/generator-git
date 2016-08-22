@@ -1,3 +1,13 @@
+<a name="3.5.5"></a>
+## 3.5.5 (2016-08-22)
+
+* Replace github → gh-user dep ([4a99825](https://github.com/Kikobeats/generator-git/commit/4a99825))
+* chore(package): update github to version 2.4.1 ([e3abf75](https://github.com/Kikobeats/generator-git/commit/e3abf75))
+* chore(package): update github to version 2.5.1 ([07073cc](https://github.com/Kikobeats/generator-git/commit/07073cc))
+* chore(package): update lodash to version 4.15.0 ([ddb8776](https://github.com/Kikobeats/generator-git/commit/ddb8776))
+
+
+
 <a name="3.5.4"></a>
 ## 3.5.4 (2016-08-09)
 
