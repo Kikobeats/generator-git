@@ -28,7 +28,7 @@
   ],
   "dependencies": {
     "chalk": "~1.1.2",
-    "finepack": "2.2.4",
+    "finepack": "2.3.0",
     "gh-user": "~2.2.0",
     "inquirer-npm-name": "~2.0.0",
     "latest-version": "~2.0.0",
