@@ -14,7 +14,7 @@ const <%= camelAppName %> = require('<%= appName %>')
 
 #### input
 
-*Required*
+*Required*<br>
 Type: `string`
 
 Lorem ipsum.
