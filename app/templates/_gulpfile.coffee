@@ -10,6 +10,7 @@ header     = require 'gulp-header'
 uglify     = require 'gulp-uglify'
 pkg        = require './package.json'
 source     = require 'vinyl-source-buffer'
+collapse   = require 'bundle-collapser/plugin'
 
 # -- Files ---------------------------------------------------------------------
 
@@ -36,6 +37,7 @@ gulp.task 'browserify', ->
     .transform coffeeify, global: true
     .require(src.main, { expose: module.shortcut})
     .ignore('coffee-script')
+    .plugin(collapse)
     .bundle().on('error', gutil.log)
   .pipe source module.filename
   .pipe uglify()

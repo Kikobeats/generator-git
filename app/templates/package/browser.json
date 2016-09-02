@@ -1,12 +1,13 @@
 {
   "devDependencies": {
     "browserify": "latest",
+    "bundle-collapser": "latest",
     "coffee-script": "latest",
     "coffeeify": "latest",
-    "gulp": "latest",
     "gulp-header": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
+    "gulp": "latest",
     "mocha": "latest",
     "should": "latest",
     "vinyl-source-buffer": "latest"
