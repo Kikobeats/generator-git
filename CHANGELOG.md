@@ -1,3 +1,13 @@
+<a name="3.5.6"></a>
+## 3.5.6 (2016-09-02)
+
+* Add separator ([f76c800](https://github.com/Kikobeats/generator-git/commit/f76c800))
+* chore(package): update finepack to version 2.2.4 ([1879c41](https://github.com/Kikobeats/generator-git/commit/1879c41))
+* chore(package): update finepack to version 2.3.0 ([c79489e](https://github.com/Kikobeats/generator-git/commit/c79489e))
+* chore(package): update yo to version 1.8.5 ([73fd8b5](https://github.com/Kikobeats/generator-git/commit/73fd8b5))
+
+
+
 <a name="3.5.5"></a>
 ## 3.5.5 (2016-08-22)
 
