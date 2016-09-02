@@ -1,3 +1,10 @@
+<a name="3.6.0"></a>
+# 3.6.0 (2016-09-02)
+
+* Collapse browserify builds ([e2aefae](https://github.com/Kikobeats/generator-git/commit/e2aefae))
+
+
+
 <a name="3.5.6"></a>
 ## 3.5.6 (2016-09-02)
 
