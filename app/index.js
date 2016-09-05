@@ -38,7 +38,7 @@ function setupDependenciesVersions (pkg) {
 
 const CONST = {
   LINTERS: {
-    choose: ['standard', 'jshint', 'jscs']
+    choose: ['standard-markdown', 'standard', 'jshint', 'jscs']
   },
 
   TESTING: {
@@ -285,11 +285,10 @@ module.exports = generators.Base.extend({
 
     let lintScript = ''
 
-    _.forEach(CONST.LINTERS.choose, function (style) {
-      if (this[style]) {
-        const script = style
-        this.package.devDependencies[style] = 'latest'
-        lintScript += lintScript === '' ? script : ' && ' + script
+    _.forEach(CONST.LINTERS.choose, function (linter) {
+      if (this[linter]) {
+        this.package.devDependencies[linter] = 'latest'
+        lintScript += lintScript === '' ? linter : ' && ' + linter
       }
     }.bind(this))
 
