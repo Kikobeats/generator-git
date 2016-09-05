@@ -302,10 +302,7 @@ module.exports = generators.Base.extend({
 
     /* INDEX.JS */
 
-    let indexExtension = 'js'
-    if (!this['coffee-script']) this.package.devDependencies['coffee-script'] = 'latest'
-    else indexExtension = 'coffee'
-
+    let indexExtension = this['coffee-script'] ? 'coffee' : 'js'
     this.copy('_index.' + indexExtension, 'index.js')
 
     /* README */
