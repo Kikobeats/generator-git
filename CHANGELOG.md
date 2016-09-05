@@ -1,3 +1,13 @@
+<a name="3.7.0"></a>
+# 3.7.0 (2016-09-05)
+
+* Add standard-markdown linter ([6a4762c](https://github.com/Kikobeats/generator-git/commit/6a4762c))
+* Fix add coffeescript ([91048da](https://github.com/Kikobeats/generator-git/commit/91048da))
+* node >= 4 by default ([5b995cf](https://github.com/Kikobeats/generator-git/commit/5b995cf))
+* chore(package): update finepack to version 2.3.1 ([cfc239d](https://github.com/Kikobeats/generator-git/commit/cfc239d))
+
+
+
 <a name="3.6.0"></a>
 # 3.6.0 (2016-09-02)
 
