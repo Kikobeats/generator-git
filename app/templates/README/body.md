@@ -23,7 +23,7 @@ Lorem ipsum.
 
 ##### foo
 
-Type: `boolean`
+Type: `boolean`<br>
 Default: `false`
 
 Lorem ipsum.
