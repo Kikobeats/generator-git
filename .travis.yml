@@ -1,7 +1,12 @@
 language: node_js
 node_js:
   - 6
+  - '4'
+  - '5'
+  - '6'
+  - '7'
 before_install:
-  - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-git' ]; then cd .. && eval "mv $currentfolder generator-git" && cd generator-git; fi
-
+  - 'currentfolder=${PWD##*/}'
+  - >-
+    if [ "$currentfolder" != 'generator-git' ]; then cd .. && eval "mv
+    $currentfolder generator-git" && cd generator-git; fi
