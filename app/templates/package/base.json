@@ -21,7 +21,7 @@
     "nyc": "latest"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 6"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
