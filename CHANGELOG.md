@@ -1,3 +1,20 @@
+<a name="3.7.1"></a>
+## 3.7.1 (2016-12-03)
+
+* Add missing separator ([4a41cbe](https://github.com/Kikobeats/generator-git/commit/4a41cbe))
+* Drop old node support by default ([13e9159](https://github.com/Kikobeats/generator-git/commit/13e9159))
+* chore: drop support for Node.js 0.10 ([baa99cb](https://github.com/Kikobeats/generator-git/commit/baa99cb))
+* chore(package): update lodash to version 4.16.0 ([b84a36c](https://github.com/Kikobeats/generator-git/commit/b84a36c))
+* chore(package): update lodash to version 4.16.4 ([edc26f4](https://github.com/Kikobeats/generator-git/commit/edc26f4))
+* chore(package): update lodash to version 4.16.5 ([12f5674](https://github.com/Kikobeats/generator-git/commit/12f5674))
+* chore(package): update yosay to version 1.2.1 ([6ea1be6](https://github.com/Kikobeats/generator-git/commit/6ea1be6))
+
+
+### BREAKING CHANGE
+
+* This module no longer supports Node.js 0.10
+
+
 <a name="3.7.0"></a>
 # 3.7.0 (2016-09-05)
 
