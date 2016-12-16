@@ -1,3 +1,10 @@
+<a name="3.7.2"></a>
+## 3.7.2 (2016-12-16)
+
+* 80 to 100 lines ([53193f9](https://github.com/Kikobeats/generator-git/commit/53193f9))
+
+
+
 <a name="3.7.1"></a>
 ## 3.7.1 (2016-12-03)
 
