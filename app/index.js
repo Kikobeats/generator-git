@@ -79,7 +79,6 @@ function capitalizeName (name) {
  *
  * - coffee
  * - cli
- * - browser
  * - jshint
  * - jscs
  */
@@ -142,18 +141,12 @@ module.exports = generators.Base.extend({
       message: 'Do you need a CLI ?',
       type: 'confirm',
       default: false
-    }, {
-      name: 'browser',
-      message: 'Do you need a Browser Support (powered by Browserify) ?',
-      type: 'confirm',
-      default: false
     }])
 
     promise.then(function (props) {
       this.appDescription = props.appDescription
       this.userLogin = props.userLogin
       this.cli = props.cli
-      this.browser = props.browser
       cb()
     }.bind(this))
   },
@@ -251,18 +244,7 @@ module.exports = generators.Base.extend({
       this.readme += this.fs.read(this.templatePath('README/install/normal.md'))
     }
 
-    if (this.browser) {
-      _.merge(this.package, this.fs.readJSON(this.templatePath('package/browser.json'), {}))
-
-      this.readme += this.fs.read(this.templatePath('README/install/browser.md'))
-      this.template('_bower.json', 'bower.json')
-      this.bulkCopy('_gulpfile.coffee', 'gulpfile.coffee')
-      this.mkdir('dist')
-      this.template('dist/_index.html', 'dist/index.html')
-      this.copy('bumped/browser', '.bumpedrc')
-    } else {
-      this.copy('bumped/base', '.bumpedrc')
-    }
+    this.copy('_bumpedrc', '.bumpedrc')
 
     /* TRANSPILERS */
 
@@ -328,6 +310,7 @@ module.exports = generators.Base.extend({
       validate: false,
       color: false
     }, function (err, packageFormated) {
+      if (err) cb(err)
       this.fs.writeJSON(this.destinationPath('package.json'), packageFormated)
       cb()
     }.bind(this))
