@@ -1,3 +1,12 @@
+<a name="3.7.3"></a>
+## 3.7.3 (2017-03-04)
+
+* Remove browser support ([ad19dbc](https://github.com/Kikobeats/generator-git/commit/ad19dbc))
+* stable (deprecated) is now node ([795330b](https://github.com/Kikobeats/generator-git/commit/795330b))
+* Update bumpedrc template ([e8cd0b0](https://github.com/Kikobeats/generator-git/commit/e8cd0b0))
+
+
+
 <a name="3.7.2"></a>
 ## 3.7.2 (2016-12-16)
 
