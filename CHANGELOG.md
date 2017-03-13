@@ -1,3 +1,10 @@
+<a name="3.7.4"></a>
+## 3.7.4 (2017-03-13)
+
+* Use last LTS version ([2d1a0ee](https://github.com/Kikobeats/generator-git/commit/2d1a0ee))
+
+
+
 <a name="3.7.3"></a>
 ## 3.7.3 (2017-03-04)
 
