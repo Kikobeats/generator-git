@@ -18,6 +18,14 @@ The version **3.x** is a totally refactor focused in offer more options to choic
 
 ## Install
 
+First, install Yeoman:
+
+```bash
+$ npm install -g yo
+```
+
+Later, install this generator:
+
 ```bash
 $ npm install -g generator-git
 ```
