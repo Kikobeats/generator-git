@@ -1,3 +1,12 @@
+<a name="3.7.5"></a>
+## 3.7.5 (2017-04-16)
+
+* Update CLI code ([1118ff2](https://github.com/Kikobeats/generator-git/commit/1118ff2))
+* Update CLI README template ([e335ead](https://github.com/Kikobeats/generator-git/commit/e335ead))
+* Update README.md ([99ce6cf](https://github.com/Kikobeats/generator-git/commit/99ce6cf))
+
+
+
 <a name="3.7.4"></a>
 ## 3.7.4 (2017-03-13)
 
