@@ -1,15 +1,13 @@
 #!/usr/bin/env node
-'use strict';
+'use strict'
 
-var path = require('path')
-var pkg = require('../package.json')
+const path = require('path')
+const pkg = require('../package.json')
 
-require('update-notifier')({pkg: pkg}).notify()
+require('update-notifier')({pkg}).notify()
 
-var <%= appname %> = require('./')
-
-var cli = require('meow')({
-  pkg: pkg,
+const cli = require('meow')({
+  pkg,
   help: require('fs').readFileSync(path.join(__dirname, 'help.txt'), 'utf8')
 })
 
