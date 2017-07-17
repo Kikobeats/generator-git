@@ -282,9 +282,7 @@ module.exports = generators.Base.extend({
     if (this.standard) {
       this.package.devDependencies['prettier-standard'] = 'latest'
       this.package.scripts.prelint = 'npm run pretty'
-      this.package.scripts.pretty = ```
-      prettier-standard index.js src/**/*.js test/**/*.js bin/**/*.js
-      ```
+      this.package.scripts.pretty = 'prettier-standard index.js src/**/*.js test/**/*.js bin/**/*.js'
 
       if (this.mocha) {
         this.package.standard = this.fs.readJSON(this.templatePath('linter/standard.json'))
