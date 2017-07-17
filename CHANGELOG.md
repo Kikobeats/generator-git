@@ -1,3 +1,10 @@
+<a name="3.8.1"></a>
+## 3.8.1 (2017-07-17)
+
+* Fix multiline string ([af2bdce](https://github.com/Kikobeats/generator-git/commit/af2bdce))
+
+
+
 <a name="3.8.0"></a>
 # 3.8.0 (2017-07-17)
 
