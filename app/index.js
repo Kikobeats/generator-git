@@ -279,7 +279,17 @@ module.exports = generators.Base.extend({
 
     this.package.scripts.lint = lintScript
 
-    if (this.mocha && this.standard) this.package.standard = this.fs.readJSON(this.templatePath('linter/standard.json'))
+    if (this.standard) {
+      this.package.devDependencies['prettier-standard'] = 'latest'
+      this.package.scripts.prelint = 'npm run pretty'
+      this.package.scripts.pretty = ```
+      prettier-standard index.js src/**/*.js test/**/*.js bin/**/*.js
+      ```
+
+      if (this.mocha) {
+        this.package.standard = this.fs.readJSON(this.templatePath('linter/standard.json'))
+      }
+    }
 
     /* INDEX.JS */
 
