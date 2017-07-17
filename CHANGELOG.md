@@ -1,3 +1,10 @@
+<a name="3.8.0"></a>
+# 3.8.0 (2017-07-17)
+
+* Add prettify using prettier-standard ([675a70a](https://github.com/Kikobeats/generator-git/commit/675a70a))
+
+
+
 <a name="3.7.5"></a>
 ## 3.7.5 (2017-04-16)
 
