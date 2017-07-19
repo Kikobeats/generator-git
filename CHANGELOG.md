@@ -1,3 +1,10 @@
+<a name="3.9.0"></a>
+# 3.9.0 (2017-07-19)
+
+* Use custom homepage ([f0d5692](https://github.com/Kikobeats/generator-git/commit/f0d5692))
+
+
+
 <a name="3.8.1"></a>
 ## 3.8.1 (2017-07-17)
 
