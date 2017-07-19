@@ -1,7 +1,7 @@
 {
   "name": "<%= appName %>",
   "description": "<%= appDescription %>",
-  "homepage": "https://github.com/<%= userLogin %>/<%= appName %>",
+  "homepage": "https://documentup.com/<%= userLogin %>/<%= appName %>",
   "version": "0.0.0",
   "main": "index.js",
   "author": {
