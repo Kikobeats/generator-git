@@ -1,6 +1,8 @@
 {
   "globals": [
     "describe",
+    "expect",
+    "jest",
     "test",
     "it"
   ]
