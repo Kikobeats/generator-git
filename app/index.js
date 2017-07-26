@@ -294,7 +294,7 @@ module.exports = generators.Base.extend({
       this.package.scripts.pretty = 'prettier-standard index.js src/**/*.js test/**/*.js bin/**/*.js'
 
       if (this.mocha || this.jest) {
-        this.package.standard = JSON.parse({ env: [this.mocha ? 'mocha' : 'jest'] })
+        this.package.standard = { env: [this.mocha ? 'mocha' : 'jest'] }
       }
     }
 
