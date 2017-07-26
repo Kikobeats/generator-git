@@ -42,7 +42,7 @@ const CONST = {
   },
 
   TESTING: {
-    choose: ['mocha', 'should', 'tap', 'tape']
+    choose: ['mocha', 'should', 'tap', 'tape', 'jest']
   },
 
   TRANSPILERS: {
@@ -263,6 +263,15 @@ module.exports = generators.Base.extend({
     if (this.tape && !this.mocha) testScript = 'tape'
     this.package.scripts.test += testScript
 
+    if (this.jest) {
+      delete this.package.devDependencies.nyc // nyc is not needed anymore!
+      this.package.scripts.coveralls = 'cat ./coverage/lcov.info | coveralls'
+      this.package.scripts.test = 'jest --coverage'
+      this.package.scripts['test:w'] = 'jest --watch'
+      const jestConfig = this.fs.readJSON(this.templatePath('package/jest.json'))
+      _.merge(this.package, jestConfig, {})
+    }
+
     /* LINTERS */
 
     let lintScript = ''
@@ -284,7 +293,7 @@ module.exports = generators.Base.extend({
       this.package.scripts.prelint = 'npm run pretty'
       this.package.scripts.pretty = 'prettier-standard index.js src/**/*.js test/**/*.js bin/**/*.js'
 
-      if (this.mocha) {
+      if (this.mocha || this.jest) {
         this.package.standard = this.fs.readJSON(this.templatePath('linter/standard.json'))
       }
     }
@@ -325,6 +334,6 @@ module.exports = generators.Base.extend({
   },
 
   install: function () {
-    this.installDependencies({bower: false})
+    this.installDependencies({ bower: false })
   }
 })
