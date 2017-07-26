@@ -38,11 +38,11 @@ function setupDependenciesVersions (pkg) {
 
 const CONST = {
   LINTERS: {
-    choose: ['standard-markdown', 'standard', 'jshint', 'jscs']
+    choose: ['jscs', 'jshint', 'standard-markdown', 'standard']
   },
 
   TESTING: {
-    choose: ['mocha', 'should', 'tap', 'tape', 'jest']
+    choose: ['jest', 'mocha', 'should', 'tap', 'tape']
   },
 
   TRANSPILERS: {
