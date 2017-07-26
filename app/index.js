@@ -267,7 +267,7 @@ module.exports = generators.Base.extend({
       delete this.package.devDependencies.nyc // nyc is not needed anymore!
       this.package.scripts.coveralls = 'cat ./coverage/lcov.info | coveralls'
       this.package.scripts.test = 'jest --coverage'
-      this.package.scripts['test:w'] = 'jest --watch'
+      this.package.scripts['test:watch'] = 'jest --watch'
       const jestConfig = this.fs.readJSON(this.templatePath('package/jest.json'))
       _.merge(this.package, jestConfig, {})
     }
