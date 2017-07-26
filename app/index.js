@@ -42,7 +42,7 @@ const CONST = {
   },
 
   TESTING: {
-    choose: ['jest', 'mocha', 'should', 'tap', 'tape', 'jest']
+    choose: ['jest', 'mocha', 'should', 'tap', 'tape']
   },
 
   TRANSPILERS: {
