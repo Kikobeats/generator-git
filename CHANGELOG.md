@@ -1,3 +1,16 @@
+<a name="3.10.0"></a>
+# 3.10.0 (2017-07-27)
+
+* Add env instead of globals for standard config ([f7a1101](https://github.com/Kikobeats/generator-git/commit/f7a1101))
+* Add Jest as testing framework 🃏 ([31da9d2](https://github.com/Kikobeats/generator-git/commit/31da9d2))
+* Add more globals to standardjs ([9fc834c](https://github.com/Kikobeats/generator-git/commit/9fc834c))
+* Replace test:w by test:watch ([2216a94](https://github.com/Kikobeats/generator-git/commit/2216a94))
+* Sort alphabetically ([2d41c9b](https://github.com/Kikobeats/generator-git/commit/2d41c9b))
+* Unneeded JSON.parse() ([59d7007](https://github.com/Kikobeats/generator-git/commit/59d7007))
+* Update index.js ([958c354](https://github.com/Kikobeats/generator-git/commit/958c354))
+
+
+
 <a name="3.9.0"></a>
 # 3.9.0 (2017-07-19)
 
