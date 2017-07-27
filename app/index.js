@@ -12,28 +12,17 @@ const generators = require('yeoman-generator')
 const latestVersion = require('latest-version')
 
 function setupDependenciesVersions (pkg) {
-  function fetchVersions (dependencies) {
-    return Promise.all(dependencies.map(function (dependency) {
-      return latestVersion(dependency)
-    }, []))
-  }
+  const fetchVersions = deps => Promise.all(deps.map(dep => latestVersion(dep), []))
 
-  function updatePkg (namespace, versions) {
-    Object.keys(pkg[namespace]).forEach(function (dep, index) {
-      pkg[namespace][dep] = '~' + versions[index]
-    })
-  }
+  const updatePkg = (namespace, versions) =>
+    Object.keys(pkg[namespace])
+      .forEach((dep, index) => (pkg[namespace][dep] = '~' + versions[index]))
 
-  const promise = Promise.all(['dependencies'].map(function (dep) {
-    const pkgs = Object.keys(pkg[dep])
-    return fetchVersions(pkgs).then(function (versions) {
-      updatePkg(dep, versions)
-    })
-  }))
+  const promise = Promise.all(['dependencies']
+    .map(dep => fetchVersions(Object.keys(pkg[dep]))
+      .then(versions => updatePkg(dep, versions))))
 
-  return promise.then(function () {
-    return Promise.resolve(pkg)
-  })
+  return promise.then(() => Promise.resolve(pkg))
 }
 
 const CONST = {
@@ -50,45 +39,16 @@ const CONST = {
   }
 }
 
-function capitalizeName (name) {
-  return _.reduce(name.split('-'), function (acc, str, index) {
-    const separator = index === 0 ? '' : ' '
-    return acc + separator + _.capitalize(str)
-  }, '')
-}
+const capitalizeName = name => name.split('-')
+  .reduce((acc, str, index) => acc + (index === 0 ? '' : ' ') + _.capitalize(str), '')
 
-/**
- * Generate a new Project.
- * Currently settings that will be configured are:
- *
- * about project name
- *
- * - appName
- * - camelAppName
- * - appDescription
- *
- * about user info (Github)
- *
- * - userLogin
- * - userUrl
- * - userEmail
- * - userBlog
- * - userName
- *
- *  about style
- *
- * - coffee
- * - cli
- * - jshint
- * - jscs
- */
 module.exports = generators.Base.extend({
-  initializing: function () {
+  initializing () {
     this.licenseYear = new Date().getFullYear()
   },
 
-  projectName: function () {
-    this.log(yosay('Initializing ' + superb() + ' Project'))
+  projectName () {
+    this.log(yosay(`Initializing ${superb()} Project`))
     const cb = this.async()
 
     const promise = askName({
@@ -96,26 +56,24 @@ module.exports = generators.Base.extend({
       message: 'Your project name',
       default: _.kebabCase(path.basename(process.cwd())),
       filter: _.kebabCase,
-      validate: function (str) {
-        return str.length > 0
-      }
+      validate: str => str.length > 0
     }, this)
 
     promise
-      .then(function (answer) {
+      .then(answer => {
         const name = answer.name
         this.appName = name
         this.camelAppName = _.camelCase(name)
         this.capitalizeName = capitalizeName(this.appName)
         cb()
-      }.bind(this))
+      })
   },
 
-  setupPath: function () {
+  setupPath () {
     if (path.basename(this.destinationPath()) !== this.appName) {
       this.log(
-        'Your generator must be inside a folder named ' + this.appName + '\n' +
-        "I'll automatically create this folder."
+        `Your generator must be inside a folder named ${this.appName}\n
+        I'll automatically create this folder.`
       )
       mkdirp(this.appName)
       this.destinationRoot(this.destinationPath(this.appName))
@@ -125,7 +83,7 @@ module.exports = generators.Base.extend({
     this.package = this.fs.read(this.templatePath('package/base.json'))
   },
 
-  questions: function () {
+  questions () {
     const cb = this.async()
 
     const promise = this.prompt([{
@@ -143,28 +101,28 @@ module.exports = generators.Base.extend({
       default: false
     }])
 
-    promise.then(function (props) {
+    promise.then(props => {
       this.appDescription = props.appDescription
       this.userLogin = props.userLogin
       this.cli = props.cli
       cb()
-    }.bind(this))
+    })
   },
 
-  userInfo: function () {
+  userInfo () {
     const cb = this.async()
     const promise = ghUser(this.userLogin)
 
-    promise.then(function (user) {
+    promise.then(user => {
       this.userName = user.name
       this.userEmail = user.email
       this.userBlog = user.blog
       this.userUrl = user.html_url
       cb()
-    }.bind(this))
+    })
   },
 
-  transpilers: function () {
+  transpilers () {
     const cb = this.async()
 
     const promise = this.prompt([{
@@ -174,15 +132,14 @@ module.exports = generators.Base.extend({
       choices: CONST.TRANSPILERS.choose
     }])
 
-    promise.then(function (props) {
-      _.forEach(CONST.TRANSPILERS.choose, function (choice) {
-        this[choice] = _.includes(props.transpilers, choice)
-      }.bind(this))
+    promise.then(props => {
+      CONST.TRANSPILERS.choose
+        .forEach(choice => (this[choice] = _.includes(props.transpilers, choice)))
       cb()
-    }.bind(this))
+    })
   },
 
-  linters: function () {
+  linters () {
     const cb = this.async()
 
     const promise = this.prompt([{
@@ -192,15 +149,14 @@ module.exports = generators.Base.extend({
       choices: CONST.LINTERS.choose
     }])
 
-    promise.then(function (props) {
-      _.forEach(CONST.LINTERS.choose, function (choice) {
-        this[choice] = _.includes(props.linter, choice)
-      }.bind(this))
+    promise.then(props => {
+      CONST.LINTERS.choose
+        .forEach(choice => (this[choice] = _.includes(props.linter, choice)))
       cb()
-    }.bind(this))
+    })
   },
 
-  testing: function () {
+  testing () {
     const cb = this.async()
 
     const promise = this.prompt([{
@@ -210,15 +166,14 @@ module.exports = generators.Base.extend({
       choices: CONST.TESTING.choose
     }])
 
-    promise.then(function (props) {
-      _.forEach(CONST.TESTING.choose, function (choice) {
-        this[choice] = _.includes(props.testing, choice)
-      }.bind(this))
+    promise.then(props => {
+      CONST.TESTING.choose
+        .forEach(choice => (this[choice] = _.includes(props.testing, choice)))
       cb()
-    }.bind(this))
+    })
   },
 
-  setup: function () {
+  setup () {
     this.copy('_editorconfig', '.editorconfig')
     this.copy('_gitignore', '.gitignore')
     this.copy('_gitattributes', '.gitattributes')
@@ -235,7 +190,7 @@ module.exports = generators.Base.extend({
       cliPackage = _.template(cliPackage)(this)
       cliPackage = JSON.parse(cliPackage)
 
-      _.merge(this.package, cliPackage, {})
+      this.package = Object.assign({}, this.package, cliPackage)
       this.readme += this.fs.read(this.templatePath('README/install/cli.md'))
 
       this.template('bin/_help.txt', 'bin/help.txt')
@@ -248,15 +203,13 @@ module.exports = generators.Base.extend({
 
     /* TRANSPILERS */
 
-    _.forEach(CONST.TRANSPILERS.choose, function (transpiler) {
-      if (this[transpiler]) this.package.dependencies[transpiler] = 'latest'
-    }.bind(this))
+    CONST.TRANSPILERS.choose.forEach(transpiler =>
+      (this[transpiler]) && (this.package.dependencies[transpiler] = 'latest'))
 
     /* TESTING */
 
-    _.forEach(CONST.TESTING.choose, function (testing) {
-      if (this[testing]) this.package.devDependencies[testing] = 'latest'
-    }.bind(this))
+    CONST.TESTING.choose.forEach(testing =>
+      (this[testing]) && (this.package.devDependencies[testing] = 'latest'))
 
     let testScript = 'mocha'
     if (this.mocha) this.copy('test/_mocha.opts', 'test/mocha.opts')
@@ -269,19 +222,19 @@ module.exports = generators.Base.extend({
       this.package.scripts.test = 'jest --coverage'
       this.package.scripts['test:watch'] = 'jest --watch'
       const jestConfig = this.fs.readJSON(this.templatePath('package/jest.json'))
-      _.merge(this.package, jestConfig, {})
+      this.package = Object.assign({}, this.package, jestConfig)
     }
 
     /* LINTERS */
 
     let lintScript = ''
 
-    _.forEach(CONST.LINTERS.choose, function (linter) {
+    CONST.LINTERS.choose.forEach(linter => {
       if (this[linter]) {
         this.package.devDependencies[linter] = 'latest'
         lintScript += lintScript === '' ? linter : ' && ' + linter
       }
-    }.bind(this))
+    })
 
     if (this.jshint) this.copy('_jshintrc', '.jshintrc')
     if (this.jscs) this.copy('_jscsrc', '.jscsrc')
@@ -300,7 +253,7 @@ module.exports = generators.Base.extend({
 
     /* INDEX.JS */
 
-    let indexExtension = this['coffee-script'] ? 'coffee' : 'js'
+    const indexExtension = this['coffee-script'] ? 'coffee' : 'js'
     this.copy('_index.' + indexExtension, 'index.js')
 
     /* README */
@@ -310,30 +263,30 @@ module.exports = generators.Base.extend({
     this.fs.write(this.destinationPath('README.md'), this.readme)
   },
 
-  dependenciesVersion: function () {
+  dependenciesVersion () {
     const cb = this.async()
-    const _this = this
 
-    setupDependenciesVersions(this.package).then(function (newPkg) {
-      _this.package = newPkg
-      cb()
-    })
+    setupDependenciesVersions(this.package)
+      .then(newPkg => {
+        this.package = newPkg
+        cb()
+      })
   },
 
-  write: function () {
+  write () {
     const cb = this.async()
 
     finepack(this.package, {
       validate: false,
       color: false
-    }, function (err, packageFormated) {
+    }, (err, packageFormated) => {
       if (err) cb(err)
       this.fs.writeJSON(this.destinationPath('package.json'), packageFormated)
       cb()
-    }.bind(this))
+    })
   },
 
-  install: function () {
+  install () {
     this.installDependencies({ bower: false })
   }
 })
