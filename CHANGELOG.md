@@ -1,3 +1,10 @@
+<a name="3.10.1"></a>
+## 3.10.1 (2017-07-27)
+
+* Get rid of bind() and some legacy code 🎉 ([524f3ae](https://github.com/Kikobeats/generator-git/commit/524f3ae))
+
+
+
 <a name="3.10.0"></a>
 # 3.10.0 (2017-07-27)
 
