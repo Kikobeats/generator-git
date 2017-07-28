@@ -27,7 +27,7 @@ function setupDependenciesVersions (pkg) {
 
 const CONST = {
   LINTERS: {
-    choose: ['jscs', 'jshint', 'standard-markdown', 'standard']
+    choose: ['jscs', 'jshint', 'standard']
   },
 
   TESTING: {
@@ -290,13 +290,18 @@ module.exports = class extends Generator {
 
     if (this.standard) {
       this.package.devDependencies['prettier-standard'] = 'latest'
+      this.package.devDependencies['standard-markdown'] = 'latest'
       this.package.scripts.prelint = 'npm run pretty'
       this.package.scripts.pretty = 'prettier-standard index.js src/**/*.js test/**/*.js bin/**/*.js'
+
+      lintScript = `standard-markdown && ${lintScript}`
 
       if (this.mocha || this.jest) {
         this.package.standard = { env: [this.mocha ? 'mocha' : 'jest'] }
       }
     }
+
+    this.package.scripts.lint = lintScript
 
     /* INDEX.JS */
 
