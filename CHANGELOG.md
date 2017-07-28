@@ -1,3 +1,11 @@
+<a name="3.11.0"></a>
+# 3.11.0 (2017-07-28)
+
+* Up-to-date with all dependencies 🤓 ([53a8cdd](https://github.com/Kikobeats/generator-git/commit/53a8cdd))
+* Upgrade to yeoman-generator 1.0 🎉 ([4f0daae](https://github.com/Kikobeats/generator-git/commit/4f0daae))
+
+
+
 <a name="3.10.1"></a>
 ## 3.10.1 (2017-07-27)
 
