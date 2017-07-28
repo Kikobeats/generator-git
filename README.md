@@ -1,20 +1,44 @@
-# generator-git
+# Generate an Impeccable Tailored project
 
 ![Last version](https://img.shields.io/github/tag/kikobeats/generator-git.svg?style=flat-square)
 [![Dependency status](http://img.shields.io/david/Kikobeats/generator-git.svg?style=flat-square)](https://david-dm.org/Kikobeats/generator-git)
 [![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/generator-git.svg?style=flat-square)](https://david-dm.org/Kikobeats/generator-git#info=devDependencies)
 [![NPM Status](http://img.shields.io/npm/dm/generator-git.svg?style=flat-square)](https://www.npmjs.org/package/generator-git)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/kikobeats)
-> Create the configurable scaffolding to start with a git-like project.
 
-The version **3.x** is a totally refactor focused in offer more options to choice each time that you need to setup a new project.
+**GIT** helps you follow best practice in your next project, allowing choose you what technologies you want, providing you:
 
-## Choice between different:
+- Continuous Integration by [Travis](https://travis-ci.org/).
+- Testing coverage by [Coveralls](https://coveralls.io/).
+- Easy Releasing by [Bumped](https://bumped.github.io/).
 
-- Code styles (JSHint, JSCS, ESLint,...)
-- Software licenses (MIT, Apache,...)
-- Testing libraries (Mocha, should, tap,...)
-- Transpilers (CoffeeScript, TypeScript, Babel,...)
+**GIT** allows you setup your scaffolding choosing between:
+
+## Project Style
+
+- [x] CLI
+- [x] Module
+
+## Transpiler
+
+- [x] CoffeeScript
+- [ ] Flow
+- [ ] TypeScript
+
+## Linter
+
+- [x] JSCS
+- [x] JSHint
+- [x] Standard
+
+## Testing Framework
+
+- [x] Jest
+- [x] Mocha
+- [x] Should
+- [x] Tape
+- [x] Tap
+- [ ] Ava
 
 ## Install
 
