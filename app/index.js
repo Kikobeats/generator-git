@@ -8,7 +8,7 @@ const mkdirp = require('mkdirp')
 const ghUser = require('gh-user')
 const finepack = require('finepack')
 const askName = require('inquirer-npm-name')
-const generators = require('yeoman-generator')
+const Generator = require('yeoman-generator')
 const latestVersion = require('latest-version')
 
 function setupDependenciesVersions (pkg) {
@@ -42,10 +42,10 @@ const CONST = {
 const capitalizeName = name => name.split('-')
   .reduce((acc, str, index) => acc + (index === 0 ? '' : ' ') + _.capitalize(str), '')
 
-module.exports = generators.Base.extend({
+module.exports = class extends Generator {
   initializing () {
     this.licenseYear = new Date().getFullYear()
-  },
+  }
 
   projectName () {
     this.log(yosay(`Initializing ${superb()} Project`))
@@ -67,7 +67,7 @@ module.exports = generators.Base.extend({
         this.capitalizeName = capitalizeName(this.appName)
         cb()
       })
-  },
+  }
 
   setupPath () {
     if (path.basename(this.destinationPath()) !== this.appName) {
@@ -81,7 +81,7 @@ module.exports = generators.Base.extend({
 
     this.readme = this.fs.read(this.templatePath('README/header.md'))
     this.package = this.fs.read(this.templatePath('package/base.json'))
-  },
+  }
 
   questions () {
     const cb = this.async()
@@ -107,7 +107,7 @@ module.exports = generators.Base.extend({
       this.cli = props.cli
       cb()
     })
-  },
+  }
 
   userInfo () {
     const cb = this.async()
@@ -120,7 +120,7 @@ module.exports = generators.Base.extend({
       this.userUrl = user.html_url
       cb()
     })
-  },
+  }
 
   transpilers () {
     const cb = this.async()
@@ -137,7 +137,7 @@ module.exports = generators.Base.extend({
         .forEach(choice => (this[choice] = _.includes(props.transpilers, choice)))
       cb()
     })
-  },
+  }
 
   linters () {
     const cb = this.async()
@@ -154,7 +154,7 @@ module.exports = generators.Base.extend({
         .forEach(choice => (this[choice] = _.includes(props.linter, choice)))
       cb()
     })
-  },
+  }
 
   testing () {
     const cb = this.async()
@@ -171,16 +171,38 @@ module.exports = generators.Base.extend({
         .forEach(choice => (this[choice] = _.includes(props.testing, choice)))
       cb()
     })
-  },
+  }
 
   setup () {
-    this.copy('_editorconfig', '.editorconfig')
-    this.copy('_gitignore', '.gitignore')
-    this.copy('_gitattributes', '.gitattributes')
-    this.copy('_npmignore', '.npmignore')
-    this.copy('_npmrc', '.npmrc')
-    this.copy('_travis.yml', '.travis.yml')
-    this.template('_LICENSE.md', 'LICENSE.md')
+    this.fs.copy(
+      this.templatePath('_editorconfig'),
+      this.destinationPath('.editorconfig')
+    )
+    this.fs.copy(
+      this.templatePath('_gitignore'),
+      this.destinationPath('.gitignore')
+    )
+    this.fs.copy(
+      this.templatePath('_gitattributes'),
+      this.destinationPath('.gitattributes')
+    )
+    this.fs.copy(
+      this.templatePath('_npmignore'),
+      this.destinationPath('.npmignore')
+    )
+    this.fs.copy(
+      this.templatePath('_npmrc'),
+      this.destinationPath('.npmrc')
+    )
+    this.fs.copy(
+      this.templatePath('_travis.yml'),
+      this.destinationPath('.travis.yml')
+    )
+    this.fs.copyTpl(
+      this.templatePath('_LICENSE'),
+      this.destinationPath('LICENSE'),
+      this
+    )
 
     this.package = _.template(this.package)(this)
     this.package = JSON.parse(this.package)
@@ -193,13 +215,23 @@ module.exports = generators.Base.extend({
       this.package = Object.assign({}, this.package, cliPackage)
       this.readme += this.fs.read(this.templatePath('README/install/cli.md'))
 
-      this.template('bin/_help.txt', 'bin/help.txt')
-      this.copy('bin/_index.js', 'bin/index.js')
+      this.fs.copyTpl(
+        this.templatePath('bin/_help.txt'),
+        this.destinationPath('bin/help.txt'),
+        this
+      )
+      this.fs.copy(
+        this.templatePath('bin/_index.js'),
+        this.destinationPath('bin/index.js')
+      )
     } else {
       this.readme += this.fs.read(this.templatePath('README/install/normal.md'))
     }
 
-    this.copy('_bumpedrc', '.bumpedrc')
+    this.fs.copy(
+      this.templatePath('_bumpedrc'),
+      this.destinationPath('.bumpedrc')
+    )
 
     /* TRANSPILERS */
 
@@ -212,7 +244,12 @@ module.exports = generators.Base.extend({
       (this[testing]) && (this.package.devDependencies[testing] = 'latest'))
 
     let testScript = 'mocha'
-    if (this.mocha) this.copy('test/_mocha.opts', 'test/mocha.opts')
+    if (this.mocha) {
+      this.fs.copy(
+        this.templatePath('test/_mocha.opts'),
+        this.destinationPath('test/mocha.opts')
+      )
+    }
     if (this.tape && !this.mocha) testScript = 'tape'
     this.package.scripts.test += testScript
 
@@ -236,8 +273,18 @@ module.exports = generators.Base.extend({
       }
     })
 
-    if (this.jshint) this.copy('_jshintrc', '.jshintrc')
-    if (this.jscs) this.copy('_jscsrc', '.jscsrc')
+    if (this.jshint) {
+      this.fs.copy(
+        this.templatePath('_jshintrc'),
+        this.destinationPath('.jshintrc')
+      )
+    }
+    if (this.jscs) {
+      this.fs.copy(
+        this.templatePath('_jscsrc'),
+        this.destinationPath('.jscsrc')
+      )
+    }
 
     this.package.scripts.lint = lintScript
 
@@ -254,14 +301,17 @@ module.exports = generators.Base.extend({
     /* INDEX.JS */
 
     const indexExtension = this['coffee-script'] ? 'coffee' : 'js'
-    this.copy('_index.' + indexExtension, 'index.js')
+    this.fs.copy(
+      this.templatePath(`_index.${indexExtension}`),
+      this.destinationPath('index.js')
+    )
 
     /* README */
 
     this.readme += this.fs.read(this.templatePath('README/body.md'))
     this.readme = _.template(this.readme)(this)
     this.fs.write(this.destinationPath('README.md'), this.readme)
-  },
+  }
 
   dependenciesVersion () {
     const cb = this.async()
@@ -271,9 +321,9 @@ module.exports = generators.Base.extend({
         this.package = newPkg
         cb()
       })
-  },
+  }
 
-  write () {
+  writePackage () {
     const cb = this.async()
 
     finepack(this.package, {
@@ -284,9 +334,9 @@ module.exports = generators.Base.extend({
       this.fs.writeJSON(this.destinationPath('package.json'), packageFormated)
       cb()
     })
-  },
+  }
 
   install () {
     this.installDependencies({ bower: false })
   }
-})
+}
