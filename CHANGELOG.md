@@ -1,3 +1,11 @@
+<a name="3.11.1"></a>
+## 3.11.1 (2017-07-28)
+
+* Update docs ([b2df9cb](https://github.com/Kikobeats/generator-git/commit/b2df9cb))
+* Use standard-markdown transparently ([633ca24](https://github.com/Kikobeats/generator-git/commit/633ca24))
+
+
+
 <a name="3.11.0"></a>
 # 3.11.0 (2017-07-28)
 
