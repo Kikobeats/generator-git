@@ -31,7 +31,7 @@ const CONST = {
   },
 
   TESTING: {
-    choose: ['jest', 'mocha', 'should', 'tap', 'tape']
+    choose: ['ava', 'jest', 'mocha', 'should', 'tap', 'tape']
   },
 
   TRANSPILERS: {
@@ -250,6 +250,7 @@ module.exports = class extends Generator {
         this.destinationPath('test/mocha.opts')
       )
     }
+    if (this.ava) testScript = 'ava'
     if (this.tape && !this.mocha) testScript = 'tape'
     this.package.scripts.test += testScript
 
