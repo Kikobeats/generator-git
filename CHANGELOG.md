@@ -1,3 +1,11 @@
+<a name="3.12.0"></a>
+# 3.12.0 (2017-07-31)
+
+* Add @avajs as testing framework 🚀 ([9bb211f](https://github.com/Kikobeats/generator-git/commit/9bb211f))
+* Add ava to README.md ([022c4ed](https://github.com/Kikobeats/generator-git/commit/022c4ed))
+
+
+
 <a name="3.11.1"></a>
 ## 3.11.1 (2017-07-28)
 
