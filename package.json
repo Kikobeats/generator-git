@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "git-dirty": "latest",
+    "jest": "latest",
     "standard": "latest"
   },
   "engines": {
@@ -50,8 +51,12 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "lint": "standard app",
-    "pretest": "npm run lint"
+    "lint": "standard app __tests__",
+    "pretest": "npm run lint",
+    "test": "jest"
+  },
+  "standard": {
+    "env": "jest"
   },
   "license": "MIT",
   "peerDependencies": {
