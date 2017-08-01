@@ -1,3 +1,10 @@
+<a name="3.13.0"></a>
+# 3.13.0 (2017-08-01)
+
+* Add unit tests ([d0cd843](https://github.com/Kikobeats/generator-git/commit/d0cd843))
+
+
+
 <a name="3.12.0"></a>
 # 3.12.0 (2017-07-31)
 
