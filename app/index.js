@@ -279,6 +279,19 @@ module.exports = class extends Generator {
       this.package.scripts.prelint = 'npm run pretty'
       this.package.scripts.pretty = 'prettier-standard {core,test,bin}/**/*.js'
 
+      this.package.devDependencies['husky'] = 'latest'
+      this.package.devDependencies['lint-staged'] = 'latest'
+
+      this.package.scripts['precommit'] = 'lint-staged'
+      this.package.scripts['precommit-lint'] = 'prettier-standard'
+
+      this.package['lint-staged'] = {
+        '*.js': [
+          'precommit-lint',
+          'git add'
+        ]
+      }
+
       lintScript = `standard-markdown && ${lintScript}`
 
       if (this.mocha || this.jest) {
