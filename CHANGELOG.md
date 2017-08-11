@@ -1,3 +1,11 @@
+<a name="3.14.0"></a>
+# 3.14.0 (2017-08-11)
+
+* Add precommit hook ([7729a43](https://github.com/Kikobeats/generator-git/commit/7729a43))
+* Better pretty command ([cdcfad1](https://github.com/Kikobeats/generator-git/commit/cdcfad1))
+
+
+
 <a name="3.13.0"></a>
 # 3.13.0 (2017-08-01)
 
