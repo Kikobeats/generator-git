@@ -1,3 +1,10 @@
+<a name="3.15.1"></a>
+## 3.15.1 (2017-08-11)
+
+* Commit after pretty ([67e37c7](https://github.com/Kikobeats/generator-git/commit/67e37c7))
+
+
+
 <a name="3.15.0"></a>
 # 3.15.0 (2017-08-11)
 
