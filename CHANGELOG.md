@@ -1,3 +1,10 @@
+<a name="3.15.0"></a>
+# 3.15.0 (2017-08-11)
+
+* Add git remote link ([7f35b43](https://github.com/Kikobeats/generator-git/commit/7f35b43))
+
+
+
 <a name="3.14.0"></a>
 # 3.14.0 (2017-08-11)
 
