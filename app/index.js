@@ -340,6 +340,10 @@ module.exports = class extends Generator {
   }
 
   install () {
+    this.spawnCommandSync('git', ['init'])
+    const repoSSH = `git@github.com:${this.userLogin}/${this.appName}.git`
+    this.spawnCommandSync('git', ['remote', 'add', 'origin', repoSSH])
+
     this.installDependencies({ bower: false })
   }
 }
