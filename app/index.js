@@ -7,6 +7,7 @@ const superb = require('superb')
 const mkdirp = require('mkdirp')
 const ghUser = require('gh-user')
 const finepack = require('finepack')
+const humanizeUrl = require('humanize-url')
 const askName = require('inquirer-npm-name')
 const Generator = require('yeoman-generator')
 
@@ -99,9 +100,10 @@ module.exports = class extends Generator {
 
     promise.then(user => {
       this.userName = user.name
-      this.userEmail = user.email
-      this.userBlog = user.blog
-      this.userUrl = user.html_url
+      this.userEmail = user.email || this.user.git.email()
+      this.userUrl = user.blog
+      this.githubUrl = user.html_url
+      this.humanizeUserUrl = humanizeUrl(this.userUrl)
       cb()
     })
   }
