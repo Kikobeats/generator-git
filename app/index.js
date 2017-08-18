@@ -287,8 +287,8 @@ module.exports = class extends Generator {
 
       this.package['lint-staged'] = {
         '*.js': [
-          'git add',
-          'precommit-lint'
+          'precommit-lint',
+          'git add'
         ]
       }
 
