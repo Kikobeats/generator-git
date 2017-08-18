@@ -1,3 +1,11 @@
+<a name="3.16.0"></a>
+# 3.16.0 (2017-08-18)
+
+* Better metadata ([7ee524e](https://github.com/Kikobeats/generator-git/commit/7ee524e))
+* Fix order ([11885a4](https://github.com/Kikobeats/generator-git/commit/11885a4))
+
+
+
 <a name="3.15.1"></a>
 ## 3.15.1 (2017-08-11)
 
