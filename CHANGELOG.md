@@ -1,3 +1,10 @@
+<a name="3.16.1"></a>
+## 3.16.1 (2017-08-23)
+
+* Add --single-quote flag to prettier ([362130c](https://github.com/Kikobeats/generator-git/commit/362130c))
+
+
+
 <a name="3.16.0"></a>
 # 3.16.0 (2017-08-18)
 
