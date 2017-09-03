@@ -283,13 +283,10 @@ module.exports = class extends Generator {
 
       this.package.devDependencies['husky'] = 'latest'
       this.package.devDependencies['lint-staged'] = 'latest'
-
       this.package.scripts['precommit'] = 'lint-staged'
-      this.package.scripts['precommit-lint'] = 'prettier-standard --single-quote'
-
       this.package['lint-staged'] = {
         '*.js': [
-          'precommit-lint',
+          'prettier-standard',
           'git add'
         ]
       }
