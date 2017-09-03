@@ -1,3 +1,12 @@
+<a name="3.16.2"></a>
+## 3.16.2 (2017-09-03)
+
+* Avoid inline flag ([ab9a5b4](https://github.com/Kikobeats/generator-git/commit/ab9a5b4))
+* Ensure resolve user url ([66fc98b](https://github.com/Kikobeats/generator-git/commit/66fc98b))
+* Update deps ([80564b7](https://github.com/Kikobeats/generator-git/commit/80564b7))
+
+
+
 <a name="3.16.1"></a>
 ## 3.16.1 (2017-08-23)
 
