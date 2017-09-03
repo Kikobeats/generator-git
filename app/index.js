@@ -103,7 +103,7 @@ module.exports = class extends Generator {
       this.userEmail = user.email || this.user.git.email()
       this.userUrl = user.blog
       this.githubUrl = user.html_url
-      this.humanizeUserUrl = humanizeUrl(this.userUrl)
+      this.humanizeUserUrl = this.userUrl ? humanizeUrl(this.userUrl) : this.userUrl
       cb()
     })
   }
