@@ -278,8 +278,7 @@ module.exports = class extends Generator {
     if (this.standard) {
       this.package.devDependencies['prettier-standard'] = 'latest'
       this.package.devDependencies['standard-markdown'] = 'latest'
-      this.package.scripts.prelint = 'npm run pretty'
-      this.package.scripts.pretty = 'prettier-standard --single-quote {core,test,bin}/**/*.js'
+      this.package.scripts.pretty = 'prettier-standard index.js {core,test,bin}/**/*.js --single-quote'
 
       this.package.devDependencies['husky'] = 'latest'
       this.package.devDependencies['lint-staged'] = 'latest'
