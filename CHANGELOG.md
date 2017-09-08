@@ -1,3 +1,11 @@
+<a name="3.17.0"></a>
+# 3.17.0 (2017-09-08)
+
+* Fix pretty command ([dd54d1b](https://github.com/Kikobeats/generator-git/commit/dd54d1b))
+* New footer style ([82eee25](https://github.com/Kikobeats/generator-git/commit/82eee25))
+
+
+
 <a name="3.16.2"></a>
 ## 3.16.2 (2017-09-03)
 
