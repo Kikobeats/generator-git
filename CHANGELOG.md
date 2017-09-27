@@ -1,3 +1,10 @@
+<a name="3.18.0"></a>
+# 3.18.0 (2017-09-27)
+
+* Ignore lock files ([587a57f](https://github.com/Kikobeats/generator-git/commit/587a57f))
+
+
+
 <a name="3.17.0"></a>
 # 3.17.0 (2017-09-08)
 
