@@ -77,7 +77,7 @@ module.exports = class extends Generator {
       default: "I'm a lazy"
     }, {
       name: 'keywords',
-      message: 'Throw here some keywords of your project! (comma-separated list)'
+      message: 'Throw here some keywords of your project!'
     }, {
       name: 'userLogin',
       message: 'Would you mind telling me your username on GitHub?',
@@ -91,7 +91,7 @@ module.exports = class extends Generator {
 
     promise.then(props => {
       this.appDescription = props.appDescription
-      this.keywords = props.keywords.trim().split(',')
+      this.keywords = props.keywords ? props.keywords.trim().split(' ') : []
       this.userLogin = props.userLogin
       this.cli = props.cli
       cb()
