@@ -1,3 +1,10 @@
+<a name="3.18.1"></a>
+## 3.18.1 (2017-10-04)
+
+* Remove npm ignore ([a94da27](https://github.com/Kikobeats/generator-git/commit/a94da27))
+
+
+
 <a name="3.18.0"></a>
 # 3.18.0 (2017-09-27)
 
