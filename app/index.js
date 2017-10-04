@@ -76,6 +76,9 @@ module.exports = class extends Generator {
       message: 'A short description of your project',
       default: "I'm a lazy"
     }, {
+      name: 'keywords',
+      message: 'Throw here some keywords of your project!'
+    }, {
       name: 'userLogin',
       message: 'Would you mind telling me your username on GitHub?',
       default: 'someone'
@@ -88,6 +91,7 @@ module.exports = class extends Generator {
 
     promise.then(props => {
       this.appDescription = props.appDescription
+      this.keywords = props.keywords ? props.keywords.trim().split(' ') : []
       this.userLogin = props.userLogin
       this.cli = props.cli
       cb()
@@ -214,6 +218,10 @@ module.exports = class extends Generator {
       this.templatePath('_bumpedrc'),
       this.destinationPath('.bumpedrc')
     )
+
+    /* KEYWORDS */
+
+    this.package.keywords = this.keywords
 
     /* TRANSPILERS */
 
