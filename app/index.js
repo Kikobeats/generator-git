@@ -173,10 +173,6 @@ module.exports = class extends Generator {
       this.destinationPath('.gitattributes')
     )
     this.fs.copy(
-      this.templatePath('_npmignore'),
-      this.destinationPath('.npmignore')
-    )
-    this.fs.copy(
       this.templatePath('_npmrc'),
       this.destinationPath('.npmrc')
     )
