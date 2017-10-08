@@ -1,3 +1,12 @@
+<a name="3.19.0"></a>
+# 3.19.0 (2017-10-08)
+
+* Add missing space ([f304fca](https://github.com/Kikobeats/generator-git/commit/f304fca))
+* Prompt with project keywords 😎 ([9ea1669](https://github.com/Kikobeats/generator-git/commit/9ea1669))
+* Split by spaces and fallback case 👌🏼 ([23c5be5](https://github.com/Kikobeats/generator-git/commit/23c5be5))
+
+
+
 <a name="3.18.1"></a>
 ## 3.18.1 (2017-10-04)
 
