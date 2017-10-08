@@ -1,3 +1,4 @@
+
 ## License
 
 **<%= appName %>** © [<%= userName %>](<%= userUrl %>), Released under the [MIT](https://github.com/<%= userLogin %>/<%= appName %>/blob/master/LICENSE.md) License.<br>
