@@ -1,3 +1,13 @@
+<a name="3.20.0"></a>
+# 3.20.0 (2017-12-20)
+
+* Add opiniated npmr configuration by default ([a5f038b](https://github.com/Kikobeats/generator-git/commit/a5f038b))
+* Update README.md ([4715a92](https://github.com/Kikobeats/generator-git/commit/4715a92))
+* docs(readme): add Greenkeeper badge ([0392f6a](https://github.com/Kikobeats/generator-git/commit/0392f6a))
+* chore(package): update dependencies ([e2b4e3d](https://github.com/Kikobeats/generator-git/commit/e2b4e3d))
+
+
+
 <a name="3.19.0"></a>
 # 3.19.0 (2017-10-08)
 
