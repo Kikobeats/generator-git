@@ -1,3 +1,10 @@
+<a name="3.20.1"></a>
+## 3.20.1 (2017-12-22)
+
+* Use CLI header under cli mode ([cd594d9](https://github.com/Kikobeats/generator-git/commit/cd594d9))
+
+
+
 <a name="3.20.0"></a>
 # 3.20.0 (2017-12-20)
 
