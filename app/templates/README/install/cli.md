@@ -5,7 +5,7 @@
 $ npm install <%= appName %> --global
 ```
 
-## Usage
+## CLI
 
 ```bash
 $ <%= appName %> --help
