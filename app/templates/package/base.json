@@ -17,7 +17,10 @@
   "dependencies": {},
   "devDependencies": {
     "coveralls": "latest",
+    "finepack": "latest",
     "git-dirty": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
     "nyc": "latest"
   },
   "engines": {
@@ -27,8 +30,15 @@
     "clean": "rm -rf node_modules",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "",
+    "precommit": "lint-staged",
     "pretest": "npm run lint",
     "test": "nyc "
+  },
+  "lint-staged": {
+    "package.json": [
+      "finepack",
+      "git add"
+    ]
   },
   "license": "MIT"
 }
