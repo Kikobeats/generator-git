@@ -1,3 +1,14 @@
+<a name="3.20.2"></a>
+## 3.20.2 (2018-02-16)
+
+* Add finepack pre commit hook for package.json ([fdd2d23](https://github.com/Kikobeats/generator-git/commit/fdd2d23))
+* Fix upper ([590462d](https://github.com/Kikobeats/generator-git/commit/590462d))
+* Remove @ from GitHub name ([293abdc](https://github.com/Kikobeats/generator-git/commit/293abdc))
+* fix(package): update finepack to version 2.7.0 ([4eec276](https://github.com/Kikobeats/generator-git/commit/4eec276))
+* fix(package): update inquirer-npm-name to version 3.0.0 ([2568a27](https://github.com/Kikobeats/generator-git/commit/2568a27))
+
+
+
 <a name="3.20.1"></a>
 ## 3.20.1 (2017-12-22)
 
