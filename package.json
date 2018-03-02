@@ -27,16 +27,16 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "chalk": "~2.3.0",
+    "chalk": "~2.3.2",
     "finepack": "~2.7.0",
     "gh-user": "~3.0.0",
     "humanize-url": "~1.0.1",
     "inquirer-npm-name": "~3.0.0",
     "latest-version": "~3.1.0",
-    "lodash": "~4.17.4",
+    "lodash": "~4.17.5",
     "mkdirp": "~0.5.1",
     "superb": "~2.0.0",
-    "yeoman-generator": "~2.0.1",
+    "yeoman-generator": "~2.0.3",
     "yosay": "~2.0.1"
   },
   "devDependencies": {
