@@ -1,3 +1,12 @@
+<a name="3.20.3"></a>
+## 3.20.3 (2018-03-16)
+
+* Add git hooks ([997b114](https://github.com/Kikobeats/generator-git/commit/997b114))
+* Add precommit hook ([29ff57b](https://github.com/Kikobeats/generator-git/commit/29ff57b))
+* Update deps ([22a5c0a](https://github.com/Kikobeats/generator-git/commit/22a5c0a))
+
+
+
 <a name="3.20.2"></a>
 ## 3.20.2 (2018-02-16)
 
