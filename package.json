@@ -55,6 +55,7 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "lint": "standard app __tests__",
+    "precommit": "lint-staged",
     "pretest": "npm run lint",
     "test": "jest"
   },
