@@ -36,22 +36,24 @@ module.exports = class extends Generator {
     this.log(yosay(`Initializing ${superb()} Project`))
     const cb = this.async()
 
-    const promise = askName({
-      name: 'name',
-      message: 'Your project name',
-      default: _.kebabCase(path.basename(process.cwd())),
-      filter: _.kebabCase,
-      validate: str => str.length > 0
-    }, this)
+    const promise = askName(
+      {
+        name: 'name',
+        message: 'Your project name',
+        default: _.kebabCase(path.basename(process.cwd())),
+        filter: _.kebabCase,
+        validate: str => str.length > 0
+      },
+      this
+    )
 
-    promise
-      .then(answer => {
-        const name = answer.name
-        this.appName = name
-        this.camelAppName = _.camelCase(name)
-        this.capitalizeName = capitalizeName(this.appName)
-        cb()
-      })
+    promise.then(answer => {
+      const name = answer.name
+      this.appName = name
+      this.camelAppName = _.camelCase(name)
+      this.capitalizeName = capitalizeName(this.appName)
+      cb()
+    })
   }
 
   setupPath () {
@@ -71,23 +73,28 @@ module.exports = class extends Generator {
   questions () {
     const cb = this.async()
 
-    const promise = this.prompt([{
-      name: 'appDescription',
-      message: 'A short description of your project',
-      default: "I'm a lazy"
-    }, {
-      name: 'keywords',
-      message: 'Throw here some keywords of your project!'
-    }, {
-      name: 'userLogin',
-      message: 'Would you mind telling me your username on GitHub?',
-      default: 'someone'
-    }, {
-      name: 'cli',
-      message: 'Do you need a CLI ?',
-      type: 'confirm',
-      default: false
-    }])
+    const promise = this.prompt([
+      {
+        name: 'appDescription',
+        message: 'A short description of your project',
+        default: "I'm a lazy"
+      },
+      {
+        name: 'keywords',
+        message: 'Throw here some keywords of your project!'
+      },
+      {
+        name: 'userLogin',
+        message: 'Would you mind telling me your username on GitHub?',
+        default: 'someone'
+      },
+      {
+        name: 'cli',
+        message: 'Do you need a CLI ?',
+        type: 'confirm',
+        default: false
+      }
+    ])
 
     promise.then(props => {
       this.appDescription = props.appDescription
@@ -107,7 +114,9 @@ module.exports = class extends Generator {
       this.userEmail = user.email || this.user.git.email()
       this.userUrl = user.blog
       this.githubUrl = user.html_url
-      this.humanizeUserUrl = this.userUrl ? humanizeUrl(this.userUrl) : this.userUrl
+      this.humanizeUserUrl = this.userUrl
+        ? humanizeUrl(this.userUrl)
+        : this.userUrl
       cb()
     })
   }
@@ -115,16 +124,19 @@ module.exports = class extends Generator {
   transpilers () {
     const cb = this.async()
 
-    const promise = this.prompt([{
-      type: 'checkbox',
-      name: 'transpilers',
-      message: 'Select transpilers:',
-      choices: CONST.TRANSPILERS.choose
-    }])
+    const promise = this.prompt([
+      {
+        type: 'checkbox',
+        name: 'transpilers',
+        message: 'Select transpilers:',
+        choices: CONST.TRANSPILERS.choose
+      }
+    ])
 
     promise.then(props => {
-      CONST.TRANSPILERS.choose
-        .forEach(choice => (this[choice] = _.includes(props.transpilers, choice)))
+      CONST.TRANSPILERS.choose.forEach(
+        choice => (this[choice] = _.includes(props.transpilers, choice))
+      )
       cb()
     })
   }
@@ -132,16 +144,19 @@ module.exports = class extends Generator {
   linters () {
     const cb = this.async()
 
-    const promise = this.prompt([{
-      type: 'checkbox',
-      name: 'linter',
-      message: 'Select the linter:',
-      choices: CONST.LINTERS.choose
-    }])
+    const promise = this.prompt([
+      {
+        type: 'checkbox',
+        name: 'linter',
+        message: 'Select the linter:',
+        choices: CONST.LINTERS.choose
+      }
+    ])
 
     promise.then(props => {
-      CONST.LINTERS.choose
-        .forEach(choice => (this[choice] = _.includes(props.linter, choice)))
+      CONST.LINTERS.choose.forEach(
+        choice => (this[choice] = _.includes(props.linter, choice))
+      )
       cb()
     })
   }
@@ -149,16 +164,19 @@ module.exports = class extends Generator {
   testing () {
     const cb = this.async()
 
-    const promise = this.prompt([{
-      type: 'checkbox',
-      name: 'testing',
-      message: 'Select testing tools:',
-      choices: CONST.TESTING.choose
-    }])
+    const promise = this.prompt([
+      {
+        type: 'checkbox',
+        name: 'testing',
+        message: 'Select testing tools:',
+        choices: CONST.TESTING.choose
+      }
+    ])
 
     promise.then(props => {
-      CONST.TESTING.choose
-        .forEach(choice => (this[choice] = _.includes(props.testing, choice)))
+      CONST.TESTING.choose.forEach(
+        choice => (this[choice] = _.includes(props.testing, choice))
+      )
       cb()
     })
   }
@@ -176,10 +194,7 @@ module.exports = class extends Generator {
       this.templatePath('_gitattributes'),
       this.destinationPath('.gitattributes')
     )
-    this.fs.copy(
-      this.templatePath('_npmrc'),
-      this.destinationPath('.npmrc')
-    )
+    this.fs.copy(this.templatePath('_npmrc'), this.destinationPath('.npmrc'))
     this.fs.copy(
       this.templatePath('_travis.yml'),
       this.destinationPath('.travis.yml')
@@ -225,13 +240,17 @@ module.exports = class extends Generator {
 
     /* TRANSPILERS */
 
-    CONST.TRANSPILERS.choose.forEach(transpiler =>
-      (this[transpiler]) && (this.package.dependencies[transpiler] = 'latest'))
+    CONST.TRANSPILERS.choose.forEach(
+      transpiler =>
+        this[transpiler] && (this.package.dependencies[transpiler] = 'latest')
+    )
 
     /* TESTING */
 
-    CONST.TESTING.choose.forEach(testing =>
-      (this[testing]) && (this.package.devDependencies[testing] = 'latest'))
+    CONST.TESTING.choose.forEach(
+      testing =>
+        this[testing] && (this.package.devDependencies[testing] = 'latest')
+    )
 
     let testScript = 'mocha'
     if (this.mocha) {
@@ -249,7 +268,9 @@ module.exports = class extends Generator {
       this.package.scripts.coveralls = 'cat ./coverage/lcov.info | coveralls'
       this.package.scripts.test = 'jest --coverage'
       this.package.scripts['test:watch'] = 'jest --watch'
-      const jestConfig = this.fs.readJSON(this.templatePath('package/jest.json'))
+      const jestConfig = this.fs.readJSON(
+        this.templatePath('package/jest.json')
+      )
       this.package = Object.assign({}, this.package, jestConfig)
     }
 
@@ -282,12 +303,12 @@ module.exports = class extends Generator {
     if (this.standard) {
       this.package.devDependencies['prettier-standard'] = 'latest'
       this.package.devDependencies['standard-markdown'] = 'latest'
-      this.package.scripts.pretty = 'prettier-standard index.js {core,test,bin}/**/*.js --single-quote'
+      this.package.scripts.pretty =
+        'prettier-standard index.js {core,test,bin}/**/*.js --single-quote'
 
-      this.package['lint-staged']['*.js'] = [
-        'prettier-standard',
-        'git add'
-      ]
+      this.package['lint-staged']['*.js'] = ['prettier-standard', 'git add']
+
+      this.package['lint-staged']['*.md'] = ['standard-markdown', 'git add']
 
       lintScript = `standard-markdown && ${lintScript}`
 
@@ -316,24 +337,27 @@ module.exports = class extends Generator {
   dependenciesVersion () {
     const cb = this.async()
 
-    setupDependenciesVersions(this.package)
-      .then(newPkg => {
-        this.package = newPkg
-        cb()
-      })
+    setupDependenciesVersions(this.package).then(newPkg => {
+      this.package = newPkg
+      cb()
+    })
   }
 
   writePackage () {
     const cb = this.async()
 
-    finepack(this.package, {
-      validate: false,
-      color: false
-    }, (err, packageFormated) => {
-      if (err) cb(err)
-      this.fs.writeJSON(this.destinationPath('package.json'), packageFormated)
-      cb()
-    })
+    finepack(
+      this.package,
+      {
+        validate: false,
+        color: false
+      },
+      (err, packageFormated) => {
+        if (err) cb(err)
+        this.fs.writeJSON(this.destinationPath('package.json'), packageFormated)
+        cb()
+      }
+    )
   }
 
   install () {
