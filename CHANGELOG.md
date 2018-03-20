@@ -1,3 +1,10 @@
+<a name="3.20.4"></a>
+## 3.20.4 (2018-03-20)
+
+* Add markdown linter ([f2e19e4](https://github.com/Kikobeats/generator-git/commit/f2e19e4))
+
+
+
 <a name="3.20.3"></a>
 ## 3.20.3 (2018-03-16)
 
