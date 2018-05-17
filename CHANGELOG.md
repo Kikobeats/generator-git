@@ -1,3 +1,11 @@
+<a name="3.20.5"></a>
+## 3.20.5 (2018-05-17)
+
+* Drop node 6 support ([496b70c](https://github.com/Kikobeats/generator-git/commit/496b70c))
+* fix(package): update chalk to version 2.4.0 ([8170916](https://github.com/Kikobeats/generator-git/commit/8170916))
+
+
+
 <a name="3.20.4"></a>
 ## 3.20.4 (2018-03-20)
 
