@@ -44,6 +44,7 @@
     "husky": "latest",
     "jest": "latest",
     "lint-staged": "latest",
+    "prettier-standard": "latest",
     "standard": "latest"
   },
   "engines": {
