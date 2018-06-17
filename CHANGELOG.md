@@ -1,3 +1,12 @@
+<a name="3.20.6"></a>
+## 3.20.6 (2018-06-17)
+
+* Clarify about keywords ([233872b](https://github.com/Kikobeats/generator-git/commit/233872b))
+* Update prettier standard ([faa8e2c](https://github.com/Kikobeats/generator-git/commit/faa8e2c))
+* fix(package): update latest-version to version 4.0.0 ([fddfa6b](https://github.com/Kikobeats/generator-git/commit/fddfa6b))
+
+
+
 <a name="3.20.5"></a>
 ## 3.20.5 (2018-05-17)
 
