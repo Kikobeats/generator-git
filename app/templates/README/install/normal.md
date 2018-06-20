@@ -11,7 +11,7 @@ $ npm install <%= appName %> --save
 const <%= camelAppName %> = require('<%= appName %>')
 
 <%= camelAppName %>('do something')
-//=> return something
+// => return something
 ```
 
 ## API

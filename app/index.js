@@ -98,7 +98,9 @@ module.exports = class extends Generator {
 
     promise.then(props => {
       this.appDescription = props.appDescription
-      this.keywords = props.keywords ? props.keywords.trim().split(',') : []
+      this.keywords = props.keywords
+        ? props.keywords.replace(/\s/g, '').split(',')
+        : []
       this.userLogin = props.userLogin
       this.cli = props.cli
       cb()
