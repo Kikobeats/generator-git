@@ -9,6 +9,20 @@
     "name": "Kiko Beats",
     "url": "https://github.com/Kikobeats"
   },
+  "contributors": [
+    {
+      "name": "Kiko Beats",
+      "email": "josefrancisco.verdu@gmail.com"
+    },
+    {
+      "name": "kutyel",
+      "email": "flaviocorpa@gmail.com"
+    },
+    {
+      "name": "Kiko Beats",
+      "email": "kikohumanbeatbox@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kikobeats/generator-git.git"
@@ -40,6 +54,7 @@
     "yosay": "~2.0.1"
   },
   "devDependencies": {
+    "git-authors-cli": "latest",
     "git-dirty": "latest",
     "husky": "latest",
     "jest": "latest",

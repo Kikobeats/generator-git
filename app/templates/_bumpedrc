@@ -2,6 +2,9 @@ files:
   - package.json
 plugins:
   prerelease:
+    Adding authors:
+      plugin: bumped-terminal
+      command: npx git-authors-cli
     Linting config files:
       plugin: bumped-finepack
   postrelease:

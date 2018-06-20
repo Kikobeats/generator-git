@@ -6,9 +6,12 @@ plugins:
 
   prerelease:
 
-    'Linting config files':
-      plugin: 'bumped-finepack'
+    Adding authors:
+      plugin: bumped-terminal
+      command: npx git-authors-cli
 
+    Linting config files:
+      plugin: bumped-finepack
   postrelease:
 
     'Generating CHANGELOG file':
