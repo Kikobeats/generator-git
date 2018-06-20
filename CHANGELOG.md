@@ -1,3 +1,10 @@
+<a name="3.20.7"></a>
+## 3.20.7 (2018-06-20)
+
+* Tweaks ([176b71f](https://github.com/Kikobeats/generator-git/commit/176b71f))
+
+
+
 <a name="3.20.6"></a>
 ## 3.20.6 (2018-06-17)
 
