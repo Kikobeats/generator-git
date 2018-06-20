@@ -1,3 +1,10 @@
+<a name="3.21.0"></a>
+# 3.21.0 (2018-06-20)
+
+* Add authors detection ([58c75d8](https://github.com/Kikobeats/generator-git/commit/58c75d8))
+
+
+
 <a name="3.20.7"></a>
 ## 3.20.7 (2018-06-20)
 
