@@ -1,3 +1,10 @@
+<a name="3.22.0"></a>
+# 3.22.0 (2018-06-26)
+
+* Add load config from file for CLI ([a8098a5](https://github.com/Kikobeats/generator-git/commit/a8098a5))
+
+
+
 <a name="3.21.1"></a>
 ## 3.21.1 (2018-06-20)
 
