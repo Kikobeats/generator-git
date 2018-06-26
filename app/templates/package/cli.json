@@ -4,6 +4,7 @@
   },
   "main": "index.js",
   "dependencies": {
+    "cosmiconfig": "latest",
     "meow": "latest",
     "update-notifier": "latest"
   },
