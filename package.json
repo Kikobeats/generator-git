@@ -42,7 +42,7 @@
   ],
   "dependencies": {
     "chalk": "~2.4.0",
-    "finepack": "~2.7.0",
+    "finepack": "~2.8.0",
     "gh-user": "~3.0.0",
     "humanize-url": "~1.0.1",
     "inquirer-npm-name": "~3.0.0",
