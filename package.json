@@ -49,7 +49,7 @@
     "latest-version": "~4.0.0",
     "lodash": "~4.17.5",
     "mkdirp": "~0.5.1",
-    "superb": "~2.0.0",
+    "superb": "~3.0.0",
     "yeoman-generator": "~2.0.3",
     "yosay": "~2.0.1"
   },
