@@ -312,7 +312,7 @@ module.exports = class extends Generator {
 
       this.package['lint-staged']['*.md'] = ['standard-markdown', 'git add']
 
-      lintScript = `standard-markdown && ${lintScript}`
+      lintScript = `standard-markdown README.md && ${lintScript}`
 
       if (this.mocha || this.jest) {
         this.package.standard = { env: [this.mocha ? 'mocha' : 'jest'] }
