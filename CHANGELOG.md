@@ -1,3 +1,13 @@
+<a name="3.22.1"></a>
+## 3.22.1 (2018-09-17)
+
+* Ensure link readme file ([8cac9b3](https://github.com/Kikobeats/generator-git/commit/8cac9b3))
+* Update superb method ([259b500](https://github.com/Kikobeats/generator-git/commit/259b500))
+* fix(package): update finepack to version 2.8.0 ([e148b03](https://github.com/Kikobeats/generator-git/commit/e148b03))
+* fix(package): update superb to version 3.0.0 ([3c5c82f](https://github.com/Kikobeats/generator-git/commit/3c5c82f))
+
+
+
 <a name="3.22.0"></a>
 # 3.22.0 (2018-06-26)
 
