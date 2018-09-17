@@ -33,7 +33,7 @@ module.exports = class extends Generator {
   }
 
   projectName () {
-    this.log(yosay(`Initializing ${superb()} Project`))
+    this.log(yosay(`Initializing ${superb.random()} Project`))
     const cb = this.async()
 
     const promise = askName(
