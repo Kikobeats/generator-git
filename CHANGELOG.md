@@ -1,3 +1,10 @@
+<a name="3.23.0"></a>
+# 3.23.0 (2018-09-19)
+
+* Add standard-version and commitlint integration ([09d3e0c](https://github.com/Kikobeats/generator-git/commit/09d3e0c))
+
+
+
 <a name="3.22.1"></a>
 ## 3.22.1 (2018-09-17)
 
