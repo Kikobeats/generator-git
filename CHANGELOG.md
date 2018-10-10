@@ -1,3 +1,10 @@
+<a name="3.24.0"></a>
+# 3.24.0 (2018-10-10)
+
+* Add automatic release ([da6ae40](https://github.com/Kikobeats/generator-git/commit/da6ae40))
+
+
+
 <a name="3.23.0"></a>
 # 3.23.0 (2018-09-19)
 
