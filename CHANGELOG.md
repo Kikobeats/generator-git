@@ -1,3 +1,10 @@
+<a name="3.24.1"></a>
+## 3.24.1 (2018-10-10)
+
+* Better update script ([b831fc7](https://github.com/Kikobeats/generator-git/commit/b831fc7))
+
+
+
 <a name="3.24.0"></a>
 # 3.24.0 (2018-10-10)
 

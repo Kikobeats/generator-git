@@ -2,7 +2,7 @@
   "name": "generator-git",
   "description": "Create the configurable scaffolding to start with a git-like project.",
   "homepage": "https://documentup.com/kikobeats/generator-git",
-  "version": "3.24.0",
+  "version": "3.24.1",
   "main": "app/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
