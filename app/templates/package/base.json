@@ -38,13 +38,14 @@
     "lint": "",
     "postrelease": "npm run release:tags && npm run release:github && npm publish",
     "precommit": "lint-staged",
-    "prerelease": "git-dirty && npm test && git-authors-cli",
+    "prerelease": "git-dirty && npm run update:check && npm test && git-authors-cli",
     "pretest": "npm run lint",
     "release": "git add package.json && standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin master",
     "test": "nyc ",
-    "update": "ncu -a"
+    "update": "ncu -a",
+    "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",
   "commitlint": {
