@@ -60,10 +60,12 @@
     }
   },
   "lint-staged": {
-    "package.json": [
-      "finepack",
-      "git add"
-    ]
+    "linters": {
+      "package.json": [
+        "finepack",
+        "git add"
+      ]
+    }
   },
   "standard-version": {
     "scripts": {
