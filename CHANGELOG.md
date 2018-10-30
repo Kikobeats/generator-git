@@ -1,3 +1,12 @@
+<a name="3.24.2"></a>
+## 3.24.2 (2018-10-30)
+
+* Migrate linter staged ([33e9f01](https://github.com/Kikobeats/generator-git/commit/33e9f01))
+* Rename coveralls script into coverage ([c9cbaa6](https://github.com/Kikobeats/generator-git/commit/c9cbaa6))
+* fix(package): update gh-user to version 4.0.0 ([703a823](https://github.com/Kikobeats/generator-git/commit/703a823))
+
+
+
 <a name="3.24.1"></a>
 ## 3.24.1 (2018-10-10)
 
