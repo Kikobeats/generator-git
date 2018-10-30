@@ -34,7 +34,7 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "",
     "postrelease": "npm run release:tags && npm run release:github && npm publish",
     "precommit": "lint-staged",
