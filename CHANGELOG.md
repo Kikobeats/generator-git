@@ -1,3 +1,13 @@
+<a name="3.24.3"></a>
+## 3.24.3 (2019-01-14)
+
+* Ignore env files ([99d7c81](https://github.com/Kikobeats/generator-git/commit/99d7c81))
+* fix(package): update finepack to version 2.9.0 ([1c340ab](https://github.com/Kikobeats/generator-git/commit/1c340ab))
+* fix(package): update humanize-url to version 2.0.0 ([034ca41](https://github.com/Kikobeats/generator-git/commit/034ca41))
+* fix(package): update yeoman-generator to version 3.2.0 ([525689d](https://github.com/Kikobeats/generator-git/commit/525689d))
+
+
+
 <a name="3.24.2"></a>
 ## 3.24.2 (2018-10-30)
 
