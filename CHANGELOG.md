@@ -1,3 +1,10 @@
+<a name="3.24.4"></a>
+## 3.24.4 (2019-02-03)
+
+* build: update release message ([f778a38](https://github.com/Kikobeats/generator-git/commit/f778a38))
+
+
+
 <a name="3.24.3"></a>
 ## 3.24.3 (2019-01-14)
 
