@@ -1,7 +1,7 @@
 {
   "name": "generator-git",
   "description": "Create the configurable scaffolding to start with a git-like project.",
-  "homepage": "https://documentup.com/kikobeats/generator-git",
+  "homepage": "https://nicedoc.io/kikobeats/generator-git",
   "version": "3.24.4",
   "main": "app/index.js",
   "author": {
