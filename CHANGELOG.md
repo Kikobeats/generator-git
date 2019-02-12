@@ -1,3 +1,10 @@
+<a name="3.24.5"></a>
+## 3.24.5 (2019-02-12)
+
+* build: use nicedoc instead of documentup ([190e8d1](https://github.com/Kikobeats/generator-git/commit/190e8d1))
+
+
+
 <a name="3.24.4"></a>
 ## 3.24.4 (2019-02-03)
 
