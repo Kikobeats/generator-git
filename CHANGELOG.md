@@ -1,3 +1,13 @@
+<a name="3.24.6"></a>
+## 3.24.6 (2019-04-18)
+
+* build: update editorconfig ([bc784d7](https://github.com/Kikobeats/generator-git/commit/bc784d7))
+* fix(package): update humanize-url to version 2.1.0 ([a7352f3](https://github.com/Kikobeats/generator-git/commit/a7352f3))
+* fix(package): update latest-version to version 5.0.0 ([0d0cd7e](https://github.com/Kikobeats/generator-git/commit/0d0cd7e))
+* fix(package): update latest-version to version 5.1.0 ([15985fa](https://github.com/Kikobeats/generator-git/commit/15985fa))
+
+
+
 <a name="3.24.5"></a>
 ## 3.24.5 (2019-02-12)
 
