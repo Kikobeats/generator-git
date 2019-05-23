@@ -8,7 +8,7 @@
 
 **GIT** helps you follow best practice in your next project, allowing choose you what technologies you want, providing you:
 
-- Continuous Integration by [Travis](https://travis-ci.org/).
+- Continuous Integration by [Travis](https://travis-ci.com/).
 - Testing coverage by [Coveralls](https://coveralls.io/).
 - Easy Releasing by [Bumped](https://bumped.github.io/).
 

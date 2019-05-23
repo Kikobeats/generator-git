@@ -7,7 +7,7 @@
 </p>
 
 ![Last version](https://img.shields.io/github/tag/<%= userLogin %>/<%= appName %>.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/<%= userLogin %>/<%= appName %>/master.svg?style=flat-square)](https://travis-ci.org/<%= userLogin %>/<%= appName %>)
+[![Build Status](https://img.shields.io/travis/com/<%= userLogin %>/<%= appName %>/master.svg?style=flat-square)](https://travis-ci.com/<%= userLogin %>/<%= appName %>)
 [![Coverage Status](https://img.shields.io/coveralls/<%= userLogin %>/<%= appName %>.svg?style=flat-square)](https://coveralls.io/github/<%= userLogin %>/<%= appName %>)
 [![Dependency status](https://img.shields.io/david/<%= userLogin %>/<%= appName %>.svg?style=flat-square)](https://david-dm.org/<%= userLogin %>/<%= appName %>)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/<%= userLogin %>/<%= appName %>.svg?style=flat-square)](https://david-dm.org/<%= userLogin %>/<%= appName %>#info=devDependencies)
