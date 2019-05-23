@@ -1,3 +1,14 @@
+<a name="3.24.7"></a>
+## 3.24.7 (2019-05-23)
+
+* build: change git-authors-cli position ([55d8e19](https://github.com/Kikobeats/generator-git/commit/55d8e19))
+* build: ensure to remove whitespace on md ([86d4468](https://github.com/Kikobeats/generator-git/commit/86d4468))
+* build: update dependencies ([e071f05](https://github.com/Kikobeats/generator-git/commit/e071f05))
+* build: update travis badge ([41c6f6d](https://github.com/Kikobeats/generator-git/commit/41c6f6d))
+* fix(package): update superb to version 4.0.0 ([dabe0a4](https://github.com/Kikobeats/generator-git/commit/dabe0a4))
+
+
+
 <a name="3.24.6"></a>
 ## 3.24.6 (2019-04-18)
 
