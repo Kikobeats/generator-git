@@ -71,11 +71,15 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "lint": "standard app __tests__",
-    "precommit": "lint-staged",
     "pretest": "npm run lint",
     "test": "jest"
   },
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "package.json": [
       "finepack",
