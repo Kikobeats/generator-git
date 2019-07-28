@@ -1,3 +1,12 @@
+<a name="3.24.8"></a>
+## 3.24.8 (2019-07-28)
+
+* build: migrate husky ([5399171](https://github.com/Kikobeats/generator-git/commit/5399171))
+* build: migrate lint-staged ([7aac5f5](https://github.com/Kikobeats/generator-git/commit/7aac5f5))
+* build: run finepack before release ([3dd7bbf](https://github.com/Kikobeats/generator-git/commit/3dd7bbf))
+
+
+
 <a name="3.24.7"></a>
 ## 3.24.7 (2019-05-23)
 
