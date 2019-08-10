@@ -37,7 +37,6 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "",
     "postrelease": "npm run release:tags && npm run release:github && npm publish",
-    "precommit": "lint-staged",
     "prerelease": "git-dirty && npm run update:check && npm test && git-authors-cli",
     "pretest": "npm run lint",
     "release": "git-authors-cli finepack && git add package.json && standard-version -a",
