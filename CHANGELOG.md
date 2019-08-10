@@ -1,3 +1,10 @@
+<a name="3.24.9"></a>
+## 3.24.9 (2019-08-10)
+
+* build: remove precommit ([25b365c](https://github.com/Kikobeats/generator-git/commit/25b365c))
+
+
+
 <a name="3.24.8"></a>
 ## 3.24.8 (2019-07-28)
 
