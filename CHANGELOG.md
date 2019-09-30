@@ -1,3 +1,10 @@
+<a name="3.25.0"></a>
+# 3.25.0 (2019-09-30)
+
+* build: improve contributors ([304cfb0](https://github.com/Kikobeats/generator-git/commit/304cfb0))
+
+
+
 <a name="3.24.9"></a>
 ## 3.24.9 (2019-08-10)
 
