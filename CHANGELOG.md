@@ -1,3 +1,10 @@
+<a name="3.25.1"></a>
+## 3.25.1 (2019-09-30)
+
+* build: update ncu update flag ([6cfe8b5](https://github.com/Kikobeats/generator-git/commit/6cfe8b5))
+
+
+
 <a name="3.25.0"></a>
 # 3.25.0 (2019-09-30)
 
