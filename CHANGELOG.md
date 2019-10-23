@@ -1,3 +1,10 @@
+<a name="3.25.2"></a>
+## 3.25.2 (2019-10-23)
+
+* build: use node 10 ([0f6df88](https://github.com/Kikobeats/generator-git/commit/0f6df88))
+
+
+
 <a name="3.25.1"></a>
 ## 3.25.1 (2019-09-30)
 

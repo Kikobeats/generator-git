@@ -2,7 +2,7 @@
   "name": "generator-git",
   "description": "Create the configurable scaffolding to start with a git-like project.",
   "homepage": "https://nicedoc.io/kikobeats/generator-git",
-  "version": "3.25.1",
+  "version": "3.25.2",
   "main": "app/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
