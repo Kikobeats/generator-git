@@ -12,7 +12,6 @@
 [![Dependency status](https://img.shields.io/david/<%= userLogin %>/<%= appName %>.svg?style=flat-square)](https://david-dm.org/<%= userLogin %>/<%= appName %>)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/<%= userLogin %>/<%= appName %>.svg?style=flat-square)](https://david-dm.org/<%= userLogin %>/<%= appName %>#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/<%= appName %>.svg?style=flat-square)](https://www.npmjs.org/package/<%= appName %>)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/<%= userLogin %>)
 
 **NOTE:** more badges availables in [shields.io](https://shields.io/)
 
