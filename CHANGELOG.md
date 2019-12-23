@@ -1,3 +1,9 @@
+## <small>3.25.3 (2019-12-23)</small>
+
+* build: remove donate button ([e92a2c5](https://github.com/Kikobeats/generator-git/commit/e92a2c5))
+
+
+
 <a name="3.25.2"></a>
 ## 3.25.2 (2019-10-23)
 
