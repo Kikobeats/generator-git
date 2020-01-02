@@ -1,3 +1,9 @@
+## <small>3.25.4 (2020-01-02)</small>
+
+* build: update ([defd15a](https://github.com/Kikobeats/generator-git/commit/defd15a))
+
+
+
 ## <small>3.25.3 (2019-12-23)</small>
 
 * build: remove donate button ([e92a2c5](https://github.com/Kikobeats/generator-git/commit/e92a2c5))
