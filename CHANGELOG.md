@@ -1,3 +1,12 @@
+## 3.26.0 (2020-01-20)
+
+* build: update dependencies ([960516f](https://github.com/Kikobeats/generator-git/commit/960516f))
+* build(deps): bump chalk from 2.4.2 to 3.0.0 ([f771530](https://github.com/Kikobeats/generator-git/commit/f771530))
+* build(deps): bump finepack from 2.9.2 to 2.10.0 ([5cd206f](https://github.com/Kikobeats/generator-git/commit/5cd206f))
+* build(deps): bump yeoman-generator from 4.0.2 to 4.4.0 ([5b03cd8](https://github.com/Kikobeats/generator-git/commit/5b03cd8))
+
+
+
 ## <small>3.25.4 (2020-01-02)</small>
 
 * build: update ([defd15a](https://github.com/Kikobeats/generator-git/commit/defd15a))
