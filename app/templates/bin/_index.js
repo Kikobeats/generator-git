@@ -3,7 +3,7 @@
 
 const path = require('path')
 const pkg = require('../package.json')
-const cosmiconfig = require('cosmiconfig')(pkg.name)
+const cosmiconfig = require('cosmiconfig').cosmiconfig(pkg.name)
 const <%= camelAppName %> = require('<%= appName %>')
 
 require('update-notifier')({pkg}).notify()
