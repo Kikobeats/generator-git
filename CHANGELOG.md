@@ -1,3 +1,12 @@
+## <small>3.26.1 (2020-02-24)</small>
+
+* fix: license file extension ([6b69966](https://github.com/Kikobeats/generator-git/commit/6b69966))
+* build: remove unnecessary git add ([970064c](https://github.com/Kikobeats/generator-git/commit/970064c))
+* build(deps): bump yeoman-generator from 4.4.0 to 4.5.0 ([86f9434](https://github.com/Kikobeats/generator-git/commit/86f9434))
+* Update _index.js ([784e2c2](https://github.com/Kikobeats/generator-git/commit/784e2c2))
+
+
+
 ## 3.26.0 (2020-01-20)
 
 * build: update dependencies ([960516f](https://github.com/Kikobeats/generator-git/commit/960516f))
