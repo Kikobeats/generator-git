@@ -202,8 +202,8 @@ module.exports = class extends Generator {
       this.destinationPath('.travis.yml')
     )
     this.fs.copyTpl(
-      this.templatePath('_LICENSE'),
-      this.destinationPath('LICENSE'),
+      this.templatePath('_LICENSE.md'),
+      this.destinationPath('LICENSE.md'),
       this
     )
 
