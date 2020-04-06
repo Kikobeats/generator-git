@@ -1,3 +1,12 @@
+## <small>3.26.2 (2020-04-06)</small>
+
+* build: remove git add from git pre hooks ([43f6cf6](https://github.com/Kikobeats/generator-git/commit/43f6cf6))
+* build(deps): bump chalk from 3.0.0 to 4.0.0 ([fe0ef07](https://github.com/Kikobeats/generator-git/commit/fe0ef07))
+* build(deps): bump mkdirp from 0.5.5 to 1.0.4 ([06ddf75](https://github.com/Kikobeats/generator-git/commit/06ddf75))
+* build(deps): bump yeoman-generator from 4.5.0 to 4.7.2 ([3a25d32](https://github.com/Kikobeats/generator-git/commit/3a25d32))
+
+
+
 ## <small>3.26.1 (2020-02-24)</small>
 
 * fix: license file extension ([6b69966](https://github.com/Kikobeats/generator-git/commit/6b69966))
