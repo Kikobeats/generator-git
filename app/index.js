@@ -306,8 +306,8 @@ module.exports = class extends Generator {
       this.package.devDependencies['prettier-standard'] = 'latest'
       this.package.devDependencies['standard-markdown'] = 'latest'
 
-      this.package['lint-staged']['*.js'] = ['prettier-standard', 'git add']
-      this.package['lint-staged']['*.md'] = ['standard-markdown', 'git add']
+      this.package['lint-staged']['*.js'] = ['prettier-standard']
+      this.package['lint-staged']['*.md'] = ['standard-markdown']
 
       lintScript = `standard-markdown README.md && ${lintScript}`
 
