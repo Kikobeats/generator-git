@@ -231,11 +231,6 @@ module.exports = class extends Generator {
       this.readme += this.fs.read(this.templatePath('README/install/normal.md'))
     }
 
-    this.fs.copy(
-      this.templatePath('_bumpedrc'),
-      this.destinationPath('.bumpedrc')
-    )
-
     /* KEYWORDS */
 
     this.package.keywords = this.keywords
