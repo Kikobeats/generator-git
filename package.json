@@ -33,7 +33,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "chalk": "~4.0.0",
+    "chalk": "~4.1.0",
     "finepack": "~2.10.1",
     "gh-user": "~4.0.0",
     "humanize-url": "~2.1.0",
