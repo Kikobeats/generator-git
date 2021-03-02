@@ -37,7 +37,7 @@
     "finepack": "~2.10.1",
     "gh-user": "~5.0.0",
     "humanize-url": "~2.1.0",
-    "inquirer-npm-name": "~3.0.0",
+    "inquirer-npm-name": "~4.0.0",
     "latest-version": "~5.1.0",
     "lodash": "~4.17.15",
     "mkdirp": "~1.0.4",
