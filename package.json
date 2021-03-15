@@ -42,7 +42,7 @@
     "lodash": "~4.17.15",
     "mkdirp": "~1.0.4",
     "superb": "~4.0.0",
-    "yeoman-generator": "~5.1.0",
+    "yeoman-generator": "~5.2.0",
     "yosay": "~2.0.2"
   },
   "devDependencies": {
