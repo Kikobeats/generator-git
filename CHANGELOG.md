@@ -1,20 +1,35 @@
-## <small>3.26.2 (2020-04-06)</small>
+# Changelog
 
-* build: remove git add from git pre hooks ([43f6cf6](https://github.com/Kikobeats/generator-git/commit/43f6cf6))
-* build(deps): bump chalk from 3.0.0 to 4.0.0 ([fe0ef07](https://github.com/Kikobeats/generator-git/commit/fe0ef07))
-* build(deps): bump mkdirp from 0.5.5 to 1.0.4 ([06ddf75](https://github.com/Kikobeats/generator-git/commit/06ddf75))
-* build(deps): bump yeoman-generator from 4.5.0 to 4.7.2 ([3a25d32](https://github.com/Kikobeats/generator-git/commit/3a25d32))
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/Kikobeats/generator-git/compare/v0.1.0...v4.0.0) (2021-03-18)
 
 
-## <small>3.26.1 (2020-02-24)</small>
+### ⚠ BREAKING CHANGES
 
-* fix: license file extension ([6b69966](https://github.com/Kikobeats/generator-git/commit/6b69966))
-* build: remove unnecessary git add ([970064c](https://github.com/Kikobeats/generator-git/commit/970064c))
-* build(deps): bump yeoman-generator from 4.4.0 to 4.5.0 ([86f9434](https://github.com/Kikobeats/generator-git/commit/86f9434))
-* Update _index.js ([784e2c2](https://github.com/Kikobeats/generator-git/commit/784e2c2))
+* This module no longer supports Node.js 0.10
+
+### Bug Fixes
+
+* add missing space ([c7b0e45](https://github.com/Kikobeats/generator-git/commit/c7b0e45ed30ae5ad3cfd340ccfc7c11bf5540403))
+* license file extension ([6b69966](https://github.com/Kikobeats/generator-git/commit/6b6996650ea5edf8a351f2119c687ae95b74c4ba))
+* **package:** update chalk to version 2.4.0 ([8170916](https://github.com/Kikobeats/generator-git/commit/817091639f1fb6376ea6b5cff0a6cd71fd9cbb40))
+* **package:** update finepack to version 2.7.0 ([4eec276](https://github.com/Kikobeats/generator-git/commit/4eec276925714f7a13617a49ea3d33c3099e7ead))
+* **package:** update finepack to version 2.8.0 ([e148b03](https://github.com/Kikobeats/generator-git/commit/e148b033e16d9770feae08820978e4ed45465bb4))
+* **package:** update finepack to version 2.9.0 ([1c340ab](https://github.com/Kikobeats/generator-git/commit/1c340ab8a5d4a92f8055fdc7cf9f2931f67d10c0))
+* **package:** update gh-user to version 4.0.0 ([703a823](https://github.com/Kikobeats/generator-git/commit/703a82333aaebf7bf7baa78641b6481312ce690a))
+* **package:** update humanize-url to version 2.0.0 ([034ca41](https://github.com/Kikobeats/generator-git/commit/034ca411d3e32d4c04e95655f18d7345249cbf91))
+* **package:** update humanize-url to version 2.1.0 ([a7352f3](https://github.com/Kikobeats/generator-git/commit/a7352f37f92d79850d2c1f215ae06cf480e06b62))
+* **package:** update inquirer-npm-name to version 3.0.0 ([2568a27](https://github.com/Kikobeats/generator-git/commit/2568a27ae85a54e34c4f62442755833e2b91101a))
+* **package:** update latest-version to version 4.0.0 ([fddfa6b](https://github.com/Kikobeats/generator-git/commit/fddfa6bf760c83f0266acd668b023d658fe0f728))
+* **package:** update latest-version to version 5.0.0 ([0d0cd7e](https://github.com/Kikobeats/generator-git/commit/0d0cd7ea5d3df3c229c0f0edc1560583f858e758))
+* **package:** update latest-version to version 5.1.0 ([15985fa](https://github.com/Kikobeats/generator-git/commit/15985fa4a28547ffade003ab44cc2139545de933))
+* **package:** update superb to version 3.0.0 ([3c5c82f](https://github.com/Kikobeats/generator-git/commit/3c5c82f0020d60e088fc755239333a5bd8091ebe))
+* **package:** update superb to version 4.0.0 ([dabe0a4](https://github.com/Kikobeats/generator-git/commit/dabe0a4f097d5ec41e5c4ffc3c25cb7e13902c1f))
+* **package:** update yeoman-generator to version 3.2.0 ([525689d](https://github.com/Kikobeats/generator-git/commit/525689d35d0de8d703515a02a108be91a8ebe5e9))
 
 
+* drop support for Node.js 0.10 ([baa99cb](https://github.com/Kikobeats/generator-git/commit/baa99cbbf2265f0cbf85efb9d5ef9ccfb17c8db9))
 
 ## 3.26.0 (2020-01-20)
 
@@ -1375,6 +1390,3 @@
 * updated version ([88805d1](https://github.com/Kikobeats/generator-git/commit/88805d1))
 * updated version ([26a2ec2](https://github.com/Kikobeats/generator-git/commit/26a2ec2))
 * updated version ([26b7aa9](https://github.com/Kikobeats/generator-git/commit/26b7aa9))
-
-
-
