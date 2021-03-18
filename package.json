@@ -34,25 +34,31 @@
   ],
   "dependencies": {
     "chalk": "~4.1.0",
-    "finepack": "~2.10.1",
+    "finepack": "~2.10.11",
     "gh-user": "~5.0.0",
     "humanize-url": "~2.1.0",
-    "inquirer-npm-name": "~3.0.0",
+    "inquirer-npm-name": "~4.0.0",
     "latest-version": "~5.1.0",
-    "lodash": "~4.17.15",
+    "lodash": "~4.17.21",
     "mkdirp": "~1.0.4",
-    "superb": "~4.0.0",
-    "yeoman-generator": "~5.1.0",
-    "yosay": "~2.0.2"
+    "yeoman-generator": "~5.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "ava": "latest",
+    "ci-publish": "latest",
+    "conventional-github-releaser": "latest",
+    "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
     "husky": "latest",
-    "jest": "latest",
     "lint-staged": "latest",
+    "npm-check-updates": "latest",
     "prettier-standard": "latest",
-    "standard": "latest"
+    "standard": "latest",
+    "standard-markdown": "latest",
+    "standard-version": "latest"
   },
   "engines": {
     "node": ">=4"
@@ -62,15 +68,24 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "lint": "standard app __tests__",
+    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "lint": "standard-markdown README.md && standard",
+    "postinstall": "husky install",
+    "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
+    "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
-    "test": "jest"
+    "release": "standard-version -a",
+    "release:github": "conventional-github-releaser -p angular",
+    "release:tags": "git push --follow-tags origin HEAD:master",
+    "test": "ava",
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "lint-staged": {
     "package.json": [
@@ -80,10 +95,9 @@
       "prettier-standard"
     ]
   },
-  "peerDependencies": {
-    "yo": ">=3.1.1"
-  },
   "standard": {
-    "env": "jest"
+    "ignore": [
+      "app/templates/bin/_index.js"
+    ]
   }
 }

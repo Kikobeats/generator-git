@@ -1,62 +1,40 @@
 'use strict'
 
-const _ = require('lodash')
-const path = require('path')
-const yosay = require('yosay')
-const superb = require('superb')
-const mkdirp = require('mkdirp')
-const ghUser = require('gh-user')
-const finepack = require('finepack')
-const humanizeUrl = require('humanize-url')
-const askName = require('inquirer-npm-name')
+const { camelCase, template, kebabCase } = require('lodash')
 const Generator = require('yeoman-generator')
+const askName = require('inquirer-npm-name')
+const humanizeUrl = require('humanize-url')
+const finepack = require('finepack')
+const ghUser = require('gh-user')
+const mkdirp = require('mkdirp')
+const path = require('path')
 
 const { capitalizeName, setupDependenciesVersions } = require('./helpers')
-
-const CONST = {
-  LINTERS: {
-    choose: ['jscs', 'jshint', 'standard']
-  },
-
-  TESTING: {
-    choose: ['ava', 'jest', 'mocha', 'should', 'tap', 'tape']
-  },
-
-  TRANSPILERS: {
-    choose: ['coffee-script']
-  }
-}
 
 module.exports = class extends Generator {
   initializing () {
     this.licenseYear = new Date().getFullYear()
   }
 
-  projectName () {
-    this.log(yosay(`Initializing ${superb.random()} Project`))
-    const cb = this.async()
-
-    const promise = askName(
+  async prompting () {
+    const answer = await askName(
       {
         name: 'name',
         message: 'Your project name',
-        default: _.kebabCase(path.basename(process.cwd())),
-        filter: _.kebabCase,
+        default: kebabCase(path.basename(process.cwd())),
+        filter: kebabCase,
         validate: str => str.length > 0
       },
       this
     )
 
-    promise.then(answer => {
-      const name = answer.name
-      this.appName = name
-      this.camelAppName = _.camelCase(name)
-      this.capitalizeName = capitalizeName(this.appName)
-      cb()
-    })
+    const name = answer.name
+    this.appName = name
+    this.camelAppName = camelCase(name)
+    this.capitalizeName = capitalizeName(this.appName)
   }
 
-  setupPath () {
+  default () {
     if (path.basename(this.destinationPath()) !== this.appName) {
       this.log(
         `Your generator must be inside a folder named ${this.appName}\n
@@ -123,66 +101,6 @@ module.exports = class extends Generator {
     })
   }
 
-  transpilers () {
-    const cb = this.async()
-
-    const promise = this.prompt([
-      {
-        type: 'checkbox',
-        name: 'transpilers',
-        message: 'Select transpilers:',
-        choices: CONST.TRANSPILERS.choose
-      }
-    ])
-
-    promise.then(props => {
-      CONST.TRANSPILERS.choose.forEach(
-        choice => (this[choice] = _.includes(props.transpilers, choice))
-      )
-      cb()
-    })
-  }
-
-  linters () {
-    const cb = this.async()
-
-    const promise = this.prompt([
-      {
-        type: 'checkbox',
-        name: 'linter',
-        message: 'Select the linter:',
-        choices: CONST.LINTERS.choose
-      }
-    ])
-
-    promise.then(props => {
-      CONST.LINTERS.choose.forEach(
-        choice => (this[choice] = _.includes(props.linter, choice))
-      )
-      cb()
-    })
-  }
-
-  testing () {
-    const cb = this.async()
-
-    const promise = this.prompt([
-      {
-        type: 'checkbox',
-        name: 'testing',
-        message: 'Select testing tools:',
-        choices: CONST.TESTING.choose
-      }
-    ])
-
-    promise.then(props => {
-      CONST.TESTING.choose.forEach(
-        choice => (this[choice] = _.includes(props.testing, choice))
-      )
-      cb()
-    })
-  }
-
   setup () {
     this.fs.copy(
       this.templatePath('_editorconfig'),
@@ -207,12 +125,12 @@ module.exports = class extends Generator {
       this
     )
 
-    this.package = _.template(this.package)(this)
+    this.package = template(this.package)(this)
     this.package = JSON.parse(this.package)
 
     if (this.cli) {
       let cliPackage = this.fs.read(this.templatePath('package/cli.json'))
-      cliPackage = _.template(cliPackage)(this)
+      cliPackage = template(cliPackage)(this)
       cliPackage = JSON.parse(cliPackage)
 
       this.package = Object.assign({}, this.package, cliPackage)
@@ -235,96 +153,23 @@ module.exports = class extends Generator {
 
     this.package.keywords = this.keywords
 
-    /* TRANSPILERS */
+    /* KEYWORDS */
 
-    CONST.TRANSPILERS.choose.forEach(
-      transpiler =>
-        this[transpiler] && (this.package.dependencies[transpiler] = 'latest')
-    )
-
-    /* TESTING */
-
-    CONST.TESTING.choose.forEach(
-      testing =>
-        this[testing] && (this.package.devDependencies[testing] = 'latest')
-    )
-
-    let testScript = 'mocha'
-    if (this.mocha) {
-      this.fs.copy(
-        this.templatePath('test/_mocha.opts'),
-        this.destinationPath('test/mocha.opts')
-      )
-    }
-    if (this.ava) testScript = 'ava'
-    if (this.tape && !this.mocha) testScript = 'tape'
-    this.package.scripts.test += testScript
-
-    if (this.jest) {
-      delete this.package.devDependencies.nyc // nyc is not needed anymore!
-      this.package.scripts.coveralls = 'cat ./coverage/lcov.info | coveralls'
-      this.package.scripts.test = 'jest --coverage'
-      this.package.scripts['test:watch'] = 'jest --watch'
-      const jestConfig = this.fs.readJSON(
-        this.templatePath('package/jest.json')
-      )
-      this.package = Object.assign({}, this.package, jestConfig)
-    }
-
-    /* LINTERS */
-
-    let lintScript = ''
-
-    CONST.LINTERS.choose.forEach(linter => {
-      if (this[linter]) {
-        this.package.devDependencies[linter] = 'latest'
-        lintScript += lintScript === '' ? linter : ' && ' + linter
-      }
-    })
-
-    if (this.jshint) {
-      this.fs.copy(
-        this.templatePath('_jshintrc'),
-        this.destinationPath('.jshintrc')
-      )
-    }
-    if (this.jscs) {
-      this.fs.copy(
-        this.templatePath('_jscsrc'),
-        this.destinationPath('.jscsrc')
-      )
-    }
-
-    this.package.scripts.lint = lintScript
-
-    if (this.standard) {
-      this.package.devDependencies['prettier-standard'] = 'latest'
-      this.package.devDependencies['standard-markdown'] = 'latest'
-
-      this.package['lint-staged']['*.js'] = ['prettier-standard']
-      this.package['lint-staged']['*.md'] = ['standard-markdown']
-
-      lintScript = `standard-markdown README.md && ${lintScript}`
-
-      if (this.mocha || this.jest) {
-        this.package.standard = { env: [this.mocha ? 'mocha' : 'jest'] }
-      }
-    }
-
-    this.package.scripts.lint = lintScript
+    this.package.keywords = this.keywords
 
     /* INDEX.JS */
 
-    const indexExtension = this['coffee-script'] ? 'coffee' : 'js'
     this.fs.copy(
-      this.templatePath(`_index.${indexExtension}`),
+      this.templatePath('_index.js'),
       this.destinationPath('index.js')
     )
+
+    this.fs.copy(this.templatePath('_husky'), this.destinationPath('.husky'))
 
     /* README */
 
     this.readme += this.fs.read(this.templatePath('README/body.md'))
-    this.readme = _.template(this.readme)(this)
+    this.readme = template(this.readme)(this)
     this.fs.write(this.destinationPath('README.md'), this.readme)
   }
 
@@ -356,9 +201,12 @@ module.exports = class extends Generator {
 
   install () {
     this.spawnCommandSync('git', ['init'])
-    const repoSSH = `git@github.com:${this.userLogin}/${this.appName}.git`
-    this.spawnCommandSync('git', ['remote', 'add', 'origin', repoSSH])
-
-    this.installDependencies({ bower: false })
+    this.spawnCommandSync('git', [
+      'remote',
+      'add',
+      'origin',
+      `git@github.com:${this.userLogin}/${this.appName}.git`
+    ])
+    this.spawnCommandSync('npm', ['install'])
   }
 }
