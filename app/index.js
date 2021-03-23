@@ -164,8 +164,6 @@ module.exports = class extends Generator {
       this.destinationPath('index.js')
     )
 
-    this.fs.copy(this.templatePath('_husky'), this.destinationPath('.husky'))
-
     /* README */
 
     this.readme += this.fs.read(this.templatePath('README/body.md'))
