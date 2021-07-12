@@ -36,7 +36,7 @@
     "chalk": "~4.1.0",
     "finepack": "~2.10.11",
     "gh-user": "~5.0.0",
-    "humanize-url": "~2.1.0",
+    "humanize-url": "~3.0.0",
     "inquirer-npm-name": "~4.0.0",
     "latest-version": "~5.1.0",
     "lodash": "~4.17.21",
