@@ -116,10 +116,6 @@ module.exports = class extends Generator {
     )
     this.fs.copy(this.templatePath('_npmrc'), this.destinationPath('.npmrc'))
     this.fs.copy(this.templatePath('_github'), this.destinationPath('.github'))
-    this.fs.copy(
-      this.templatePath('_travis.yml'),
-      this.destinationPath('.travis.yml')
-    )
     this.fs.copyTpl(
       this.templatePath('_LICENSE.md'),
       this.destinationPath('LICENSE.md'),
