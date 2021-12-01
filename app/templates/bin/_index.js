@@ -3,8 +3,8 @@
 
 const path = require('path')
 const pkg = require('../package.json')
-const cosmiconfig = require('cosmiconfig').cosmiconfig(pkg.name)
 const <%= camelAppName %> = require('<%= appName %>')
+const JoyCon = require('joycon')
 
 require('update-notifier')({pkg}).notify()
 
@@ -20,7 +20,20 @@ const cli = require('meow')({
 
 ;(async () => {
   const { cwd } = cli.flags
-  const { config } = await cosmiconfig.search(cwd) || {}
+
+  const joycon = new JoyCon({
+    cwd,
+    packageKey: pkg.name,
+    files: [
+      'package.json',
+      `.${pkg.name}rc`,
+      `.${pkg.name}rc.json`,
+      `.${pkg.name}rc.js`,
+      `${pkg.name}.config.js`
+    ]
+  })
+
+  const { data: config } = await joycon.load()
   const input = config.url || cli.input[0]
   const flags = { ...config, ...cli.flags }
   if (!input) cli.showHelp()
