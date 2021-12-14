@@ -18,16 +18,17 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "ava": "latest",
+    "c8": "latest",
     "conventional-github-releaser": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
-    "git-dirty": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
-    "c8": "latest",
     "prettier-standard": "latest",
     "simple-git-hooks": "latest",
-    "standard-version": "latest"
+    "standard-markdown": "latest",
+    "standard-version": "latest",
+    "standard": "latest"
   },
   "engines": {
     "node": ">= 14"
@@ -38,9 +39,9 @@
     "coverage": "c8 report --reporter=text-lcov > coverage/lcov.info",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && npm publish",
-    "prerelease": "git-dirty && npm run update:check && npm test && npm run contributors",
+    "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
-    "release": "git-authors-cli finepack && git add package.json && standard-version -a",
+    "release": "standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "c8 ava",
