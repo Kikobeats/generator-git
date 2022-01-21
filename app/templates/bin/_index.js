@@ -33,7 +33,7 @@ const cli = require('meow')({
     ]
   })
 
-  const { data: config } = await joycon.load()
+  const { data: config = {} } = (await joycon.load()) || {}
   const input = config.url || cli.input[0]
   const flags = { ...config, ...cli.flags }
   if (!input) cli.showHelp()
