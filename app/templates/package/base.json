@@ -3,7 +3,9 @@
   "description": "<%= appDescription %>",
   "homepage": "https://nicedoc.io/<%= userLogin %>/<%= appName %>",
   "version": "0.0.0",
-  "main": "index.js",
+  "exports": {
+    ".": "index.js"
+  },
   "author": {
     "email": "<%= userEmail %>",
     "name": "<%= userName %>",
