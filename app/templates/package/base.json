@@ -33,7 +33,7 @@
     "standard": "latest"
   },
   "engines": {
-    "node": ">= 14"
+    "node": ">= 18"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
