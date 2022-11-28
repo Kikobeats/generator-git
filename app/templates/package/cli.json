@@ -2,7 +2,9 @@
   "bin": {
     "<%= appName %>": "bin/index.js"
   },
-  "main": "index.js",
+  "exports": {
+    ".": "index.js"
+  },
   "dependencies": {
     "joycon": "latest",
     "meow": "latest",
