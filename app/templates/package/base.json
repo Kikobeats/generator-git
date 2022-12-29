@@ -41,7 +41,7 @@
     "coverage": "c8 report --reporter=text-lcov > coverage/lcov.info",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && npm publish",
-    "prerelease": "npm run update:check && npm run contributors",
+    "prerelease": "npm run update:check",
     "pretest": "npm run lint",
     "release": "standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
