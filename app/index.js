@@ -4,10 +4,12 @@ const { camelCase, template, kebabCase } = require('lodash')
 const Generator = require('yeoman-generator')
 const askName = require('inquirer-npm-name')
 const humanizeUrl = require('humanize-url')
+const { mkdir } = require('fs/promises')
 const finepack = require('finepack')
 const ghUser = require('gh-user')
-const mkdirp = require('mkdirp')
 const path = require('path')
+
+const mkdirp = filepath => mkdir(filepath, { recursive: true }).catch(() => {})
 
 const { capitalizeName, setupDependenciesVersions } = require('./helpers')
 

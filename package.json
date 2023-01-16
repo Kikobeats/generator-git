@@ -40,7 +40,6 @@
     "inquirer-npm-name": "~4.0.0",
     "latest-version": "~5.1.0",
     "lodash": "~4.17.21",
-    "mkdirp": "~1.0.4",
     "yeoman-generator": "~5.7.0"
   },
   "devDependencies": {
