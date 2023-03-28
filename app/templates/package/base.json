@@ -1,7 +1,7 @@
 {
   "name": "<%= appName %>",
   "description": "<%= appDescription %>",
-  "homepage": "https://nicedoc.io/<%= userLogin %>/<%= appName %>",
+  "homepage": "https://github.com/<%= userLogin %>/<%= appName %>",
   "version": "0.0.0",
   "exports": {
     ".": "index.js"
