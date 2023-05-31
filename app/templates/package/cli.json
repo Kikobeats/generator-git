@@ -3,7 +3,7 @@
     "<%= appName %>": "bin/index.js"
   },
   "exports": {
-    ".": "index.js"
+    ".": "./cli/index.js"
   },
   "dependencies": {
     "joycon": "latest",
