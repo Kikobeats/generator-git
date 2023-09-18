@@ -26,7 +26,7 @@
     "git-authors-cli": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
-    "prettier-standard": "latest",
+    "@ksmithut/prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard-markdown": "latest",
     "standard-version": "latest",
@@ -60,8 +60,9 @@
     "package.json": [
       "finepack"
     ],
-    "*.js,!*.min.js,": [
-      "prettier-standard"
+    "*.js,!*.min.js": [
+      "prettier-standard",
+      "standard --fix"
     ],
     "*.md": [
       "standard-markdown"
