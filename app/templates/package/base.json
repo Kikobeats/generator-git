@@ -21,7 +21,7 @@
     "@commitlint/config-conventional": "latest",
     "ava": "latest",
     "c8": "latest",
-    "conventional-github-releaser": "latest",
+    "github-generate-release": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
     "nano-staged": "latest",
@@ -44,7 +44,7 @@
     "prerelease": "npm run update:check",
     "pretest": "npm run lint",
     "release": "standard-version -a",
-    "release:github": "conventional-github-releaser -p angular",
+    "release:github": "github-generate-release",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "c8 ava",
     "update": "ncu -u",
@@ -60,7 +60,7 @@
     "package.json": [
       "finepack"
     ],
-    "*.js,!*.min.js": [
+    "*.js": [
       "prettier-standard",
       "standard --fix"
     ],

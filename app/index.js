@@ -81,7 +81,7 @@ module.exports = class extends Generator {
       this.keywords = props.keywords
         ? props.keywords.replace(/\s/g, '').split(',')
         : []
-      this.userLogin = props.userLogin
+      this.userLogin = props.userLogin.toLowerCase()
       this.cli = props.cli
       cb()
     })
@@ -140,9 +140,10 @@ module.exports = class extends Generator {
         this.destinationPath('bin/help.txt'),
         this
       )
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('bin/_index.js'),
-        this.destinationPath('bin/index.js')
+        this.destinationPath('bin/index.js'),
+        this
       )
     } else {
       this.readme += this.fs.read(this.templatePath('README/install/normal.md'))
