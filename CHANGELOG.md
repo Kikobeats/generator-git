@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.8](https://github.com/Kikobeats/generator-git/compare/v4.0.7...v4.0.8) (2024-01-04)
+
+
+### Bug Fixes
+
+* exports main ([d7b97c7](https://github.com/Kikobeats/generator-git/commit/d7b97c757f93fb8925b5d98f80ba02213c8fc804))
+* fallback empty object ([d69ac12](https://github.com/Kikobeats/generator-git/commit/d69ac120d287a398bb64f39f8ab0318524755ef3))
+* style ([f3f3e6d](https://github.com/Kikobeats/generator-git/commit/f3f3e6d86003746bbdac99d056c7a4674d12092b))
+
 ### [4.0.7](https://github.com/Kikobeats/generator-git/compare/v4.0.6...v4.0.7) (2021-12-14)
 
 ### [4.0.6](https://github.com/Kikobeats/generator-git/compare/v4.0.4...v4.0.6) (2021-12-12)
