@@ -3,41 +3,47 @@
 
 const path = require('path')
 const pkg = require('../package.json')
-const <%= camelAppName %> = require('<%= appName %>')
 const JoyCon = require('joycon')
+const mri = require('mri')
 
-require('update-notifier')({pkg}).notify()
+require('update-notifier')({ pkg }).notify()
 
-const cli = require('meow')({
-  pkg,
-  help: require('fs').readFileSync(path.join(__dirname, 'help.txt'), 'utf8'),
-  flags: {
-    cwd: {
-      default: process.cwd()
-    }
+const { _, ...flags } = mri(process.argv.slice(2), {
+  /* https://github.com/lukeed/mri#usage< */
+  default: {
+    token: process.env.GH_TOKEN || process.env.GITHUB_TOKEN
   }
 })
 
-;(async () => {
-  const { cwd } = cli.flags
+if (flags.help) {
+  console.log(require('fs').readFileSync('./help.txt', 'utf8'))
+  process.exit(0)
+}
 
-  const joycon = new JoyCon({
-    cwd,
-    packageKey: pkg.name,
-    files: [
-      'package.json',
-      `.${pkg.name}rc`,
-      `.${pkg.name}rc.json`,
-      `.${pkg.name}rc.js`,
-      `${pkg.name}.config.js`
-    ]
+const joycon = new JoyCon({
+  cwd,
+  packageKey: pkg.name,
+  files: [
+    'package.json',
+    `.${pkg.name}rc`,
+    `.${pkg.name}rc.json`,
+    `.${pkg.name}rc.js`,
+    `${pkg.name}.config.js`
+  ]
+})
+
+const { data: config = {} } = (await joycon.load()) || {}
+
+Promise.resolve(
+  require('<%= appName %>')({
+    ...config,
+    ...flags
   })
-
-  const { data: config = {} } = (await joycon.load()) || {}
-  const input = config.url || cli.input[0]
-  const flags = { ...config, ...cli.flags }
-  if (!input) cli.showHelp()
-
-  const output = <%= camelAppName %>(flags)
-  console.log(output)
-})()
+)
+  .then(() => {
+    process.exit(0)
+  })
+  .catch(error => {
+    console.error(error)
+    process.exit(1)
+  })

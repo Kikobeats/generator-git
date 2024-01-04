@@ -6,9 +6,7 @@
     ".": "./cli/index.js"
   },
   "dependencies": {
-    "joycon": "latest",
-    "meow": "latest",
-    "update-notifier": "latest"
+    "mri": "latest"
   },
   "preferGlobal": true
 }
