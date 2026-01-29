@@ -32,7 +32,7 @@
     "standard": "latest"
   },
   "engines": {
-    "node": ">= 20"
+    "node": ">= 24"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
