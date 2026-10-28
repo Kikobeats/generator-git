@@ -25,7 +25,7 @@
     "finepack": "latest",
     "git-authors-cli": "latest",
     "nano-staged": "latest",
-    "@ksmithut/prettier-standard": "latest",
+
     "simple-git-hooks": "latest",
     "standard-markdown": "latest",
     "standard-version": "latest",
@@ -62,7 +62,7 @@
       "finepack"
     ],
     "*.js": [
-      "prettier-standard",
+      "npx @kikobeats/prettier-standard",
       "standard --fix"
     ],
     "*.md": [

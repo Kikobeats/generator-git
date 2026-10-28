@@ -1,6 +1,6 @@
 'use strict'
 
-const test = require('ava')
+const test = require('ava').default
 
 const pkg = require('../package')
 const { capitalizeName, setupDependenciesVersions } = require('../app/helpers')

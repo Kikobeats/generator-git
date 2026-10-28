@@ -1,7 +1,7 @@
 # generator-git
 
-![Last version](https://img.shields.io/github/tag/kikobeats/generator-git.svg?style=flat-square)
-[![NPM Status](http://img.shields.io/npm/dm/generator-git.svg?style=flat-square)](https://www.npmjs.org/package/generator-git)
+[![Last version](https://img.shields.io/github/v/tag/Kikobeats/generator-git?style=flat-square)](https://github.com/Kikobeats/generator-git/releases)
+[![NPM Status](https://img.shields.io/npm/dm/generator-git?style=flat-square)](https://www.npmjs.com/package/generator-git)
 
 ## Install
 
